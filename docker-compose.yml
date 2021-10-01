@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  db:
+    image: 'mysql:5.7'
+    ports:
+      - 3309:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hell_ta_bus
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
