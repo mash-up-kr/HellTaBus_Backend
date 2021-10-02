@@ -1,10 +1,13 @@
-import {Controller, Get, Post, Body, Patch, Param, Delete} from '@nestjs/common';
+import {
+  Controller, Get, Post, Body, Patch,
+  Param, Delete, Query, ParseArrayPipe,
+} from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 
 @Controller('exercise')
 export class ExerciseController {
-  constructor(private readonly exerciseService: ExerciseService) {}
+  constructor(private readonly exerciseService: ExerciseService) { }
 
   @Post()
   create(@Body() createExerciseDto: CreateExerciseDto) {
@@ -12,13 +15,22 @@ export class ExerciseController {
   }
 
   @Get()
-  findAll() {
-    return this.exerciseService.findAll();
+  findAll(
+    @Query('partList', new ParseArrayPipe({
+      optional: true,
+      items: String,
+      separator: ',',
+    }))
+    partList: string[],
+  ) {
+    return this.exerciseService.findAll(
+      partList
+    );
   }
 
   @Get('suggestion')
   findSuggestion() {
-    return this.exerciseService.findAll();
+    return this.exerciseService.findSuggestion();
   }
 
   @Delete(':id')

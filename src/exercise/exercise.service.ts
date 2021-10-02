@@ -1,26 +1,54 @@
 import {Injectable} from '@nestjs/common';
+import {InjectRepository} from '@nestjs/typeorm';
+import {In, Repository} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
+import {Exercise} from './entities/exercise.entity';
 
 @Injectable()
 export class ExerciseService {
-  create(createExerciseDto: CreateExerciseDto) {
-    return 'This action adds a new exercise';
+  constructor(
+    @InjectRepository(Exercise)
+    private readonly exerciseRepository: Repository<Exercise>
+  ) { }
+
+  async create(createExerciseDto: CreateExerciseDto) {
+    return await this.exerciseRepository.save(createExerciseDto);
   }
 
-  findAll() {
-    return `This action returns all exercise`;
+  async findAll(partList: string[]) {
+    if (partList[0] === '') {
+      return await this.exerciseRepository.find({
+        relations: ['feedback'],
+      });
+    } else {
+      return await this.exerciseRepository.find({
+        where: {
+          part: In(partList),
+        },
+        relations: ['feedback'],
+      });
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} exercise`;
+  async findSuggestion() {
+    return `This action returns suggestion`;
   }
 
-  update(id: number, updateExerciseDto: UpdateExerciseDto) {
-    return `This action updates a #${id} exercise`;
+  async findOne(id: number) {
+    return await this.exerciseRepository.findOne({
+      where: {
+        id,
+      },
+      relations: ['feedback'],
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} exercise`;
+  async update(id: number, updateExerciseDto: UpdateExerciseDto) {
+    return this.exerciseRepository.update(id, updateExerciseDto);
+  }
+
+  async remove(id: number) {
+    await this.exerciseRepository.delete(id);
   }
 }
