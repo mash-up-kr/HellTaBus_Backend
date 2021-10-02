@@ -17,7 +17,8 @@ export class ExerciseHistoryService {
   }
 
   async findAll(exerciseIdList: number[], duration: string) {
-    let start, end;
+    let start;
+    let end;
     if (duration === 'recent') {
       return await this.ExerciseHistoryRepository.findOne({
         where: {
@@ -30,7 +31,7 @@ export class ExerciseHistoryService {
     } else {
       return await this.ExerciseHistoryRepository.find({
         where: {
-          updatedAt: Between(start, end)
+          updatedAt: Between(start, end),
           id: In(exerciseIdList),
         },
         order: {

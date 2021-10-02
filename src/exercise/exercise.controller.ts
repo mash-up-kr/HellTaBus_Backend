@@ -31,10 +31,10 @@ export class ExerciseController {
       items: String,
       separator: ',',
     }))
-    partList: string[],
+        partList: string[],
   ) {
     return this.exerciseService.findAll(
-      partList
+        partList
     );
   }
 
