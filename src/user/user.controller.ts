@@ -1,7 +1,7 @@
-import {Controller, Get, Post, Body, Patch, Param, Delete} from '@nestjs/common';
+import {Controller, Post, Body} from '@nestjs/common';
 import {UserService} from './user.service';
-import {UpdateUserDto} from './dto/update-user.dto';
 import {ApiDocs} from './user.docs';
+import {GoogleUserDto} from './dto/google-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -9,16 +9,15 @@ export class UserController {
 
   @Post()
   @ApiDocs.create('회원가입 API')
-  create(@Body() req) {
-    return this.userService.create(req);
+  create(@Body() googleUserDto: GoogleUserDto) {
+    return this.userService.create(googleUserDto);
   }
 
-  // @Post('login')
-  // login(@Body req) {
-  //   return {
-  //     accessToken: this.jwtService.sign(payload),
-  //   }
-  // }
+  @Post('/login')
+  @ApiDocs.create('로그인 API')
+  async login(@Body() googleUserDto: GoogleUserDto) {
+    return this.userService.login(googleUserDto);
+  }
   //
   // @Get('my')
   // getMyInfo() {
