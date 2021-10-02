@@ -10,7 +10,7 @@ import {Exercise} from './entities/exercise.entity';
 @Controller('exercise')
 @ApiTags('Exercise')
 export class ExerciseController {
-  constructor(private readonly exerciseService: ExerciseService) {}
+  constructor(private readonly exerciseService: ExerciseService) { }
 
   @Post()
   @ApiDocs.create('운동 목록 생성 API')
@@ -25,13 +25,22 @@ export class ExerciseController {
   }
 
   @Get()
-  findAll() {
-    return this.exerciseService.findAll();
+  findAll(
+    @Query('partList', new ParseArrayPipe({
+      optional: true,
+      items: String,
+      separator: ',',
+    }))
+    partList: string[],
+  ) {
+    return this.exerciseService.findAll(
+      partList
+    );
   }
 
   @Get('suggestion')
   findSuggestion(@Req() req, @Query('from') from: string,
-      @Query('to') to: string) {
+    @Query('to') to: string) {
     return this.exerciseService.findSuggestion(req.user, from, to);
   }
 

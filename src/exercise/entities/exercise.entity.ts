@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   OneToMany,
@@ -51,14 +52,17 @@ export class Exercise {
   /* Relations */
 
   @OneToMany(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.exercise)
+    (exerciseHistory) => exerciseHistory.exercise)
   exerciseHistoryList: ExerciseHistory[];
 
   @OneToMany(() => Feedback,
-      (feedback) => feedback.exercise)
+    (feedback) => feedback.exercise)
   feedbackList: Feedback[];
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;

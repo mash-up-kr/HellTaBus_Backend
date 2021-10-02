@@ -1,26 +1,24 @@
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {Repository} from 'typeorm';
+import {In, Repository, Between} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {User} from '../user/entities/user.entity';
 import * as dayjs from 'dayjs';
 import {HealthPart, HealthStyle} from '../constants';
-import {InjectRepository} from '@nestjs/typeorm';
-import {Exercise} from './entities/exercise.entity';
-import {Between, Repository} from 'typeorm';
 import {ExerciseHistory} from '../exercise-history/entities/exercise-history.entity';
+import {Exercise} from './entities/exercise.entity';
 
 @Injectable()
 export class ExerciseService {
   constructor(
-      @InjectRepository(Exercise)
-      private readonly exerciseRepository: Repository<Exercise>,
-      @InjectRepository(ExerciseHistory)
-      private readonly exerciseHistoryRepository: Repository<ExerciseHistory>,
-      @InjectRepository(User)
-      private readonly userRepository: Repository<User>,
-  ) {}
+    @InjectRepository(Exercise)
+    private readonly exerciseRepository: Repository<Exercise>,
+    @InjectRepository(ExerciseHistory)
+    private readonly exerciseHistoryRepository: Repository<ExerciseHistory>,
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+  ) { }
 
   async create(createExerciseDto: CreateExerciseDto) {
     const createExercise = await this.exerciseRepository.save({
@@ -37,9 +35,30 @@ export class ExerciseService {
     });
 
     return createExercise;
+  }
 
-  findAll() {
-    return `This action returns all exercise`;
+  async findAll(partList: string[]) {
+    if (partList[0] === '') {
+      return await this.exerciseRepository.find({
+        relations: ['feedback'],
+      });
+    } else {
+      return await this.exerciseRepository.find({
+        where: {
+          part: In(partList),
+        },
+        relations: ['feedback'],
+      });
+    }
+  }
+
+  async findOne(id: number) {
+    return await this.exerciseRepository.findOne({
+      where: {
+        id,
+      },
+      relations: ['feedback'],
+    });
   }
 
   async findSuggestion(user: User, from: string, to: string) {
@@ -92,16 +111,13 @@ export class ExerciseService {
     };
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} exercise`;
-  }
 
   async update(id: number, updateExerciseDto: UpdateExerciseDto) {
     await this.exerciseRepository.update(id, updateExerciseDto);
     return `This action updates a #${id} exercise`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} exercise`;
+  async remove(id: number) {
+    await this.exerciseRepository.delete(id);
   }
 }
