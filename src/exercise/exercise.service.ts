@@ -75,7 +75,7 @@ export class ExerciseService {
     return {
       suggestionPartList,
       suggestionExerciseList,
-    }
+    };
   }
 
   findOne(id: number) {

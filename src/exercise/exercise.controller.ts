@@ -1,4 +1,4 @@
-import {Controller, Get, Post, Body, Patch, Param, Delete, Req, Query} from '@nestjs/common';
+import {Controller, Get, Post, Body, Param, Delete, Req, Query} from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 
