@@ -1,27 +1,27 @@
 enum HealthStyle {
-  FULL_BODY_WORKOUT, // 무분할
-  SPLIT_3_DAY_WORKOUT, // 3분할
-  SPLIT_5_DAY_WORKOUT, // 5분할
+  FULL_BODY_WORKOUT = 'FULL_BODY_WORKOUT', // 무분할
+  SPLIT_3_DAY_WORKOUT = 'SPLIT_3_DAY_WORKOUT', // 3분할
+  SPLIT_5_DAY_WORKOUT = 'SPLIT_5_DAY_WORKOUT', // 5분할
 }
 
 enum HealthPart {
-  LOWER, // 하체
-  BACK, // 등
-  CHEST, // 가슴
-  SHOULDER, // 어깨
-  BICEPS, // 이두
-  TRICEPS, // 삼두
+  LOWER = 'LOWER', // 하체
+  BACK = 'BACK', // 등
+  CHEST= 'CHEST', // 가슴
+  SHOULDER = 'SHOULDER', // 어깨
+  BICEPS = 'BICEPS', // 이두
+  TRICEPS = 'TRICEPS', // 삼두
 }
 
 enum FeedbackDifficulty {
-  EASY,
-  NORMAL,
-  HARD,
+  EASY = 'EASY',
+  NORMAL = 'NORMAL',
+  HARD = 'HARD',
 }
 
 enum Gender {
-  MALE,
-  FEMALE,
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
 }
 
 export {
