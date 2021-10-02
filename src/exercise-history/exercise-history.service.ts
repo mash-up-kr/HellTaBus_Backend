@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { CreateExerciseHistoryDto } from './dto/create-exercise-history.dto';
-import { UpdateExerciseHistoryDto } from './dto/update-exercise-history.dto';
+import {Injectable} from '@nestjs/common';
+import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
+import {UpdateExerciseHistoryDto} from './dto/update-exercise-history.dto';
 
 @Injectable()
 export class ExerciseHistoryService {

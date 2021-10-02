@@ -23,10 +23,10 @@ export class Feedback {
 
   /* Relations */
 
-  @ManyToOne(() => User, user => user.feedbackList)
+  @ManyToOne(() => User, (user) => user.feedbackList)
   user: User;
 
-  @ManyToOne(() => Exercise, exercise => exercise.feedbackList)
+  @ManyToOne(() => Exercise, (exercise) => exercise.feedbackList)
   exercise: Exercise;
 
   /* Date Columns */

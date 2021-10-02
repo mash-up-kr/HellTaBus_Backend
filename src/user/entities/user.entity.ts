@@ -59,11 +59,11 @@ export class User {
   /* Relations */
 
   @OneToMany(() => ExerciseHistory,
-      exerciseHistory => exerciseHistory.user)
+      (exerciseHistory) => exerciseHistory.user)
   exerciseHistoryList: ExerciseHistory[];
 
   @OneToMany(() => Feedback,
-      feedback => feedback.user)
+      (feedback) => feedback.user)
   feedbackList: Feedback[];
 
   /* Date Columns */
@@ -73,6 +73,5 @@ export class User {
 
   @DeleteDateColumn()
   deletedAt: Date | null;
-
 }
 

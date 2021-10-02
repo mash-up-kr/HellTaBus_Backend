@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { CreateFeedbackDto } from './dto/create-feedback.dto';
-import { UpdateFeedbackDto } from './dto/update-feedback.dto';
+import {Injectable} from '@nestjs/common';
+import {CreateFeedbackDto} from './dto/create-feedback.dto';
+import {UpdateFeedbackDto} from './dto/update-feedback.dto';
 
 @Injectable()
 export class FeedbackService {

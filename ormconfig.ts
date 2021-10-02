@@ -16,6 +16,6 @@ export function getConfig(): TypeOrmModuleOptions {
     },
     autoLoadEntities: true,
     charset: 'utf8mb4',
-    synchronize: false,
+    synchronize: true,
   };
 }

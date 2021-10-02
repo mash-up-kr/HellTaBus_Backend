@@ -23,14 +23,14 @@ export class ExerciseHistory {
 
   /* Relations */
 
-  @ManyToOne(() => User, user => user.exerciseHistoryList)
+  @ManyToOne(() => User, (user) => user.exerciseHistoryList)
   user: User;
 
-  @ManyToOne(() => Exercise, exercise => exercise.exerciseHistoryList)
+  @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList)
   exercise: Exercise;
 
   @OneToMany(() => Set,
-      set => set.exerciseHistory)
+      (set) => set.exerciseHistory)
   setList: Set[];
 
   /* Date Columns */
