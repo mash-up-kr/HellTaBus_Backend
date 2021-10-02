@@ -1,7 +1,4 @@
-import {
-  Controller, Get, Post, Body, Patch,
-  Param, Delete, Query, ParseArrayPipe,
-} from '@nestjs/common';
+import {Controller, Get, Post, Body, Param, Delete, Req, Query} from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 
@@ -29,8 +26,9 @@ export class ExerciseController {
   }
 
   @Get('suggestion')
-  findSuggestion() {
-    return this.exerciseService.findSuggestion();
+  findSuggestion(@Req() req, @Query('from') from: string,
+    @Query('to') to: string) {
+    return this.exerciseService.findSuggestion(req.user, from, to);
   }
 
   @Delete(':id')

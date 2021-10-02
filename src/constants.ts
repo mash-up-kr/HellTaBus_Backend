@@ -11,6 +11,7 @@ enum HealthPart {
   SHOULDER, // 어깨
   BICEPS, // 이두
   TRICEPS, // 삼두
+  ARM, // 팔 운동 (이두 + 삼두)
 }
 
 enum FeedbackDifficulty {
