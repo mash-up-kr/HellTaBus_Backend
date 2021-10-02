@@ -28,6 +28,9 @@ export class Exercise {
   baseCount: number; // 기본 횟수
 
   @Column()
+  setCount: number; // 기본 세트 수
+
+  @Column()
   startWeight: number; // 시작 중량
 
   @Column()

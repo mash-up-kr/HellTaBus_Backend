@@ -1,4 +1,6 @@
 import {Injectable} from '@nestjs/common';
+import {InjectRepository} from '@nestjs/typeorm';
+import {Repository} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {User} from '../user/entities/user.entity';
@@ -20,9 +22,21 @@ export class ExerciseService {
       private readonly userRepository: Repository<User>,
   ) {}
 
-  create(createExerciseDto: CreateExerciseDto) {
-    return 'This action adds a new exercise';
-  }
+  async create(createExerciseDto: CreateExerciseDto) {
+    const createExercise = await this.exerciseRepository.save({
+      name: createExerciseDto.name,
+      priority: createExerciseDto.priority,
+      part: createExerciseDto.part,
+      baseCount: createExerciseDto.baseCount,
+      setCount: createExerciseDto.setCount,
+      startWeight: createExerciseDto.startWeight,
+      changeWeight: createExerciseDto.changeWeight,
+      setBreakTime: createExerciseDto.setBreakTime,
+      breakTime: createExerciseDto.breakTime,
+      imageLink: createExerciseDto.imageLink,
+    });
+
+    return createExercise;
 
   findAll() {
     return `This action returns all exercise`;
@@ -82,7 +96,8 @@ export class ExerciseService {
     return `This action returns a #${id} exercise`;
   }
 
-  update(id: number, updateExerciseDto: UpdateExerciseDto) {
+  async update(id: number, updateExerciseDto: UpdateExerciseDto) {
+    await this.exerciseRepository.update(id, updateExerciseDto);
     return `This action updates a #${id} exercise`;
   }
 
