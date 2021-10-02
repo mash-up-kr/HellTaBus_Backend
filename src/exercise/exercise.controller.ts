@@ -1,13 +1,6 @@
 import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Param,
-  Delete,
-  Req,
-  Query,
-  ParseArrayPipe, Patch,
+  Controller, Get, Post, Body,
+  Param, Delete, Req, Query, ParseArrayPipe,
 } from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
@@ -36,6 +29,7 @@ export class ExerciseController {
 
   @Get()
   findAll(
+    @Req() req,
     @Query('partList', new ParseArrayPipe({
       optional: true,
       items: String,
@@ -44,7 +38,7 @@ export class ExerciseController {
         partList: string[],
   ) {
     return this.exerciseService.findAll(
-        partList
+        req.id, partList
     );
   }
 
