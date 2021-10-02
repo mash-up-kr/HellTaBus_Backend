@@ -1,11 +1,18 @@
-import {BadRequestException, Injectable} from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  InternalServerErrorException,
+  NotFoundException,
+} from '@nestjs/common';
 import {UpdateUserDto} from './dto/update-user.dto';
 import {JwtService} from '@nestjs/jwt';
 import {InjectRepository} from '@nestjs/typeorm';
 import {User} from './entities/user.entity';
 import {Repository} from 'typeorm';
 import {Err} from '../error';
-import {Gender, HealthStyle} from '../constants';
+import verifyGoogle from './util/google';
+import {GoogleUserDto} from './dto/google-user.dto';
+import {JwtSignOptions} from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 
 @Injectable()
 export class UserService {
@@ -15,49 +22,67 @@ export class UserService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async create(req) {
-    // TODO: req dto 생성
-    const token = await this.jwtService.decode(req.idToken);
+  async create(googleUserDto: GoogleUserDto) {
+    const payload = await verifyGoogle(googleUserDto.idToken);
 
-    const googleToken = JSON.parse(JSON.stringify(token));
-
-    // TODO: expire 체크
-    if (!googleToken) throw new BadRequestException(Err.TOKEN.INVALID);
-    console.log(googleToken);
-    const existingUser = await this.findUserBySub(googleToken.sub);
-
-    if (existingUser) throw new BadRequestException(Err.USER.EXISTING_USER);
-
-    if (!req.gender.includes(Gender)) {
-      throw new BadRequestException(Err.USER.GENDER_INVALID);
+    if (payload.email_verified !== true) {
+      throw new BadRequestException(Err.USER.GOOGLE_EMAIL_NOT_VERIFIED);
     }
 
-    if (!req.healthStyle.includes(HealthStyle)) {
-      throw new BadRequestException(Err.USER.HEALTH_STYLE_INVALID);
-    }
+    const existingUser = await this.userRepository.findOne({
+      where: [
+        {googleAccount: payload.sub},
+        {email: payload.email},
+      ],
+    });
+
+    if (existingUser) throw new BadRequestException(Err.USER.ALREADY_EXIST);
 
     const createdUser = await this.userRepository.save({
-      email: googleToken.email,
-      googleAccount: googleToken.sub,
-      nickname: req.nickname,
-      gender: req.gender,
-      age: req.age,
-      height: req.height,
-      weight: req.weight,
-      healthStyle: req.healthStyle,
+      email: payload.email,
+      googleAccount: payload.sub,
     });
 
-    return createdUser;
+    return {
+      id: createdUser.id,
+    };
   }
 
-  async findUserBySub(sub: string) {
+  async login(googleUserDto: GoogleUserDto) {
+    const payload = await verifyGoogle(googleUserDto.idToken);
+
+    if (payload.email_verified !== true) {
+      throw new BadRequestException(Err.USER.GOOGLE_EMAIL_NOT_VERIFIED);
+    }
+
+    const googleAccount = payload.sub;
+
     const user = await this.userRepository.findOne({
-      where: {
-        googleAccount: sub,
-      },
+      where: {googleAccount},
     });
 
-    return user;
+    if (!user) throw new NotFoundException(Err.USER.NOT_FOUND);
+
+    const accessTokenData = {
+      userId: user.id,
+    };
+
+    let accessToken;
+    try {
+      const options: JwtSignOptions = {
+        algorithm: 'HS512',
+        expiresIn: '100d',
+        issuer: 'helltabus',
+      };
+      accessToken = this.jwtService.sign(accessTokenData, options);
+    } catch (e) {
+      console.log(e);
+      throw new InternalServerErrorException(Err.SERVER.UNEXPECTED_ERROR);
+    }
+
+    return {
+      accessToken,
+    };
   }
 
   findAll() {

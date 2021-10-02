@@ -15,7 +15,9 @@ export class User {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   nickname: string;
 
   @Column({
@@ -32,27 +34,32 @@ export class User {
   @Column({
     type: 'enum',
     enum: Gender,
+    nullable: true,
   })
   gender: Gender;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   age: number;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   height: number;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   weight: number;
 
   @Column({
     type: 'enum',
     enum: HealthStyle,
+    nullable: true,
   })
   healthStyle: HealthStyle;
 
