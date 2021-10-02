@@ -35,12 +35,16 @@ export class ExerciseService {
     } else {
       const exerciseList = await Promise.all(partList.map(async (part) => {
         const exerciseEntity = await this.exerciseRepository.findOne({
+          relations: ['feedback'],
           where: {
             part,
+            feedbackList: {
+              user: {
+                id: userId,
+              },
+            },
           },
-          relations: ['feedback'],
         });
-        exerciseEntity.feedbackList.
         return exerciseEntity;
       }));
       return exerciseList;
