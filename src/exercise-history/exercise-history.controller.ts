@@ -18,7 +18,7 @@ export class ExerciseHistoryController {
       items: Number,
       separator: ',',
     }))
-    exerciseIdList: number[],
+        exerciseIdList: number[],
     @Query('duration') duration: string
   ) {
     return this.exerciseHistoryService.findAll(exerciseIdList, duration);
