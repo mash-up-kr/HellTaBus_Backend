@@ -18,5 +18,6 @@ import {Exercise} from './entities/exercise.entity';
 >>>>>>> 0e3699afa7552cff75f75c6beae1a52ed22d2845
   controllers: [ExerciseController],
   providers: [ExerciseService],
+  exports: [ExerciseService],
 })
 export class ExerciseModule { }
