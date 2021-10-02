@@ -21,7 +21,20 @@ export class ExerciseService {
   ) { }
 
   async create(createExerciseDto: CreateExerciseDto) {
-    return await this.exerciseRepository.save(createExerciseDto);
+    const createExercise = await this.exerciseRepository.save({
+      name: createExerciseDto.name,
+      priority: createExerciseDto.priority,
+      part: createExerciseDto.part,
+      baseCount: createExerciseDto.baseCount,
+      setCount: createExerciseDto.setCount,
+      startWeight: createExerciseDto.startWeight,
+      changeWeight: createExerciseDto.changeWeight,
+      setBreakTime: createExerciseDto.setBreakTime,
+      breakTime: createExerciseDto.breakTime,
+      imageLink: createExerciseDto.imageLink,
+    });
+
+    return createExercise;
   }
 
   async findAll(userId: string, partList: string[]) {
@@ -108,7 +121,8 @@ export class ExerciseService {
 
 
   async update(id: number, updateExerciseDto: UpdateExerciseDto) {
-    return this.exerciseRepository.update(id, updateExerciseDto);
+    await this.exerciseRepository.update(id, updateExerciseDto);
+    return `This action updates a #${id} exercise`;
   }
 
   async remove(id: number) {
