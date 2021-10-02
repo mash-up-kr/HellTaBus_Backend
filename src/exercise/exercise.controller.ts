@@ -1,6 +1,6 @@
 import {
   Controller, Get, Post, Body,
-  Param, Delete, Req, Query, ParseArrayPipe,
+  Param, Delete, Req, Query, ParseArrayPipe, Patch,
 } from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
