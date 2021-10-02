@@ -24,18 +24,26 @@ export class ExerciseService {
     return await this.exerciseRepository.save(createExerciseDto);
   }
 
-  async findAll(partList: string[]) {
+  async findAll(userId: string, partList: string[]) {
+    const exercise = new Exercise();
+
+    exercise.feedbackList;
     if (partList[0] === '') {
       return await this.exerciseRepository.find({
         relations: ['feedback'],
       });
     } else {
-      return await this.exerciseRepository.find({
-        where: {
-          part: In(partList),
-        },
-        relations: ['feedback'],
-      });
+      const exerciseList = await Promise.all(partList.map(async (part) => {
+        const exerciseEntity = await this.exerciseRepository.findOne({
+          where: {
+            part,
+          },
+          relations: ['feedback'],
+        });
+        exerciseEntity.feedbackList.
+        return exerciseEntity;
+      }));
+      return exerciseList;
     }
   }
 

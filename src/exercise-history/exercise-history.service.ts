@@ -16,27 +16,35 @@ export class ExerciseHistoryService {
     return await this.ExerciseHistoryRepository.save(createExerciseHistoryDto);
   }
 
-  async findAll(exerciseIdList: number[], duration: string) {
-    let start, end;
+  async findAll(exerciseIdList: number[], userId: number,
+      duration: string, from: string, to: string) {
     if (duration === 'recent') {
-      return await this.ExerciseHistoryRepository.findOne({
-        where: {
-          id: In(exerciseIdList),
-        },
-        order: {
-          updatedAt: 'DESC',
-        },
-      });
+      const exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+        const exerciseHistory = await this.ExerciseHistoryRepository.findOne({
+          where: {
+            id: exerciseId,
+            userId,
+          },
+          order: {
+            createdAt: 'DESC',
+          },
+        });
+        return exerciseHistory;
+      }));
+      return exerciseHistoryList;
     } else {
-      return await this.ExerciseHistoryRepository.find({
-        where: {
-          updatedAt: Between(start, end)
-          id: In(exerciseIdList),
-        },
-        order: {
-          updatedAt: 'DESC',
-        },
-      });
+      const exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+        const exerciseHistory = await this.ExerciseHistoryRepository.findOne({
+          where: {
+            id: exerciseId,
+            userId,
+            startTime: Between(from, to),
+          },
+          select: ['createdAt'],
+        });
+        return exerciseHistory;
+      }));
+      return exerciseHistoryList;
     }
   }
 

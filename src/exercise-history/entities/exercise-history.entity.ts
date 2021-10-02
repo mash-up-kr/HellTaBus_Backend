@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   ManyToOne, OneToMany,
@@ -34,6 +35,9 @@ export class ExerciseHistory {
   setList: Set[];
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
