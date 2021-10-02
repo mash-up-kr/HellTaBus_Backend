@@ -3,11 +3,11 @@ import {AppController} from './app.controller';
 import {AppService} from './app.service';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {ConfigModule} from '@nestjs/config';
-import {getConfig} from '../ormconfig';
 import {ExerciseModule} from './exercise/exercise.module';
 import {UserModule} from './user/user.module';
 import {ExerciseHistoryModule} from './exercise-history/exercise-history.module';
 import {FeedbackModule} from './feedback/feedback.module';
+import * as ormconfig from '../ormconfig';
 
 @Module({
   imports: [
@@ -15,7 +15,7 @@ import {FeedbackModule} from './feedback/feedback.module';
       isGlobal: true,
       envFilePath: '.env',
     }),
-    TypeOrmModule.forRoot(getConfig()),
+    TypeOrmModule.forRoot(ormconfig),
     ExerciseModule,
     UserModule,
     ExerciseHistoryModule,

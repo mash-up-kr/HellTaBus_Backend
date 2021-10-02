@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   OneToMany,
@@ -26,6 +27,9 @@ export class Exercise {
 
   @Column()
   baseCount: number; // 기본 횟수
+
+  @Column()
+  setCount: number; // 기본 세트 수
 
   @Column()
   startWeight: number; // 시작 중량
@@ -56,6 +60,9 @@ export class Exercise {
   feedbackList: Feedback[];
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
