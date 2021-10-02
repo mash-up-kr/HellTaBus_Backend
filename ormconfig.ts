@@ -1,4 +1,4 @@
-import {TypeOrmModule, TypeOrmModuleOptions} from '@nestjs/typeorm';
+import {TypeOrmModuleOptions} from '@nestjs/typeorm';
 import * as path from 'path';
 
 export function getConfig(): TypeOrmModuleOptions {
