@@ -163,7 +163,7 @@ export const ExerciseSeed = [
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
-  },{
+  }, {
     name: '덤벨 플라이',
     priority: 2,
     part: 'CHEST',
@@ -375,5 +375,3 @@ export const ExerciseSeed = [
     deletedAt: null,
   },
 ];
-
-module.exports = ExerciseSeed;
