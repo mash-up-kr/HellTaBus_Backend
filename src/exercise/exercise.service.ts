@@ -53,22 +53,16 @@ export class ExerciseService {
           .where('feedbackList.userId = :userId', {userId})
           .getMany();
     } else {
-      exerciseList = await Promise.all(partList.map(async (part) => {
-        const exerciseEntity = await this.exerciseRepository
-            .createQueryBuilder('exercise')
-            .where('exercise.part = :part', {part})
-            .getMany();
-        return exerciseEntity;
-      }));
-      feedbackList = await Promise.all(partList.map(async (part) => {
-        const feedbackEntity = await this.exerciseRepository
-            .createQueryBuilder('exercise')
-            .innerJoinAndSelect('exercise.feedbackList', 'feedbackList')
-            .where('feedbackList.userId = :userId', {userId})
-            .andWhere('exercise.part = :part', {part})
-            .getMany();
-        return feedbackEntity;
-      }));
+      exerciseList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .where('exercise.part In (:partList)', {partList})
+          .getMany();
+      feedbackList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .innerJoinAndSelect('exercise.feedbackList', 'feedbackList')
+          .where('feedbackList.userId = :userId', {userId})
+          .andWhere('exercise.part In (:partList)', {partList})
+          .getMany();
     }
     for (const idx in feedbackList) {
       if (feedbackList.hasOwnProperty(idx)) {
@@ -76,14 +70,6 @@ export class ExerciseService {
       }
     }
     return exerciseList;
-  }
-
-  async findOne(id: number) {
-    return await this.exerciseRepository.findOne({
-      where: {
-        id,
-      },
-    });
   }
 
   async findSuggestion(user: User, from: string, to: string) {
