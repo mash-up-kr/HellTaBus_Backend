@@ -19,23 +19,29 @@ export class ExerciseHistoryService {
 
   async findAll(exerciseIdList: number[], userId: number,
       duration: string, from: string, to: string) {
-    const user = 1;
     let exerciseHistoryList;
     if (duration === 'recent') {
-      exerciseHistoryList = await this.ExerciseHistoryRepository
-          .createQueryBuilder('exerciseHistory')
-          .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
-          .leftJoinAndSelect('exerciseHistory.setList', 'setList')
-          .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
-          .andWhere('exerciseHistory.userId = :userId', {userId})
-          .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
-          .orderBy('exerciseHistory.updatedAt', 'DESC')
-          .getRawOne();
+      exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+        const exerciseHistorykEntity = await this.ExerciseHistoryRepository
+            .createQueryBuilder('exerciseHistory')
+            .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
+            .leftJoinAndSelect('exerciseHistory.setList', 'setList')
+            .select(['exerciseHistory.startTime', 'exercise.id',
+              'exercise.name', 'setList.index', 'setList.weight'])
+            .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
+            .andWhere('exerciseHistory.userId = :userId', {userId})
+            .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
+            .orderBy('exerciseHistory.updatedAt', 'DESC')
+            .getOne();
+        return exerciseHistorykEntity;
+      }));
     } else {
       exerciseHistoryList = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
           .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
           .leftJoinAndSelect('exerciseHistory.setList', 'setList')
+          .select(['exerciseHistory.startTime', 'exercise.id',
+            'exercise.name', 'setList.index', 'setList.weight'])
           .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
           .andWhere('exerciseHistory.userId = :userId', {userId})
           .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
