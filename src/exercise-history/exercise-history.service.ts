@@ -1,5 +1,6 @@
 import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
+import {filter} from 'rxjs';
 import {Between, CreateDateColumn, In, Repository} from 'typeorm';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {UpdateExerciseHistoryDto} from './dto/update-exercise-history.dto';
@@ -18,34 +19,37 @@ export class ExerciseHistoryService {
 
   async findAll(exerciseIdList: number[], userId: number,
       duration: string, from: string, to: string) {
+    let exerciseHistoryList;
     if (duration === 'recent') {
-      const exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
-        const exerciseHistory = await this.ExerciseHistoryRepository.findOne({
-          where: {
-            id: exerciseId,
-            userId,
-          },
-          order: {
-            createdAt: 'DESC',
-          },
-        });
-        return exerciseHistory;
+      exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+        const exerciseHistorykEntity = await this.ExerciseHistoryRepository
+            .createQueryBuilder('exerciseHistory')
+            .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
+            .leftJoinAndSelect('exerciseHistory.setList', 'setList')
+            .select(['exerciseHistory.startTime', 'exercise.id',
+              'exercise.name', 'setList.index', 'setList.weight'])
+            .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
+            .andWhere('exerciseHistory.userId = :userId', {userId})
+            .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
+            .orderBy('exerciseHistory.updatedAt', 'DESC')
+            .getOne();
+        return exerciseHistorykEntity;
       }));
-      return exerciseHistoryList;
     } else {
-      const exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
-        const exerciseHistory = await this.ExerciseHistoryRepository.findOne({
-          where: {
-            id: exerciseId,
-            userId,
-            startTime: Between(from, to),
-          },
-          select: ['createdAt'],
-        });
-        return exerciseHistory;
-      }));
-      return exerciseHistoryList;
+      exerciseHistoryList = await this.ExerciseHistoryRepository
+          .createQueryBuilder('exerciseHistory')
+          .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
+          .leftJoinAndSelect('exerciseHistory.setList', 'setList')
+          .select(['exerciseHistory.startTime', 'exercise.id',
+            'exercise.name', 'setList.index', 'setList.weight'])
+          .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
+          .andWhere('exerciseHistory.userId = :userId', {userId})
+          .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
+          .andWhere(`exerciseHistory.updatedAt 
+          BETWEEN '${from}' AND '${to}'`)
+          .getMany();
     }
+    return exerciseHistoryList;
   }
 
   findOne(id: number) {

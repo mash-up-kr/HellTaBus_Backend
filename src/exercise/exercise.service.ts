@@ -1,6 +1,6 @@
-import {Injectable} from '@nestjs/common';
+import {Injectable, Query} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {In, Repository, Between} from 'typeorm';
+import {In, Repository, Between, EntityManager} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {User} from '../user/entities/user.entity';
@@ -8,6 +8,7 @@ import * as dayjs from 'dayjs';
 import {HealthPart, HealthStyle} from '../constants';
 import {ExerciseHistory} from '../exercise-history/entities/exercise-history.entity';
 import {Exercise} from './entities/exercise.entity';
+import {Feedback} from './../feedback/entities/feedback.entity';
 
 @Injectable()
 export class ExerciseService {
@@ -18,6 +19,8 @@ export class ExerciseService {
     private readonly exerciseHistoryRepository: Repository<ExerciseHistory>,
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
+    @InjectRepository(Feedback)
+    private readonly feedbackRepository: Repository<Feedback>,
   ) { }
 
   async create(createExerciseDto: CreateExerciseDto) {
@@ -37,40 +40,36 @@ export class ExerciseService {
     return createExercise;
   }
 
-  async findAll(userId: string, partList: string[]) {
-    const exercise = new Exercise();
-
-    exercise.feedbackList;
+  async findAll(userId: number, partList: string[]) {
+    let exerciseList;
+    let feedbackList;
     if (partList[0] === '') {
-      return await this.exerciseRepository.find({
-        relations: ['feedback'],
-      });
+      exerciseList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .getMany();
+      feedbackList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .innerJoinAndSelect('exercise.feedbackList', 'feedback')
+          .where('feedback.userId = :userId', {userId})
+          .getMany();
     } else {
-      const exerciseList = await Promise.all(partList.map(async (part) => {
-        const exerciseEntity = await this.exerciseRepository.findOne({
-          relations: ['feedback'],
-          where: {
-            part,
-            feedbackList: {
-              user: {
-                id: userId,
-              },
-            },
-          },
-        });
-        return exerciseEntity;
-      }));
-      return exerciseList;
+      exerciseList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .where('exercise.part In (:partList)', {partList})
+          .getMany();
+      feedbackList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .innerJoinAndSelect('exercise.feedbackList', 'feedback')
+          .where('feedback.userId = :userId', {userId})
+          .andWhere('exercise.part In (:partList)', {partList})
+          .getMany();
     }
-  }
-
-  async findOne(id: number) {
-    return await this.exerciseRepository.findOne({
-      where: {
-        id,
-      },
-      relations: ['feedback'],
-    });
+    for (const idx in feedbackList) {
+      if (feedbackList.hasOwnProperty(idx)) {
+        Object.assign(exerciseList[idx], feedbackList[idx]);
+      }
+    }
+    return exerciseList;
   }
 
   async findSuggestion(user: User, from: string, to: string) {

@@ -14,6 +14,7 @@ const config: TypeOrmModuleOptions = {
     migrationsDir: __dirname + '/src/migrations',
   },
   autoLoadEntities: true,
+  timezone: 'Z',
   charset: 'utf8mb4',
   synchronize: false,
 };
