@@ -40,7 +40,7 @@ export class ExerciseService {
     return createExercise;
   }
 
-  async findAll(userId: number, partList: string[]) {
+  async findAll(user: User, partList: string[]) {
     let exerciseList;
     let feedbackList;
     if (partList[0] === '') {
@@ -50,7 +50,7 @@ export class ExerciseService {
       feedbackList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId: 1})
+          .where('feedback.userId = :userId', {userId: user.id})
           .getMany();
     } else {
       exerciseList = await this.exerciseRepository
@@ -60,7 +60,7 @@ export class ExerciseService {
       feedbackList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId: 1})
+          .where('feedback.userId = :userId', {userId: user.id})
           .andWhere('exercise.part In (:partList)', {partList})
           .getMany();
     }

@@ -10,7 +10,7 @@ export const ApiDocs: SwaggerMethodDoc<FeedbackController> = {
   create(summary) {
     return applyDecorators(
         ApiOperation({
-          summary, // '운동 목록 생성 API',
+          summary,
           description: '새로운 운동 로직을 생성합니다.',
         }),
         ApiCreatedResponse({
