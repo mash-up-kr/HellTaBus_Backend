@@ -5,6 +5,7 @@ import {Between, CreateDateColumn, In, Repository} from 'typeorm';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {UpdateExerciseHistoryDto} from './dto/update-exercise-history.dto';
 import {ExerciseHistory} from './entities/exercise-history.entity';
+import {User} from './../user/entities/user.entity';
 
 @Injectable()
 export class ExerciseHistoryService {
@@ -17,7 +18,7 @@ export class ExerciseHistoryService {
     return await this.ExerciseHistoryRepository.save(createExerciseHistoryDto);
   }
 
-  async findAll(exerciseIdList: number[], userId: number,
+  async findAll(exerciseIdList: number[], user: User,
       duration: string, from: string, to: string) {
     let exerciseHistoryList;
     if (duration === 'recent') {
@@ -29,7 +30,7 @@ export class ExerciseHistoryService {
             .select(['exerciseHistory.startTime', 'exercise.id',
               'exercise.name', 'setList.index', 'setList.weight'])
             .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
-            .andWhere('exerciseHistory.userId = :userId', {userId})
+            .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
             .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
             .orderBy('exerciseHistory.updatedAt', 'DESC')
             .getOne();
@@ -43,7 +44,7 @@ export class ExerciseHistoryService {
           .select(['exerciseHistory.startTime', 'exercise.id',
             'exercise.name', 'setList.index', 'setList.weight'])
           .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
-          .andWhere('exerciseHistory.userId = :userId', {userId})
+          .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
           .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
           .andWhere(`exerciseHistory.updatedAt 
           BETWEEN '${from}' AND '${to}'`)

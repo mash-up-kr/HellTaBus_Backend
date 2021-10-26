@@ -1,5 +1,5 @@
-import {applyDecorators} from '@nestjs/common';
-import {ApiCreatedResponse, ApiOperation, ApiResponse} from '@nestjs/swagger';
+import {applyDecorators, Param} from '@nestjs/common';
+import {ApiCreatedResponse, ApiOperation, ApiParam, ApiQuery, ApiResponse} from '@nestjs/swagger';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {ExerciseController} from './exercise.controller';
@@ -12,7 +12,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
   create(summary) {
     return applyDecorators(
         ApiOperation({
-          summary, // '운동 목록 생성 API',
+          summary,
           description: '새로운 운동 로직을 생성합니다.',
         }),
         ApiCreatedResponse({
@@ -28,20 +28,37 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
   },
   findAll(summary: string) {
     return applyDecorators(
-        ApiResponse({status: 403, description: 'Forbidden.'}),
         ApiOperation({
           summary,
-          /** '모든 사용자 조회' */ description: '모든 운동 로직을 조회합니다.',
+          description: '운동 로직을 조회합니다.',
         }),
+        ApiQuery(
+            {
+              name: 'partList',
+              required: true,
+              type: String,
+              description: '조회하고 싶은 운동 부위 목록',
+              example: 'lower,back',
+            },
+        ),
+        ApiResponse({
+          status: 201,
+          description: 'The record has been successfully created.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
   findSuggestion(summary: string) {
     return applyDecorators(
-        ApiResponse({status: 403, description: 'Forbidden.'}),
         ApiOperation({
           summary,
           description: '특정 id에 해당하는 운동 로직만 조회합니다.',
         }),
+        ApiResponse({
+          status: 201,
+          description: 'The record has been successfully created.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
   update(summary: string) {
@@ -63,11 +80,15 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
   },
   remove(summary: string) {
     return applyDecorators(
-        ApiResponse({status: 403, description: 'Forbidden.'}),
         ApiOperation({
           summary,
           description: '특정 id에 해당하는 운동 로직을 삭제합니다.',
         }),
+        ApiResponse({
+          status: 201,
+          description: 'The record has been successfully created.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
 };
