@@ -19,36 +19,36 @@ export class ExerciseHistoryService {
   }
 
   async findAll(exerciseIdList: number[], user: User,
-    duration: string, from: string, to: string) {
+      duration: string, from: string, to: string) {
     let exerciseHistoryList;
     if (duration === 'recent') {
       exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
         const exerciseHistorykEntity = await this.ExerciseHistoryRepository
+            .createQueryBuilder('exerciseHistory')
+            .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
+            .leftJoinAndSelect('exerciseHistory.setList', 'setList')
+            .select(['exerciseHistory.startTime', 'exercise.id',
+              'exercise.name', 'setList.index', 'setList.weight'])
+            .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
+            .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
+            .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
+            .orderBy('exerciseHistory.updatedAt', 'DESC')
+            .getOne();
+        return exerciseHistorykEntity;
+      }));
+    } else {
+      exerciseHistoryList = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
           .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
           .leftJoinAndSelect('exerciseHistory.setList', 'setList')
           .select(['exerciseHistory.startTime', 'exercise.id',
             'exercise.name', 'setList.index', 'setList.weight'])
-          .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
+          .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
           .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
           .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
-          .orderBy('exerciseHistory.updatedAt', 'DESC')
-          .getOne();
-        return exerciseHistorykEntity;
-      }));
-    } else {
-      exerciseHistoryList = await this.ExerciseHistoryRepository
-        .createQueryBuilder('exerciseHistory')
-        .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
-        .leftJoinAndSelect('exerciseHistory.setList', 'setList')
-        .select(['exerciseHistory.startTime', 'exercise.id',
-          'exercise.name', 'setList.index', 'setList.weight'])
-        .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
-        .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-        .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
-        .andWhere(`exerciseHistory.updatedAt 
+          .andWhere(`exerciseHistory.updatedAt 
           BETWEEN '${from}' AND '${to}'`)
-        .getMany();
+          .getMany();
     }
     return exerciseHistoryList;
   }

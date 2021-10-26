@@ -24,7 +24,7 @@ export class ExerciseHistoryController {
       items: Number,
       separator: ',',
     }))
-    exerciseIdList: number[],
+        exerciseIdList: number[],
     @Query('duration') duration: string,
     @Query('from') from: string,
     @Query('to') to: string
