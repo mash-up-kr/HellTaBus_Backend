@@ -50,7 +50,7 @@ export class ExerciseService {
       feedbackList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId})
+          .where('feedback.userId = :userId', {userId: 1})
           .getMany();
     } else {
       exerciseList = await this.exerciseRepository
@@ -60,7 +60,7 @@ export class ExerciseService {
       feedbackList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId})
+          .where('feedback.userId = :userId', {userId: 1})
           .andWhere('exercise.part In (:partList)', {partList})
           .getMany();
     }

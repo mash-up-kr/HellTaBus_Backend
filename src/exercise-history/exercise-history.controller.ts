@@ -1,8 +1,10 @@
 import {Controller, Get, Post, Body, Query, ParseArrayPipe, Req} from '@nestjs/common';
 import {ExerciseHistoryService} from './exercise-history.service';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
+import {ApiTags} from '@nestjs/swagger';
 
 @Controller('exercise-history')
+@ApiTags('exercise')
 export class ExerciseHistoryController {
   constructor(private readonly exerciseHistoryService: ExerciseHistoryService) { }
 
@@ -19,7 +21,7 @@ export class ExerciseHistoryController {
       items: Number,
       separator: ',',
     }))
-        exerciseIdList: number[],
+    exerciseIdList: number[],
     @Query('duration') duration: string,
     @Query('from') from: string,
     @Query('to') to: string
