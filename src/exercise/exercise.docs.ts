@@ -36,6 +36,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
             {
               name: 'partList',
               required: true,
+              type: String,
               description: '조회하고 싶은 운동 부위 목록',
               example: 'lower,back',
             },
