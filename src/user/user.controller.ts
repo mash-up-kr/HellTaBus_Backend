@@ -2,7 +2,7 @@ import {Controller, Get, Post, Body, Patch} from '@nestjs/common';
 import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
-import { ApiTags } from '@nestjs/swagger';
+import {ApiTags} from '@nestjs/swagger';
 
 @Controller('user')
 @ApiTags('user')

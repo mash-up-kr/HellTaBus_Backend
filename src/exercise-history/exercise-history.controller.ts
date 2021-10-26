@@ -4,7 +4,7 @@ import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {ApiTags} from '@nestjs/swagger';
 
 @Controller('exercise-history')
-@ApiTags('exercise')
+@ApiTags('exercise-history')
 export class ExerciseHistoryController {
   constructor(private readonly exerciseHistoryService: ExerciseHistoryService) { }
 

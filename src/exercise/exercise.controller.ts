@@ -11,7 +11,7 @@ import {Exercise} from './entities/exercise.entity';
 
 
 @Controller('exercise')
-@ApiTags('Exercise')
+@ApiTags('exercise')
 export class ExerciseController {
   constructor(private readonly exerciseService: ExerciseService) { }
 
@@ -35,10 +35,10 @@ export class ExerciseController {
       items: String,
       separator: ',',
     }))
-        partList: string[],
+    partList: string[],
   ) {
     return this.exerciseService.findAll(
-        req.id, partList
+      req.id, partList
     );
   }
 
