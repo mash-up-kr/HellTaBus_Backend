@@ -5,6 +5,7 @@ import {JwtModule} from '@nestjs/jwt';
 import {JwtConstants} from '../auth/constant';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {User} from './entities/user.entity';
+import {JwtStrategy} from './jwt.strategy';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import {User} from './entities/user.entity';
     }),
   ],
   controllers: [UserController],
-  providers: [UserService],
+  providers: [UserService, JwtStrategy],
   exports: [JwtModule],
 })
 export class UserModule {}
