@@ -65,6 +65,7 @@ export class UserService {
 
     const accessTokenData = {
       userId: user.id,
+      email: user.email,
     };
 
     let accessToken;
