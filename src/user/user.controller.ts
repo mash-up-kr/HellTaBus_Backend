@@ -10,13 +10,13 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Post()
-  @ApiDocs.create('회원가입 API')
+  @ApiDocs.create('회원가입 API (Author by 소연)')
   create(@Body() googleUserDto: GoogleUserDto) {
     return this.userService.create(googleUserDto);
   }
 
   @Post('/login')
-  @ApiDocs.create('로그인 API')
+  @ApiDocs.login('로그인 API (Author by 소연)')
   async login(@Body() googleUserDto: GoogleUserDto) {
     return this.userService.login(googleUserDto);
   }
