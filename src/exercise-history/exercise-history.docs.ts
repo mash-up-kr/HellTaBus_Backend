@@ -1,5 +1,6 @@
 import {applyDecorators} from '@nestjs/common';
 import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/swagger';
+import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {ExerciseHistoryController} from './exercise-history.controller';
 
 type SwaggerMethodDoc<T> = {
@@ -11,8 +12,17 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: '새로운 운동 기록을 생성합니다.',
+          description: '운동 기록을 생성하는 API 입니다.',
         }),
+        ApiCreatedResponse({
+          description: '운동 기록 생성',
+          type: CreateExerciseHistoryDto,
+        }),
+        ApiResponse({
+          status: 201,
+          description: 'The record has been successfully created.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
   findAll(summary: string) {
