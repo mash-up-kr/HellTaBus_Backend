@@ -28,7 +28,7 @@ export class Set {
   /* Relations */
 
   @ManyToOne(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.setList)
+      (exerciseHistory) => exerciseHistory.setList, {nullable: false})
   exerciseHistory: ExerciseHistory;
 
   /* Date Columns */

@@ -10,7 +10,7 @@ import {JwtAuthGuard} from './jwt-auth.guard';
 @Controller('user')
 @ApiTags('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: UserService) { }
 
   @Post()
   @ApiDocs.create('회원가입 API (Author by 소연)')

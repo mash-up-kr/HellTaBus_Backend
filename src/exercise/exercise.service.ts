@@ -43,7 +43,6 @@ export class ExerciseService {
   async findAll(user: User, partList: string[]) {
     let exerciseList;
     let feedbackList;
-    console.log(partList);
     if (partList[0] === '') {
       exerciseList = await this.exerciseRepository
           .createQueryBuilder('exercise')

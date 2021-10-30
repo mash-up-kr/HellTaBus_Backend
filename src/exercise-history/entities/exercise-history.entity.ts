@@ -3,6 +3,7 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne, OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -27,11 +28,11 @@ export class ExerciseHistory {
   @ManyToOne(() => User, (user) => user.exerciseHistoryList)
   user: User;
 
-  @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList)
+  @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList, {nullable: false})
   exercise: Exercise;
 
   @OneToMany(() => Set,
-      (set) => set.exerciseHistory)
+      (set) => set.exerciseHistory, {nullable: false})
   setList: Set[];
 
   /* Date Columns */
