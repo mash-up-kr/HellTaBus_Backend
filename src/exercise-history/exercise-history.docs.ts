@@ -10,7 +10,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
   create(summary) {
     return applyDecorators(
         ApiOperation({
-          summary, // '운동 목록 생성 API',
+          summary,
           description: '새로운 운동 기록을 생성합니다.',
         }),
     );
@@ -19,7 +19,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          /** '모든 사용자 조회' */ description: '운동 기록을 조회합니다.',
+          description: '운동 기록을 조회합니다. 최신 운동기록 조회는 duration를 사용해주세요. 기간내 운동기록 조회는 from, to를 사용해주세요.',
         }),
         ApiQuery(
             {
@@ -34,7 +34,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
             {
               name: 'duration',
               required: false,
-              description: '최근에 운동한 기록 조회',
+              description: 'exerciseIdList에 해당하는 운동 목록에 대해 최근에 운동한 기록을 조회합니다.',
               example: 'recent',
             },
         ),
@@ -55,8 +55,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
             },
         ),
         ApiResponse({
-          status: 201,
-          description: 'The record has been successfully created.',
+          status: 200,
+          description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );

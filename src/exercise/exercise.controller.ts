@@ -29,7 +29,7 @@ export class ExerciseController {
   }
 
   @Get()
-  @ApiDocs.findAll('운동 로직 조회 API')
+  @ApiDocs.findAll('운동 로직 조회 API (Author by 선우)')
   findAll(
     @Req() req,
     @Query('partList', new ParseArrayPipe({

@@ -7,7 +7,7 @@ import {ApiTags} from '@nestjs/swagger';
 @Controller('user')
 @ApiTags('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: UserService) { }
 
   @Post()
   @ApiDocs.create('회원가입 API')
@@ -16,7 +16,7 @@ export class UserController {
   }
 
   @Post('/login')
-  @ApiDocs.create('로그인 API')
+  @ApiDocs.login('로그인 API')
   async login(@Body() googleUserDto: GoogleUserDto) {
     return this.userService.login(googleUserDto);
   }

@@ -16,7 +16,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           description: '새로운 운동 로직을 생성합니다.',
         }),
         ApiCreatedResponse({
-          description: '생성된 운동 로직의 모든 항목을 확인 할 수 있습니다.',
+          description: '생성된 운동 로직의 모든 항목을 확인할 수 있습니다.',
           type: CreateExerciseDto,
         }),
         ApiResponse({
@@ -42,8 +42,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
             },
         ),
         ApiResponse({
-          status: 201,
-          description: 'The record has been successfully created.',
+          status: 200,
+          description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
@@ -72,8 +72,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           type: UpdateExerciseDto,
         }),
         ApiResponse({
-          status: 201,
-          description: 'The record has been successfully created.',
+          status: 200,
+          description: 'The record has been successfully updated.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
@@ -85,8 +85,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           description: '특정 id에 해당하는 운동 로직을 삭제합니다.',
         }),
         ApiResponse({
-          status: 201,
-          description: 'The record has been successfully created.',
+          status: 200,
+          description: 'The record has been successfully deleted.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
