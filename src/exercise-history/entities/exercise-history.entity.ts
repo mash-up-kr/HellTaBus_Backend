@@ -3,7 +3,6 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
-  JoinColumn,
   ManyToOne, OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -18,10 +17,10 @@ export class ExerciseHistory {
   id: number;
 
   @Column()
-  startTime: Date;
+  startTime!: Date;
 
   @Column()
-  finishTime: Date;
+  finishTime!: Date;
 
   /* Relations */
 
