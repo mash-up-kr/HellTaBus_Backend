@@ -17,18 +17,18 @@ export class ExerciseHistory {
   id: number;
 
   @Column()
-  startTime: Date;
+  startTime!: Date;
 
   @Column()
-  finishTime: Date;
+  finishTime!: Date;
 
   /* Relations */
 
   @ManyToOne(() => User, (user) => user.exerciseHistoryList)
-  user: User;
+  user!: User;
 
   @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList)
-  exercise: Exercise;
+  exercise!: Exercise;
 
   @OneToMany(() => Set,
       (set) => set.exerciseHistory)
@@ -37,10 +37,10 @@ export class ExerciseHistory {
   /* Date Columns */
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 
   @DeleteDateColumn()
   deletedAt: Date | null;
