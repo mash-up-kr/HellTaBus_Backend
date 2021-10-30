@@ -16,6 +16,7 @@ export class ExerciseHistoryController {
   }
 
   @Get()
+  @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
   findAll(
     @Req() req,
     @Query(
@@ -31,6 +32,6 @@ export class ExerciseHistoryController {
     @Query('from') from: string,
     @Query('to') to: string,
   ) {
-    return this.exerciseHistoryService.findAll(exerciseIdList, req.id, duration, from, to);
+    return this.exerciseHistoryService.findAll(exerciseIdList, req.user, duration, from, to);
   }
 }

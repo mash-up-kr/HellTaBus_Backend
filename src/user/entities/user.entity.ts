@@ -9,10 +9,12 @@ import {
 import {Gender, HealthStyle} from '../../constants';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 import {Feedback} from '../../feedback/entities/feedback.entity';
+import {ApiProperty} from '@nestjs/swagger';
 
 @Entity('user')
 export class User {
   @PrimaryGeneratedColumn('increment')
+  @ApiProperty({description: '사용자의 id'})
   id: number;
 
   @Column({
@@ -23,6 +25,7 @@ export class User {
   @Column({
     unique: true,
   })
+  @ApiProperty({description: '사용자의 이메일'})
   email: string;
 
   @Column({

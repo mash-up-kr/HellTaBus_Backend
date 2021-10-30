@@ -1,5 +1,5 @@
 import {applyDecorators} from '@nestjs/common';
-import {ApiCreatedResponse, ApiOperation, ApiResponse} from '@nestjs/swagger';
+import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/swagger';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {ExerciseHistoryController} from './exercise-history.controller';
 
@@ -27,11 +27,48 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
   },
   findAll(summary: string) {
     return applyDecorators(
-        ApiResponse({status: 403, description: 'Forbidden.'}),
         ApiOperation({
           summary,
-          /** '모든 사용자 조회' */ description: '모든 운동 로직을 조회합니다.',
+          description: '운동 기록을 조회합니다. 최신 운동기록 조회는 duration를 사용해주세요. 기간내 운동기록 조회는 from, to를 사용해주세요.',
         }),
+        ApiQuery(
+            {
+              name: 'exerciseIdList',
+              required: true,
+              type: String,
+              description: '조회하고 싶은 운동 Id 목록',
+              example: '1,2',
+            },
+        ),
+        ApiQuery(
+            {
+              name: 'duration',
+              required: false,
+              description: 'exerciseIdList에 해당하는 운동 목록에 대해 최근에 운동한 기록을 조회합니다.',
+              example: 'recent',
+            },
+        ),
+        ApiQuery(
+            {
+              name: 'from',
+              required: false,
+              description: '조회하고 싶은 날짜의 시작',
+              example: '2021-10-22 13:32',
+            },
+        ),
+        ApiQuery(
+            {
+              name: 'to',
+              required: false,
+              description: '조회하고 싶은 날짜의 끝',
+              example: '2021-10-24 13:32',
+            },
+        ),
+        ApiResponse({
+          status: 200,
+          description: 'The record has been successfully searched.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
 };
