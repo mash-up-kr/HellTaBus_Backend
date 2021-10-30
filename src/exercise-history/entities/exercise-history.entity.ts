@@ -25,7 +25,7 @@ export class ExerciseHistory {
   /* Relations */
 
   @ManyToOne(() => User, (user) => user.exerciseHistoryList)
-  user: User;
+  user!: User;
 
   @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList, {nullable: false})
   exercise: Exercise;
@@ -37,10 +37,10 @@ export class ExerciseHistory {
   /* Date Columns */
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 
   @DeleteDateColumn()
   deletedAt: Date | null;
