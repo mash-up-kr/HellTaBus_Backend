@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   ManyToOne,
@@ -8,7 +9,7 @@ import {
 } from 'typeorm';
 import {FeedbackDifficulty} from '../../constants';
 import {User} from '../../user/entities/user.entity';
-import {Exercise} from '../../exercise/entities/exercise.entity';
+import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 
 @Entity('feedback')
 export class Feedback {
@@ -26,10 +27,16 @@ export class Feedback {
   @ManyToOne(() => User, (user) => user.feedbackList, {nullable: false})
   user: User;
 
-  @ManyToOne(() => Exercise, (exercise) => exercise.feedbackList, {nullable: false})
-  exercise: Exercise;
+  @ManyToOne(() => ExerciseHistory,
+      (exerciseHistory) => exerciseHistory.feedbackList,
+      {nullable: false}
+  )
+  exerciseHistory: ExerciseHistory;
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;

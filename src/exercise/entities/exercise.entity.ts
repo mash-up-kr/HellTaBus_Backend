@@ -8,7 +8,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import {HealthPart} from '../../constants';
-import {Feedback} from '../../feedback/entities/feedback.entity';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 
 @Entity('exercise')
@@ -54,10 +53,6 @@ export class Exercise {
   @OneToMany(() => ExerciseHistory,
       (exerciseHistory) => exerciseHistory.exercise)
   exerciseHistoryList: ExerciseHistory[];
-
-  @OneToMany(() => Feedback,
-      (feedback) => feedback.exercise)
-  feedbackList: Feedback[];
 
   /* Date Columns */
 
