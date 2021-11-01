@@ -4,6 +4,7 @@ import {CreateFeedbackDto} from './dto/create-feedback.dto';
 import {User} from '../user/entities/user.entity';
 import {ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './feedback.docs';
+import {Request} from 'express';
 
 @Controller('feedback')
 @ApiTags('feedback')
