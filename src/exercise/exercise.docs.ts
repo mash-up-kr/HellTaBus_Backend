@@ -4,6 +4,11 @@ import {query} from 'express';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {ExerciseController} from './exercise.controller';
+import {ExerciseDto} from './dto/exercise.dto';
+import {FindSuggestionResponseDto} from './dto/find-suggestion-response.dto';
+import {CreateExerciseResponseDto} from './dto/create-exercise-response.dto';
+import {FindAllExerciseResponseDto} from './dto/find-all-exercise-response.dto';
+import {UpdateExerciseResponseDto} from './dto/update-exercise-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -16,13 +21,10 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           summary,
           description: '새로운 운동 로직을 생성합니다.',
         }),
-        ApiCreatedResponse({
-          description: '생성된 운동 로직의 모든 항목을 확인할 수 있습니다.',
-          type: CreateExerciseDto,
-        }),
         ApiResponse({
           status: 201,
           description: 'The record has been successfully created.',
+          type: CreateExerciseResponseDto,
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
@@ -44,6 +46,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
         ),
         ApiResponse({
           status: 200,
+          type: FindAllExerciseResponseDto,
           description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
@@ -56,8 +59,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           description: '특정 id에 해당하는 운동 로직만 조회합니다.',
         }),
         ApiResponse({
-          status: 201,
-          description: 'The record has been successfully created.',
+          status: 200,
+          type: FindSuggestionResponseDto,
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
@@ -68,13 +71,10 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
           summary,
           description: '특정 id에 해당하는 운동 로직을 수정합니다.',
         }),
-        ApiCreatedResponse({
-          description: '수정된 운동 로직의 모든 항목을 확인 할 수 있습니다.',
-          type: UpdateExerciseDto,
-        }),
         ApiResponse({
           status: 200,
-          description: 'The record has been successfully updated.',
+          type: UpdateExerciseResponseDto,
+          description: '수정된 운동 로직의 모든 항목을 확인 할 수 있습니다.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
