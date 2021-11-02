@@ -4,7 +4,7 @@ import {ExerciseDto} from '../dto/exercise.dto';
 import {BaseResponseDto} from '../../common/dto/base-response.dto';
 
 export class SuggestionResponseDataDto {
-  @ApiProperty({enum: HealthPart, description: '부위 목록'})
+  @ApiProperty({enum: HealthPart, type: [HealthPart], description: '부위 목록'})
   suggestionPartList: [HealthPart];
 
   @ApiProperty({type: [ExerciseDto], description: '운동 목록'})
