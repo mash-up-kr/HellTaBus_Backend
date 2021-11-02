@@ -23,13 +23,11 @@ export class ExerciseHistoryService {
       exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
         const exerciseHistorykEntity = await this.ExerciseHistoryRepository
             .createQueryBuilder('exerciseHistory')
-            .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
-            .leftJoinAndSelect('exerciseHistory.setList', 'setList')
-            .select(['exerciseHistory.startTime', 'exercise.id',
-              'exercise.name', 'setList.index', 'setList.weight'])
+            .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
+            .innerJoinAndSelect('exerciseHistory.setList', 'setList')
+            .innerJoinAndSelect('exerciseHistory.feedbackList', 'feedbackList')
             .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
             .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-            .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
             .orderBy('exerciseHistory.updatedAt', 'DESC')
             .getOne();
         return exerciseHistorykEntity;
@@ -37,14 +35,12 @@ export class ExerciseHistoryService {
     } else {
       exerciseHistoryList = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
-          .leftJoinAndSelect('exerciseHistory.exercise', 'exercise')
-          .leftJoinAndSelect('exerciseHistory.setList', 'setList')
-          .select(['exerciseHistory.startTime', 'exercise.id',
-            'exercise.name', 'setList.index', 'setList.weight'])
+          .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
+          .innerJoinAndSelect('exerciseHistory.setList', 'setList')
+          .innerJoinAndSelect('exerciseHistory.feedbackList', 'feedbackList')
           .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
           .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-          .andWhere('exerciseHistory.id = setList.exerciseHistoryId')
-          .andWhere(`exerciseHistory.updatedAt 
+          .andWhere(`exerciseHistory.startTime 
           BETWEEN '${from}' AND '${to}'`)
           .getMany();
     }

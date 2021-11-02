@@ -7,7 +7,7 @@ import {ApiDocs} from './exercise-history.docs';
 @Controller('exercise-history')
 @ApiTags('Exercise-history')
 export class ExerciseHistoryController {
-  constructor(private readonly exerciseHistoryService: ExerciseHistoryService) {}
+  constructor(private readonly exerciseHistoryService: ExerciseHistoryService) { }
 
   @Post()
   @ApiDocs.create('운동 기록 생성 API (Author by 신영)')
