@@ -4,7 +4,7 @@ import {
   InternalServerErrorException,
   NotFoundException,
 } from '@nestjs/common';
-import { UpdateBaseUserInformationDto } from './dto/update-user.dto';
+import {UpdateBaseUserInformationDto} from './dto/update-user.dto';
 import {JwtService} from '@nestjs/jwt';
 import {InjectRepository} from '@nestjs/typeorm';
 import {User} from './entities/user.entity';

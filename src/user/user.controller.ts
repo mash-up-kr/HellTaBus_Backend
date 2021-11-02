@@ -2,7 +2,7 @@ import {Controller, Get, Post, Body, Patch, UseGuards, Req} from '@nestjs/common
 import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
-import { UpdateBaseUserInformationDto } from './dto/update-user.dto';
+import {UpdateBaseUserInformationDto} from './dto/update-user.dto';
 import {ApiTags} from '@nestjs/swagger';
 
 import {JwtAuthGuard} from './jwt-auth.guard';
@@ -25,7 +25,7 @@ export class UserController {
     return this.userService.login(googleUserDto);
   }
 
-  @Get('/loginInfo')
+  @Get('/login-info')
   @ApiDocs.getLoginInfo('현재 로그인 사용자 정보 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
   async getLoginInfo(@Req() req) {
