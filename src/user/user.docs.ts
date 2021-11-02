@@ -62,4 +62,21 @@ export const ApiDocs: SwaggerMethodDoc<UserController> = {
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
+
+  updateBaseUserInformation(summary) {
+    return applyDecorators(
+        ApiOperation({
+          summary,
+          description: '회원가입 후 사용자의 기본 정보들을 업데이트할 수 있습니다.',
+        }),
+        ApiCreatedResponse({
+          description: '수정된 사용자',
+          type: User,
+        }),
+        ApiResponse({
+          status: 200,
+          description: '정상 수정',
+        }),
+    );
+  },
 };
