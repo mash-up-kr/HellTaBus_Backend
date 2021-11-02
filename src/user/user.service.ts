@@ -4,7 +4,7 @@ import {
   InternalServerErrorException,
   NotFoundException,
 } from '@nestjs/common';
-import {UpdateUserDto} from './dto/update-user.dto';
+import { UpdateBaseUserInformationDto } from './dto/update-user.dto';
 import {JwtService} from '@nestjs/jwt';
 import {InjectRepository} from '@nestjs/typeorm';
 import {User} from './entities/user.entity';
@@ -13,6 +13,8 @@ import {Err} from '../error';
 import verifyGoogle from './util/google';
 import {GoogleUserDto} from './dto/google-user.dto';
 import {JwtSignOptions} from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
+import {ExtractJwt} from 'passport-jwt';
+import fromAuthHeaderWithScheme = ExtractJwt.fromAuthHeaderWithScheme;
 
 @Injectable()
 export class UserService {
@@ -21,6 +23,14 @@ export class UserService {
     private readonly userRepository: Repository<User>,
     private readonly jwtService: JwtService,
   ) {}
+
+  async findOneById(id: number): Promise<User> {
+    const user = await this.userRepository.findOne(id);
+    if (user == null) {
+      throw new NotFoundException(Err.USER.NOT_FOUND);
+    }
+    return user;
+  }
 
   async create(googleUserDto: GoogleUserDto) {
     const payload = await verifyGoogle(googleUserDto.idToken);
@@ -86,16 +96,18 @@ export class UserService {
     };
   }
 
-  findAll() {
-    return `This action returns all user`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
-  }
-
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async updateBaseUserInformation(
+      user: User,
+      {nickname, gender, age, height, weight, healthStyle}: UpdateBaseUserInformationDto) {
+    const existingUser = await this.findOneById(user.id);
+    existingUser.nickname = nickname;
+    existingUser.gender = gender;
+    existingUser.age = age;
+    existingUser.height = height;
+    existingUser.weight = weight;
+    existingUser.healthStyle = healthStyle;
+    const updateUser = await this.userRepository.save(existingUser);
+    return updateUser;
   }
 
   remove(id: number) {
