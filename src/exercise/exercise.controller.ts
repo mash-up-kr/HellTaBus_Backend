@@ -31,7 +31,6 @@ export class ExerciseController {
   @Get()
   @ApiDocs.findAll('운동 로직 조회 API (Author by 선우)')
   findAll(
-    @Req() req,
     @Query('partList', new ParseArrayPipe({
       optional: true,
       items: String,
@@ -39,9 +38,7 @@ export class ExerciseController {
     }))
         partList: string[],
   ) {
-    return this.exerciseService.findAll(
-        req.user, partList
-    );
+    return this.exerciseService.findAll(partList);
   }
 
   @Get('suggestion')

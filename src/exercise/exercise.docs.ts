@@ -1,5 +1,6 @@
 import {applyDecorators, Param} from '@nestjs/common';
 import {ApiCreatedResponse, ApiOperation, ApiParam, ApiQuery, ApiResponse} from '@nestjs/swagger';
+import {query} from 'express';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {ExerciseController} from './exercise.controller';
@@ -37,7 +38,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
               name: 'partList',
               required: true,
               type: String,
-              description: '조회하고 싶은 운동 부위 목록',
+              description: '조회하고 싶은 운동 부위 목록 (빈칸은 모든 운동 부위 목록으로 처리)',
               example: 'lower,back',
             },
         ),

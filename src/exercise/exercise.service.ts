@@ -40,34 +40,17 @@ export class ExerciseService {
     return createExercise;
   }
 
-  async findAll(user: User, partList: string[]) {
+  async findAll(partList: string[]) {
     let exerciseList;
-    let feedbackList;
     if (partList[0] === '') {
       exerciseList = await this.exerciseRepository
           .createQueryBuilder('exercise')
-          .getMany();
-      feedbackList = await this.exerciseRepository
-          .createQueryBuilder('exercise')
-          .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId: user.id})
           .getMany();
     } else {
       exerciseList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .where('exercise.part In (:partList)', {partList})
           .getMany();
-      feedbackList = await this.exerciseRepository
-          .createQueryBuilder('exercise')
-          .innerJoinAndSelect('exercise.feedbackList', 'feedback')
-          .where('feedback.userId = :userId', {userId: user.id})
-          .andWhere('exercise.part In (:partList)', {partList})
-          .getMany();
-    }
-    for (const idx in feedbackList) {
-      if (feedbackList.hasOwnProperty(idx)) {
-        Object.assign(exerciseList[idx], feedbackList[idx]);
-      }
     }
     return exerciseList;
   }
