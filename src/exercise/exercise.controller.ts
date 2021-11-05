@@ -8,8 +8,6 @@ import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './exercise.docs';
 import {Exercise} from './entities/exercise.entity';
-import {User} from './../user/entities/user.entity';
-
 
 @Controller('exercise')
 @ApiTags('exercise')
@@ -17,13 +15,13 @@ export class ExerciseController {
   constructor(private readonly exerciseService: ExerciseService) { }
 
   @Post()
-  @ApiDocs.create('운동 로직 생성 API')
+  @ApiDocs.create('운동 로직 생성 API (Author by 신영)')
   create(@Body() createExerciseDto: CreateExerciseDto): Promise<Exercise> {
     return this.exerciseService.create(createExerciseDto);
   }
 
   @Patch('/:id')
-  @ApiDocs.update('운동 로직 수정 API')
+  @ApiDocs.update('운동 로직 수정 API (Author by 신영)')
   update(@Param('id') id: number, @Body() updateExerciseDto: UpdateExerciseDto) {
     return this.exerciseService.update(id, updateExerciseDto);
   }
@@ -49,7 +47,7 @@ export class ExerciseController {
   }
 
   @Delete(':id')
-  @ApiDocs.remove('운동 로직 삭제 API')
+  @ApiDocs.remove('운동 로직 삭제 API (Author by 신영)')
   remove(@Param('id') id: string) {
     return this.exerciseService.remove(+id);
   }
