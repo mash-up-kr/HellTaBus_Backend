@@ -1,10 +1,6 @@
-import {applyDecorators, Param} from '@nestjs/common';
-import {ApiCreatedResponse, ApiOperation, ApiParam, ApiQuery, ApiResponse} from '@nestjs/swagger';
-import {query} from 'express';
-import {CreateExerciseDto} from './dto/create-exercise.dto';
-import {UpdateExerciseDto} from './dto/update-exercise.dto';
+import {applyDecorators} from '@nestjs/common';
+import {ApiOperation, ApiQuery, ApiResponse} from '@nestjs/swagger';
 import {ExerciseController} from './exercise.controller';
-import {ExerciseDto} from './dto/exercise.dto';
 import {FindSuggestionResponseDto} from './dto/find-suggestion-response.dto';
 import {CreateExerciseResponseDto} from './dto/create-exercise-response.dto';
 import {FindAllExerciseResponseDto} from './dto/find-all-exercise-response.dto';
@@ -73,8 +69,8 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
         }),
         ApiResponse({
           status: 200,
-          type: UpdateExerciseResponseDto,
           description: '수정된 운동 로직의 모든 항목을 확인 할 수 있습니다.',
+          type: UpdateExerciseResponseDto,
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );

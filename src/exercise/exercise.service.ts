@@ -1,6 +1,6 @@
-import {Injectable, Query} from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {In, Repository, Between, EntityManager} from 'typeorm';
+import {Repository, Between} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {User} from '../user/entities/user.entity';
