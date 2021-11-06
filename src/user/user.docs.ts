@@ -7,7 +7,9 @@ import {CreateUserResponseDto} from './dto/create-user-response.dto';
 import {LoginUserResponseDto} from './dto/login-user-response.dto';
 import {GetLoginInfoResponseDto} from './dto/get-login-info-response.dto';
 import {UserDto} from './dto/user.dto';
-import {UpdateBaseUserInformationResponseDto} from './dto/update-base-information-user.dto';
+import {} from './dto/update-base-information-user.dto';
+import {UpdateUserDto} from './dto/update-user.dto';
+import {UpdateBaseUserInformationResponseDto} from './dto/update-user-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -69,6 +71,20 @@ export const ApiDocs: SwaggerMethodDoc<UserController> = {
           status: 201,
           type: UpdateBaseUserInformationResponseDto,
           description: '회원가입 후 사용자의 기본 정보들을 업데이트',
+        }),
+    );
+  },
+
+  updateUser(summary) {
+    return applyDecorators(
+        ApiOperation({
+          summary,
+          description: '설정에서 사용자의 정보를 수정할 수 있습니다.',
+        }),
+        ApiResponse({
+          status: 201,
+          type: UpdateUserDto,
+          description: '사용자의 정보 수정',
         }),
     );
   },
