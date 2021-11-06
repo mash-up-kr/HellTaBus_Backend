@@ -2,10 +2,11 @@ import {Controller, Get, Post, Body, Patch, UseGuards, Req} from '@nestjs/common
 import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
-import {UpdateBaseUserInformationDto} from './dto/update-user.dto';
+import {UpdateUserDto} from './dto/update-user.dto';
 import {ApiTags} from '@nestjs/swagger';
 
 import {JwtAuthGuard} from './jwt-auth.guard';
+import { UpdateBaseUserInformationDto } from './dto/update-base-information-user.dto';
 
 
 @Controller('user')
@@ -32,7 +33,7 @@ export class UserController {
     return req.user;
   }
 
-  @Patch('/my')
+  @Patch('/my/base-information')
   @ApiDocs.updateBaseUserInformation('회원가입 후 사용자 기본 정보 업데이트 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
   updateBaseUserInformation(
@@ -40,5 +41,15 @@ export class UserController {
     @Body() updateBaseUserInformationDto: UpdateBaseUserInformationDto
   ) {
     return this.userService.updateBaseUserInformation(req.user, updateBaseUserInformationDto);
+  }
+
+  @Patch('/my')
+  @ApiDocs.updateUser('사용자 정보 수정 API (Author by 소연)')
+  @UseGuards(JwtAuthGuard)
+  updateUser(
+    @Req() req,
+    @Body() updateUserDto: UpdateUserDto
+  ) {
+    return this.userService.updateUser(req.user, updateUserDto);
   }
 }

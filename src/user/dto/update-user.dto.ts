@@ -2,13 +2,9 @@ import {ApiProperty} from '@nestjs/swagger';
 import {IsNotEmpty} from 'class-validator';
 import {Gender, HealthStyle} from '../../constants';
 
-export class UpdateBaseUserInformationDto {
+export class UpdateUserDto {
   @ApiProperty({example: '펭귄', description: '사용자 닉네임'})
   nickname: string;
-
-  @ApiProperty({example: 'FEMALE', description: '사용자 성별'})
-  gender: Gender;
-
   @ApiProperty({example: 25, description: '사용자 나이'})
   age: number;
 

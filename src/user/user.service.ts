@@ -4,7 +4,7 @@ import {
   InternalServerErrorException,
   NotFoundException,
 } from '@nestjs/common';
-import {UpdateBaseUserInformationDto} from './dto/update-user.dto';
+import {UpdateUserDto} from './dto/update-user.dto';
 import {JwtService} from '@nestjs/jwt';
 import {InjectRepository} from '@nestjs/typeorm';
 import {User} from './entities/user.entity';
@@ -15,6 +15,7 @@ import {GoogleUserDto} from './dto/google-user.dto';
 import {JwtSignOptions} from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 import {ExtractJwt} from 'passport-jwt';
 import fromAuthHeaderWithScheme = ExtractJwt.fromAuthHeaderWithScheme;
+import { UpdateBaseUserInformationDto } from './dto/update-base-information-user.dto';
 
 @Injectable()
 export class UserService {
@@ -102,6 +103,19 @@ export class UserService {
     const existingUser = await this.findOneById(user.id);
     existingUser.nickname = nickname;
     existingUser.gender = gender;
+    existingUser.age = age;
+    existingUser.height = height;
+    existingUser.weight = weight;
+    existingUser.healthStyle = healthStyle;
+    const updateUser = await this.userRepository.save(existingUser);
+    return updateUser;
+  }
+
+  async updateUser(
+      user: User,
+      {nickname, age, height, weight, healthStyle}: UpdateUserDto) {
+    const existingUser = await this.findOneById(user.id);
+    existingUser.nickname = nickname;
     existingUser.age = age;
     existingUser.height = height;
     existingUser.weight = weight;
