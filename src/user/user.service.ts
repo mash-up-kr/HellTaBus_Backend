@@ -15,7 +15,7 @@ import {GoogleUserDto} from './dto/google-user.dto';
 import {JwtSignOptions} from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 import {ExtractJwt} from 'passport-jwt';
 import fromAuthHeaderWithScheme = ExtractJwt.fromAuthHeaderWithScheme;
-import { UpdateBaseUserInformationDto } from './dto/update-base-information-user.dto';
+import {UpdateBaseUserInformationDto} from './dto/update-base-information-user.dto';
 
 @Injectable()
 export class UserService {
