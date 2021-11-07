@@ -1,7 +1,7 @@
 import {Controller, Get, Post, Body, Query, ParseArrayPipe, Req} from '@nestjs/common';
 import {ExerciseHistoryService} from './exercise-history.service';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
-import {ApiTags} from '@nestjs/swagger';
+import {ApiBearerAuth, ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './exercise-history.docs';
 
 @Controller('exercise-history')
@@ -9,12 +9,14 @@ import {ApiDocs} from './exercise-history.docs';
 export class ExerciseHistoryController {
   constructor(private readonly exerciseHistoryService: ExerciseHistoryService) { }
 
+  @ApiBearerAuth()
   @Post()
   @ApiDocs.create('운동 기록 생성 API (Author by 신영)')
   create(@Body() createExerciseHistoryDto: CreateExerciseHistoryDto) {
     return this.exerciseHistoryService.create(createExerciseHistoryDto);
   }
 
+  @ApiBearerAuth()
   @Get()
   @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
   findAll(

@@ -3,10 +3,10 @@ import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
 import {UpdateUserDto} from './dto/update-user.dto';
-import {ApiTags} from '@nestjs/swagger';
+import {ApiBearerAuth, ApiTags} from '@nestjs/swagger';
 
 import {JwtAuthGuard} from './jwt-auth.guard';
-import { UpdateBaseUserInformationDto } from './dto/update-base-information-user.dto';
+import {UpdateBaseUserInformationDto} from './dto/update-base-information-user.dto';
 
 
 @Controller('user')
@@ -26,6 +26,7 @@ export class UserController {
     return this.userService.login(googleUserDto);
   }
 
+  @ApiBearerAuth()
   @Get('/login-info')
   @ApiDocs.getLoginInfo('현재 로그인 사용자 정보 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
@@ -33,6 +34,7 @@ export class UserController {
     return req.user;
   }
 
+  @ApiBearerAuth()
   @Patch('/my/base-information')
   @ApiDocs.updateBaseUserInformation('회원가입 후 사용자 기본 정보 업데이트 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
@@ -43,6 +45,7 @@ export class UserController {
     return this.userService.updateBaseUserInformation(req.user, updateBaseUserInformationDto);
   }
 
+  @ApiBearerAuth()
   @Patch('/my')
   @ApiDocs.updateUser('사용자 정보 수정 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
