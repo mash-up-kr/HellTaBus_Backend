@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   ManyToOne,
@@ -17,21 +18,24 @@ export class Set {
   index: number;
 
   @Column()
-  weight: number;
+  weight: number; // 한 운동의 한 세트의 무게
 
   @Column()
-  startTime: Date;
+  startTime: Date; // 한 운동의 한 세트 시작 시간
 
   @Column()
-  finishTime: Date;
+  finishTime: Date; // 한 운동의 한 세트 끝난 시간
 
   /* Relations */
 
   @ManyToOne(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.setList)
+      (exerciseHistory) => exerciseHistory.setList, {nullable: false})
   exerciseHistory: ExerciseHistory;
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;

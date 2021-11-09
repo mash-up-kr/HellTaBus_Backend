@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   ManyToOne, OneToMany,
@@ -9,6 +10,7 @@ import {
 import {User} from '../../user/entities/user.entity';
 import {Exercise} from '../../exercise/entities/exercise.entity';
 import {Set} from './set.entity';
+import {Feedback} from '../../feedback/entities/feedback.entity';
 
 @Entity('exercise-history')
 export class ExerciseHistory {
@@ -16,27 +18,33 @@ export class ExerciseHistory {
   id: number;
 
   @Column()
-  startTime: Date;
+  startTime!: Date;
 
   @Column()
-  finishTime: Date;
+  finishTime!: Date;
 
   /* Relations */
 
   @ManyToOne(() => User, (user) => user.exerciseHistoryList)
-  user: User;
+  user!: User;
 
   @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList)
   exercise: Exercise;
 
-  @OneToMany(() => Set,
-      (set) => set.exerciseHistory)
+  @OneToMany(() => Set, (set) => set.exerciseHistory)
   setList: Set[];
+
+  @OneToMany(() => Feedback,
+      (feedback) => feedback.exerciseHistory)
+  feedbackList: Feedback[];
 
   /* Date Columns */
 
+  @CreateDateColumn()
+  createdAt!: Date;
+
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 
   @DeleteDateColumn()
   deletedAt: Date | null;

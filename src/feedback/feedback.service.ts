@@ -1,26 +1,59 @@
 import {Injectable} from '@nestjs/common';
 import {CreateFeedbackDto} from './dto/create-feedback.dto';
-import {UpdateFeedbackDto} from './dto/update-feedback.dto';
+import {InjectRepository} from '@nestjs/typeorm';
+import {Feedback} from './entities/feedback.entity';
+import {Repository} from 'typeorm';
+import {User} from '../user/entities/user.entity';
 
 @Injectable()
 export class FeedbackService {
-  create(createFeedbackDto: CreateFeedbackDto) {
-    return 'This action adds a new feedback';
+  constructor(
+    @InjectRepository(Feedback)
+    private readonly feedbackRepository: Repository<Feedback>,
+    @InjectRepository(Feedback)
+    private readonly exerciseRepository: Repository<Feedback>,
+  ) {}
+
+  async create(user: User, createFeedbackDto: CreateFeedbackDto) {
+    const exercise = await this.exerciseRepository.findOne({
+      where: {
+        id: createFeedbackDto.exerciseId,
+      },
+    });
+    if (!exercise) {
+      throw Error(`Can't find exercise (id: ${createFeedbackDto.exerciseId})`);
+    }
+    const feedback = await this.feedbackRepository.save({
+      difficulty: createFeedbackDto.difficulty,
+      user: user,
+      exercise: exercise,
+    });
+    return feedback;
   }
 
-  findAll() {
-    return `This action returns all feedback`;
+  async findOne(user: User, exerciseId: string) {
+    const feedback = await this.feedbackRepository.findOne({
+      relations: ['user', 'exercise'],
+      where: {
+        user: {
+          id: user.id,
+        },
+        exercise: {
+          id: exerciseId,
+        },
+        order: {
+          updatedAt: 'DESC',
+        },
+      },
+    });
+    return feedback;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} feedback`;
-  }
-
-  update(id: number, updateFeedbackDto: UpdateFeedbackDto) {
-    return `This action updates a #${id} feedback`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} feedback`;
+  async findAll(user: User, exerciseIdList: string[]) {
+    const feedbackList = [];
+    for (const exerciseId of exerciseIdList) {
+      feedbackList.push(await this.findOne(user, exerciseId));
+    }
+    return feedbackList;
   }
 }

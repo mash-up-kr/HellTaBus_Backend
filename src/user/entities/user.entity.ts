@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   OneToMany,
@@ -9,18 +10,23 @@ import {
 import {Gender, HealthStyle} from '../../constants';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 import {Feedback} from '../../feedback/entities/feedback.entity';
+import {ApiProperty} from '@nestjs/swagger';
 
 @Entity('user')
 export class User {
   @PrimaryGeneratedColumn('increment')
+  @ApiProperty({description: '사용자의 id'})
   id: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   nickname: string;
 
   @Column({
     unique: true,
   })
+  @ApiProperty({description: '사용자의 이메일'})
   email: string;
 
   @Column({
@@ -32,27 +38,32 @@ export class User {
   @Column({
     type: 'enum',
     enum: Gender,
+    nullable: true,
   })
   gender: Gender;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   age: number;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   height: number;
 
   @Column({
     unsigned: true,
+    nullable: true,
   })
   weight: number;
 
   @Column({
     type: 'enum',
     enum: HealthStyle,
+    nullable: true,
   })
   healthStyle: HealthStyle;
 
@@ -67,6 +78,9 @@ export class User {
   feedbackList: Feedback[];
 
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;

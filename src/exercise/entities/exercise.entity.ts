@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   OneToMany,
@@ -7,7 +8,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import {HealthPart} from '../../constants';
-import {Feedback} from '../../feedback/entities/feedback.entity';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 
 @Entity('exercise')
@@ -26,6 +26,9 @@ export class Exercise {
 
   @Column()
   baseCount: number; // 기본 횟수
+
+  @Column()
+  setCount: number; // 기본 세트 수
 
   @Column()
   startWeight: number; // 시작 중량
@@ -51,11 +54,10 @@ export class Exercise {
       (exerciseHistory) => exerciseHistory.exercise)
   exerciseHistoryList: ExerciseHistory[];
 
-  @OneToMany(() => Feedback,
-      (feedback) => feedback.exercise)
-  feedbackList: Feedback[];
-
   /* Date Columns */
+
+  @CreateDateColumn()
+  createdAt: Date;
 
   @UpdateDateColumn()
   updatedAt: Date;
