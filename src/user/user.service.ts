@@ -99,14 +99,21 @@ export class UserService {
 
   async updateBaseUserInformation(
       user: User,
-      {nickname, gender, age, height, weight, healthStyle}: UpdateBaseUserInformationDto) {
+      {
+        nickname, gender, age, height, weight, healthStyle, audioCoach, speed, explanation
+      }: UpdateBaseUserInformationDto) {
     const existingUser = await this.findOneById(user.id);
+
     existingUser.nickname = nickname;
     existingUser.gender = gender;
     existingUser.age = age;
     existingUser.height = height;
     existingUser.weight = weight;
     existingUser.healthStyle = healthStyle;
+    existingUser.audioCoach = audioCoach;
+    existingUser.speed = speed;
+    existingUser.explanation = explanation;
+
     const updateUser = await this.userRepository.save(existingUser);
     return updateUser;
   }
