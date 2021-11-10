@@ -1,8 +1,9 @@
-import {Controller, Get, Post, Body, Query, ParseArrayPipe, Req} from '@nestjs/common';
+import {Controller, Get, Post, Body, Query, ParseArrayPipe, Req, UseGuards} from '@nestjs/common';
 import {ExerciseHistoryService} from './exercise-history.service';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {ApiBearerAuth, ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './exercise-history.docs';
+import {JwtAuthGuard} from '../user/jwt-auth.guard';
 
 @Controller('exercise-history')
 @ApiTags('Exercise-history')
@@ -15,7 +16,7 @@ export class ExerciseHistoryController {
   create(@Body() createExerciseHistoryDto: CreateExerciseHistoryDto) {
     return this.exerciseHistoryService.create(createExerciseHistoryDto);
   }
-  
+
   @ApiBearerAuth()
   @Get()
   @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
