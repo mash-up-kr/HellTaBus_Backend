@@ -14,7 +14,6 @@ import verifyGoogle from './util/google';
 import {GoogleUserDto} from './dto/google-user.dto';
 import {JwtSignOptions} from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 import {ExtractJwt} from 'passport-jwt';
-import fromAuthHeaderWithScheme = ExtractJwt.fromAuthHeaderWithScheme;
 import {UpdateBaseUserInformationDto} from './dto/update-base-information-user.dto';
 
 @Injectable()
@@ -54,8 +53,27 @@ export class UserService {
       googleAccount: payload.sub,
     });
 
+    const accessTokenData = {
+      userId: createdUser.id,
+      email: createdUser.email,
+    };
+
+    let accessToken;
+    try {
+      const options: JwtSignOptions = {
+        algorithm: 'HS512',
+        expiresIn: '100d',
+        issuer: 'helltabus',
+      };
+      accessToken = this.jwtService.sign(accessTokenData, options);
+    } catch (e) {
+      console.log(e);
+      throw new InternalServerErrorException(Err.SERVER.UNEXPECTED_ERROR);
+    }
+
     return {
       id: createdUser.id,
+      accessToken,
     };
   }
 
@@ -92,15 +110,21 @@ export class UserService {
       throw new InternalServerErrorException(Err.SERVER.UNEXPECTED_ERROR);
     }
 
+    let isPatched = 0;
+    if (user.nickname !== null || user.speed !== null) {
+      isPatched = 1;
+    }
+
     return {
       accessToken,
+      isPatched,
     };
   }
 
   async updateBaseUserInformation(
       user: User,
       {
-        nickname, gender, age, height, weight, healthStyle, audioCoach, speed, explanation
+        nickname, gender, age, height, weight, healthStyle, audioCoach, speed, explanation,
       }: UpdateBaseUserInformationDto) {
     const existingUser = await this.findOneById(user.id);
 
@@ -120,13 +144,17 @@ export class UserService {
 
   async updateUser(
       user: User,
-      {nickname, age, height, weight, healthStyle}: UpdateUserDto) {
+      {nickname, age, height, weight, healthStyle, audioCoach, speed, explanation}: UpdateUserDto) {
     const existingUser = await this.findOneById(user.id);
     existingUser.nickname = nickname;
     existingUser.age = age;
     existingUser.height = height;
     existingUser.weight = weight;
     existingUser.healthStyle = healthStyle;
+    existingUser.audioCoach = audioCoach;
+    existingUser.speed = speed;
+    existingUser.explanation = explanation;
+
     const updateUser = await this.userRepository.save(existingUser);
     return updateUser;
   }
