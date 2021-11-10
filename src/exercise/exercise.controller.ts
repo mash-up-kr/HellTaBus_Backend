@@ -1,6 +1,6 @@
 import {
   Controller, Get, Post, Body,
-  Param, Delete, Req, Query, ParseArrayPipe, Patch,
+  Param, Delete, Req, Query, ParseArrayPipe, Patch, UseGuards,
 } from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
@@ -8,8 +8,10 @@ import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {ApiBearerAuth, ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './exercise.docs';
 import {Exercise} from './entities/exercise.entity';
+import {JwtAuthGuard} from '../user/jwt-auth.guard';
 
 @Controller('exercise')
+@UseGuards(JwtAuthGuard)
 @ApiTags('exercise')
 export class ExerciseController {
   constructor(private readonly exerciseService: ExerciseService) { }
