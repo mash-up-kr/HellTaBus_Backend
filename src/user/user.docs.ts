@@ -1,15 +1,13 @@
 import {applyDecorators} from '@nestjs/common';
-import {ApiCreatedResponse, ApiOperation, ApiResponse} from '@nestjs/swagger';
+import {ApiOperation, ApiResponse} from '@nestjs/swagger';
 import {UserController} from './user.controller';
-import {GoogleUserDto} from './dto/google-user.dto';
-import {User} from './entities/user.entity';
 import {CreateUserResponseDto} from './dto/create-user-response.dto';
 import {LoginUserResponseDto} from './dto/login-user-response.dto';
 import {GetLoginInfoResponseDto} from './dto/get-login-info-response.dto';
-import {UserDto} from './dto/user.dto';
 import {} from './dto/update-base-information-user.dto';
-import {UpdateUserDto} from './dto/update-user.dto';
-import {UpdateBaseUserInformationResponseDto} from './dto/update-user-response.dto';
+import {UpdateUserResponseDto} from './dto/update-user-response.dto';
+import {UpdateBaseUserInformationResponseDto}
+  from './dto/update-base-information-user-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -83,7 +81,7 @@ export const ApiDocs: SwaggerMethodDoc<UserController> = {
         }),
         ApiResponse({
           status: 201,
-          type: UpdateUserDto,
+          type: UpdateUserResponseDto,
           description: '사용자의 정보 수정',
         }),
     );
