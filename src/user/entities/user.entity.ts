@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import {Gender, HealthStyle} from '../../constants';
+import {AudioCoach, Gender, HealthStyle, Speed} from '../../constants';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 import {Feedback} from '../../feedback/entities/feedback.entity';
 import {ApiProperty} from '@nestjs/swagger';
@@ -66,6 +66,27 @@ export class User {
     nullable: true,
   })
   healthStyle: HealthStyle;
+
+  @Column({
+    type: 'enum',
+    enum: AudioCoach,
+    nullable: true,
+  })
+  audioCoach: AudioCoach;
+
+  @Column({
+    type: 'enum',
+    enum: Speed,
+    nullable: true,
+  })
+  speed: Speed;
+
+  @Column({
+    type: 'boolean',
+    nullable: true,
+    default: 0,
+  })
+  explanation: boolean;
 
   /* Relations */
 
