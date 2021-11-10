@@ -9,6 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({transform: true}));
   app.useGlobalFilters(new HttpExceptionFilter());
   setupSwagger(app);
+  app.enableCors();
   await app.listen(3000);
 }
 
