@@ -1,3 +1,9 @@
+enum AudioCoach {
+  SCARY = 'SCARY',
+  COMFORTABLE = 'COMFORTABLE',
+  KID = 'KID',
+}
+
 enum HealthStyle {
   FULL_BODY_WORKOUT = 'FULL_BODY_WORKOUT', // 무분할
   SPLIT_3_DAY_WORKOUT = 'SPLIT_3_DAY_WORKOUT', // 3분할
@@ -13,6 +19,12 @@ enum HealthPart {
   TRICEPS = 'TRICEPS', // 삼두
 }
 
+enum Speed { // 어떤 속도로 운동
+  SLOW = 'SLOW', // 천천히
+  NORMAL = 'NORMAL', // 보통
+  FAST = 'FAST', // 빠르게
+}
+
 enum FeedbackDifficulty {
   EASY = 'EASY',
   NORMAL = 'NORMAL',
@@ -25,8 +37,10 @@ enum Gender {
 }
 
 export {
+  AudioCoach,
   HealthStyle,
   HealthPart,
+  Speed,
   FeedbackDifficulty,
   Gender,
 };
