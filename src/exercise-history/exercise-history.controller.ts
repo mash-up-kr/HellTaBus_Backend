@@ -15,10 +15,11 @@ export class ExerciseHistoryController {
   create(@Body() createExerciseHistoryDto: CreateExerciseHistoryDto) {
     return this.exerciseHistoryService.create(createExerciseHistoryDto);
   }
-
+  
   @ApiBearerAuth()
   @Get()
   @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
+  @UseGuards(JwtAuthGuard)
   findAll(
     @Req() req,
     @Query(
