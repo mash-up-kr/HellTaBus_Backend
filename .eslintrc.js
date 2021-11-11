@@ -26,5 +26,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'max-len': ["error", { "code": 100 }],
     strict: 0,
+    'linebreak-style': ['error', 'windows']
   },
 };
