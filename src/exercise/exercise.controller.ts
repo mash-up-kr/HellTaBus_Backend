@@ -41,7 +41,7 @@ export class ExerciseController {
     }))
         partList: string[],
   ) {
-    return this.exerciseService.findAll(partList);
+    return this.exerciseService.findAll(partList || []);
   }
 
   @ApiBearerAuth()
