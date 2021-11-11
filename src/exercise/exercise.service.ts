@@ -41,11 +41,14 @@ export class ExerciseService {
 
   async findAll(partList: string[]) {
     let exerciseList;
-    if (partList[0] === '') {
+    if (partList.length === 0 || partList[0] === '') {
       exerciseList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .getMany();
     } else {
+      if (partList.includes(HealthPart.ARM)) {
+        partList.push(...[HealthPart.BICEPS, HealthPart.TRICEPS]);
+      }
       exerciseList = await this.exerciseRepository
           .createQueryBuilder('exercise')
           .where('exercise.part In (:partList)', {partList})
