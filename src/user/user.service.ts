@@ -124,7 +124,7 @@ export class UserService {
   async updateBaseUserInformation(
       user: User,
       {
-        nickname, gender, age, height, weight, healthStyle, audioCoach, speed, explanation,
+        nickname, gender, age, height, weight, splitType, audioCoach, speed, explanation,
       }: UpdateBaseUserInformationDto) {
     const existingUser = await this.findOneById(user.id);
 
@@ -133,7 +133,7 @@ export class UserService {
     existingUser.age = age;
     existingUser.height = height;
     existingUser.weight = weight;
-    existingUser.healthStyle = healthStyle;
+    existingUser.splitType = splitType;
     existingUser.audioCoach = audioCoach;
     existingUser.speed = speed;
     existingUser.explanation = explanation;
@@ -144,13 +144,13 @@ export class UserService {
 
   async updateUser(
       user: User,
-      {nickname, age, height, weight, healthStyle, audioCoach, speed, explanation}: UpdateUserDto) {
+      {nickname, age, height, weight, splitType, audioCoach, speed, explanation}: UpdateUserDto) {
     const existingUser = await this.findOneById(user.id);
     existingUser.nickname = nickname;
     existingUser.age = age;
     existingUser.height = height;
     existingUser.weight = weight;
-    existingUser.healthStyle = healthStyle;
+    existingUser.splitType = splitType;
     existingUser.audioCoach = audioCoach;
     existingUser.speed = speed;
     existingUser.explanation = explanation;
