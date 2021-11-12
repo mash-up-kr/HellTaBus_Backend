@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import {HealthPart} from '../../constants';
+import {ExercisePart} from '../../constants';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 
 @Entity('exercise')
@@ -20,9 +20,9 @@ export class Exercise {
 
   @Column({
     type: 'enum',
-    enum: HealthPart,
+    enum: ExercisePart,
   })
-  part: HealthPart; // 부위
+  part: ExercisePart; // 부위
 
   @Column()
   baseCount: number; // 기본 횟수

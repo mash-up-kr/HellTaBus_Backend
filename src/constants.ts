@@ -10,7 +10,7 @@ enum SplitType {
   SPLIT_5_DAY_WORKOUT = 'SPLIT_5_DAY_WORKOUT', // 5분할
 }
 
-enum HealthPart {
+enum ExercisePart {
   LOWER = 'LOWER', // 하체
   BACK = 'BACK', // 등
   CHEST = 'CHEST', // 가슴
@@ -46,7 +46,7 @@ enum Gender {
 export {
   AudioCoach,
   SplitType,
-  HealthPart,
+  ExercisePart,
   Split3DayWorkoutPart,
   Speed,
   FeedbackDifficulty,
