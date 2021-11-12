@@ -4,6 +4,7 @@ import {
   DeleteDateColumn,
   Entity,
   ManyToOne,
+  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -27,9 +28,7 @@ export class Feedback {
   @ManyToOne(() => User, (user) => user.feedbackList, {nullable: false})
   user: User;
 
-  @ManyToOne(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.feedbackList,
-      {nullable: false}
+  @OneToOne(() => ExerciseHistory, (exerciseHistory) => exerciseHistory.feedback,
   )
   exerciseHistory: ExerciseHistory;
 
