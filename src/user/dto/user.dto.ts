@@ -1,6 +1,6 @@
-import {IsNotEmpty} from 'class-validator';
+import {IsBoolean, IsEnum, IsNotEmpty} from 'class-validator';
 import {ApiProperty} from '@nestjs/swagger';
-import {Gender, SplitType} from '../../constants';
+import {AudioCoach, Gender, SplitType, Speed} from '../../constants';
 
 export class UserDto {
   @IsNotEmpty()
@@ -38,4 +38,13 @@ export class UserDto {
   @IsNotEmpty()
   @ApiProperty({enum: SplitType})
   splitType: SplitType;
+
+  @ApiProperty({enum: AudioCoach})
+  audioCoach: AudioCoach;
+
+  @ApiProperty({enum: Speed})
+  speed: Speed;
+
+  @ApiProperty()
+  explanation: boolean;
 }
