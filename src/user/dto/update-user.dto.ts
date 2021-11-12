@@ -1,5 +1,5 @@
 import {ApiProperty} from '@nestjs/swagger';
-import {AudioCoach, Gender, HealthStyle, Speed} from '../../constants';
+import {AudioCoach, SplitType, Speed} from '../../constants';
 
 export class UpdateUserDto {
   @ApiProperty({example: '펭귄', description: '사용자 닉네임'})
@@ -14,7 +14,7 @@ export class UpdateUserDto {
   weight: number;
 
   @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택'})
-  healthStyle: HealthStyle;
+  splitType: SplitType;
 
   @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택'})
   audioCoach: AudioCoach;

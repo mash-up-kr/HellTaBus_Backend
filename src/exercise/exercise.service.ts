@@ -4,7 +4,7 @@ import {Between, Repository} from 'typeorm';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
 import {UpdateExerciseDto} from './dto/update-exercise.dto';
 import {User} from '../user/entities/user.entity';
-import {HealthPart, HealthStyle, Split3DayWorkoutPart} from '../constants';
+import {HealthPart, SplitType, Split3DayWorkoutPart} from '../constants';
 import {ExerciseHistory} from '../exercise-history/entities/exercise-history.entity';
 import {Exercise} from './entities/exercise.entity';
 import {Feedback} from './../feedback/entities/feedback.entity';
@@ -149,7 +149,7 @@ export class ExerciseService {
       throw Error(`Need 'from' & 'to' query string`);
     }
 
-    const healthStyle = HealthStyle.SPLIT_3_DAY_WORKOUT;
+    const healthStyle = SplitType.SPLIT_3_DAY_WORKOUT;
     const userExerciseHistoryList = await this.exerciseHistoryRepository.find({
       where: {
         startTime: Between(from, to),
@@ -163,7 +163,7 @@ export class ExerciseService {
     const suggestionPartList: HealthPart[] = [];
     const suggestionExerciseList: Exercise[] = [];
 
-    if (user.healthStyle === HealthStyle.SPLIT_3_DAY_WORKOUT) {
+    if (user.splitType === SplitType.SPLIT_3_DAY_WORKOUT) {
       // 가장 적게한 3분할 파트 찾기
       const partSetCount = {
         [Split3DayWorkoutPart.BACK_AND_TRICEPS]: 0,
@@ -210,7 +210,7 @@ export class ExerciseService {
       } else {
         throw Error(`Unknown leastPartSet (${leastPartSet})`);
       }
-    } else if (user.healthStyle === HealthStyle.SPLIT_5_DAY_WORKOUT) {
+    } else if (user.splitType === SplitType.SPLIT_5_DAY_WORKOUT) {
       // 가장 적게한 부위 찾기
       const partCount = {
         [HealthPart.LOWER]: 0,
@@ -236,7 +236,7 @@ export class ExerciseService {
       // 가장 적게한 부위에서 운동 3개 추천
       suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
           leastHealthPart, userExerciseHistoryList, 3)));
-    } else if (user.healthStyle === HealthStyle.FULL_BODY_WORKOUT) { // 무분할
+    } else if (user.splitType === SplitType.FULL_BODY_WORKOUT) { // 무분할
       suggestionPartList.push(...[HealthPart.SHOULDER, HealthPart.ARM,
         HealthPart.CHEST, HealthPart.BACK, HealthPart.LOWER]);
 
@@ -253,7 +253,7 @@ export class ExerciseService {
             HealthPart.LOWER, userExerciseHistoryList),
       ]);
     } else {
-      throw Error(`Invalid healthStyle!!!!! (${user.healthStyle})`);
+      throw Error(`Invalid healthStyle!!!!! (${user.splitType})`);
     }
     return {
       suggestionPartList,

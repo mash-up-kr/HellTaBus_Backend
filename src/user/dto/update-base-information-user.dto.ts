@@ -1,6 +1,6 @@
 import {ApiProperty} from '@nestjs/swagger';
 import {IsNotEmpty} from 'class-validator';
-import {AudioCoach, Gender, HealthStyle, Speed} from '../../constants';
+import {AudioCoach, Gender, SplitType, Speed} from '../../constants';
 
 export class UpdateBaseUserInformationDto {
   @IsNotEmpty()
@@ -25,7 +25,7 @@ export class UpdateBaseUserInformationDto {
 
   @IsNotEmpty()
   @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택'})
-  healthStyle: HealthStyle;
+  splitType: SplitType;
 
   @IsNotEmpty()
   @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택'})

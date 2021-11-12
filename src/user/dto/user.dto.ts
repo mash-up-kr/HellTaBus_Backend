@@ -1,6 +1,6 @@
 import {IsNotEmpty} from 'class-validator';
 import {ApiProperty} from '@nestjs/swagger';
-import {Gender, HealthStyle} from '../../constants';
+import {Gender, SplitType} from '../../constants';
 
 export class UserDto {
   @IsNotEmpty()
@@ -36,6 +36,6 @@ export class UserDto {
   weight: number;
 
   @IsNotEmpty()
-  @ApiProperty({enum: HealthStyle})
-  healthStyle: HealthStyle;
+  @ApiProperty({enum: SplitType})
+  splitType: SplitType;
 }

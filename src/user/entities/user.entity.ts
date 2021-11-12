@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import {AudioCoach, Gender, HealthStyle, Speed} from '../../constants';
+import {AudioCoach, Gender, SplitType, Speed} from '../../constants';
 import {ExerciseHistory} from '../../exercise-history/entities/exercise-history.entity';
 import {Feedback} from '../../feedback/entities/feedback.entity';
 import {ApiProperty} from '@nestjs/swagger';
@@ -62,10 +62,10 @@ export class User {
 
   @Column({
     type: 'enum',
-    enum: HealthStyle,
+    enum: SplitType,
     nullable: true,
   })
-  healthStyle: HealthStyle;
+  splitType: SplitType;
 
   @Column({
     type: 'enum',
