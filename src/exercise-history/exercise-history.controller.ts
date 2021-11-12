@@ -8,16 +8,19 @@ import {JwtAuthGuard} from '../user/jwt-auth.guard';
 @Controller('exercise-history')
 @ApiTags('Exercise-history')
 export class ExerciseHistoryController {
-  constructor(private readonly exerciseHistoryService: ExerciseHistoryService) { }
+  constructor(
+    private readonly exerciseHistoryService: ExerciseHistoryService
+  ) { }
 
   @ApiBearerAuth()
   @Post()
-  @ApiDocs.create('운동 기록 생성 API (Author by 신영)')
+  @ApiDocs.create('운동 기록 생성 API (Author by 선우)')
+  @UseGuards(JwtAuthGuard)
   create(
     @Req() req,
     @Body() createExerciseHistoryDto: CreateExerciseHistoryDto
   ) {
-    return this.exerciseHistoryService.create(req.user, createExerciseHistoryDto);
+    return this.exerciseHistoryService.create(req.user.id, createExerciseHistoryDto);
   }
 
   @ApiBearerAuth()
@@ -39,6 +42,6 @@ export class ExerciseHistoryController {
     @Query('from') from: string,
     @Query('to') to: string,
   ) {
-    return this.exerciseHistoryService.findAll(exerciseIdList, req.user, duration, from, to);
+    return this.exerciseHistoryService.findAll(exerciseIdList, req.user.id, duration, from, to);
   }
 }

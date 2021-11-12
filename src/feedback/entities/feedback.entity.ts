@@ -28,9 +28,7 @@ export class Feedback {
   @ManyToOne(() => User, (user) => user.feedbackList, {nullable: false})
   user: User;
 
-  @OneToOne(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.feedback,
-      {nullable: false}
+  @OneToOne(() => ExerciseHistory, (exerciseHistory) => exerciseHistory.feedback,
   )
   exerciseHistory: ExerciseHistory;
 
