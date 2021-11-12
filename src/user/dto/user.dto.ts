@@ -1,6 +1,6 @@
-import {IsNotEmpty} from 'class-validator';
+import {IsBoolean, IsEnum, IsNotEmpty} from 'class-validator';
 import {ApiProperty} from '@nestjs/swagger';
-import {Gender, HealthStyle} from '../../constants';
+import {AudioCoach, Gender, HealthStyle, Speed} from '../../constants';
 
 export class UserDto {
   @IsNotEmpty()
@@ -38,4 +38,13 @@ export class UserDto {
   @IsNotEmpty()
   @ApiProperty({enum: HealthStyle})
   healthStyle: HealthStyle;
+
+  @ApiProperty({enum: AudioCoach})
+  audioCoach: AudioCoach;
+
+  @ApiProperty({enum: Speed})
+  speed: Speed;
+
+  @ApiProperty()
+  explanation: boolean;
 }
