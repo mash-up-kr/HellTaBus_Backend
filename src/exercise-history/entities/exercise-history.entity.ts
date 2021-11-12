@@ -3,7 +3,9 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne, OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -34,9 +36,9 @@ export class ExerciseHistory {
   @OneToMany(() => Set, (set) => set.exerciseHistory)
   setList: Set[];
 
-  @OneToMany(() => Feedback,
-      (feedback) => feedback.exerciseHistory)
-  feedbackList: Feedback[];
+  @OneToOne(() => Feedback, (feedback) => feedback.exerciseHistory)
+  @JoinColumn()
+  feedback: Feedback;
 
   /* Date Columns */
 

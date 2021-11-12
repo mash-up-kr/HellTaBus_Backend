@@ -12,7 +12,8 @@ export class ExerciseHistoryService {
     private readonly ExerciseHistoryRepository: Repository<ExerciseHistory>
   ) { }
 
-  async create(createExerciseHistoryDto: CreateExerciseHistoryDto) {
+  async create(user: User, createExerciseHistoryDto: CreateExerciseHistoryDto) {
+    
     return await this.ExerciseHistoryRepository.save(createExerciseHistoryDto);
   }
 

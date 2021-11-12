@@ -13,8 +13,11 @@ export class ExerciseHistoryController {
   @ApiBearerAuth()
   @Post()
   @ApiDocs.create('운동 기록 생성 API (Author by 신영)')
-  create(@Body() createExerciseHistoryDto: CreateExerciseHistoryDto) {
-    return this.exerciseHistoryService.create(createExerciseHistoryDto);
+  create(
+    @Req() req,
+    @Body() createExerciseHistoryDto: CreateExerciseHistoryDto
+  ) {
+    return this.exerciseHistoryService.create(req.user, createExerciseHistoryDto);
   }
 
   @ApiBearerAuth()

@@ -4,11 +4,6 @@ import {IsNotEmpty, IsNumber} from 'class-validator';
 export class CreateExerciseHistoryDto {
   @IsNumber()
   @IsNotEmpty()
-  @ApiProperty({example: '1', description: '사용자 id 값'})
-  userId: number;
-
-  @IsNumber()
-  @IsNotEmpty()
   @ApiProperty({example: '1', description: '운동 id 값'})
   exerciseId: number;
 
