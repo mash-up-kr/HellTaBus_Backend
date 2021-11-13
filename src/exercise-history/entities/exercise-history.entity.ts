@@ -37,7 +37,7 @@ export class ExerciseHistory {
   setList: Set[];
 
   @OneToOne(() => Feedback,
-      (feedback) => feedback.exerciseHistory, {nullable: false})
+      (feedback) => feedback.exerciseHistory, {nullable: true})
   @JoinColumn()
   feedback: Feedback;
 
