@@ -7,5 +7,5 @@ RUN npm run build
 
 ENV PORT 3000
 EXPOSE 3000
-CMD npm run db:generate-migration && npm run db:migration
+CMD ["npm", "run", "db:generate-migration && npm run db:migration"]
 CMD ["npm", "run", "start:prod"]
