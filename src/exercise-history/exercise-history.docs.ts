@@ -1,6 +1,5 @@
 import {applyDecorators} from '@nestjs/common';
 import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/swagger';
-import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
 import {ExerciseHistoryController} from './exercise-history.controller';
 import {CreateExerciseHistoryResponseDto} from './dto/create-exercise-history-response.dto';
 import {FindAllExerciseHistoryResponseDto} from './dto/find-all-exercise-history-response.dto';

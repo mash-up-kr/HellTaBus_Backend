@@ -1,6 +1,6 @@
 import {ApiProperty} from '@nestjs/swagger';
 import {IsNotEmpty, IsNumber, IsString} from 'class-validator';
-import {HealthPart} from 'src/constants';
+import {ExercisePart} from 'src/constants';
 
 export class CreateExerciseDto {
   @IsString()
@@ -16,7 +16,7 @@ export class CreateExerciseDto {
   @IsString()
   @IsNotEmpty()
   @ApiProperty({example: 'CHEST', description: '운동 부위'})
-  part: HealthPart;
+  part: ExercisePart;
 
   @IsNumber()
   @IsNotEmpty()

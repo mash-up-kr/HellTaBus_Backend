@@ -55,6 +55,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: service-hell-ta-bus
-          cluster: cluster-hell-ta-bus
+          service: service-hell-ta-bus-2
+          cluster: cluster-hell-ta-bus-2
           wait-for-service-stability: true
