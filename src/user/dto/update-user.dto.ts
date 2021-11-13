@@ -1,5 +1,5 @@
 import {ApiProperty} from '@nestjs/swagger';
-import {AudioCoach, Gender, SplitType, Speed} from '../../constants';
+import {AudioCoach, SplitType, Speed} from '../../constants';
 import {IsBoolean, IsEnum, IsNumber, IsString} from 'class-validator';
 
 export class UpdateUserDto {
@@ -20,7 +20,7 @@ export class UpdateUserDto {
   weight: number;
 
   @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택'})
-  @IsEnum(splitType)
+  @IsEnum(SplitType)
   splitType: SplitType;
 
   @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택'})
