@@ -7,6 +7,7 @@ import {User} from './../user/entities/user.entity';
 import {Feedback} from './../feedback/entities/feedback.entity';
 import {Set} from './entities/set.entity';
 import {Exercise} from 'src/exercise/entities/exercise.entity';
+import {ConfigModule} from '@nestjs/config';
 
 @Injectable()
 export class ExerciseHistoryService {
@@ -64,6 +65,13 @@ export class ExerciseHistoryService {
       throw Error(`Can't find user`);
     }
     let exerciseHistoryList;
+    if (exerciseIdList === undefined) {
+      exerciseIdList = [];
+      const exerciseNumber = await this.exerciseRepository.count();
+      for (let i = 0; i < exerciseNumber; i++) {
+        exerciseIdList.push(i);
+      }
+    }
     if (duration === 'recent') {
       exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
         const exerciseHistorykEntity = await this.ExerciseHistoryRepository
@@ -78,6 +86,12 @@ export class ExerciseHistoryService {
         return exerciseHistorykEntity;
       }));
     } else {
+      if (from === undefined) {
+        from = '1800-01-01';
+      }
+      if (to === undefined) {
+        to = '2800-01-01';
+      }
       exerciseHistoryList = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
           .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
@@ -89,6 +103,9 @@ export class ExerciseHistoryService {
           BETWEEN '${from}' AND '${to}'`)
           .getMany();
     }
+    exerciseHistoryList = exerciseHistoryList.filter(function(item) {
+      return item !== null && item !== undefined && item !== '';
+    });
     return exerciseHistoryList;
   }
 }
