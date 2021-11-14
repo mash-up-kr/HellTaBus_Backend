@@ -8,7 +8,7 @@ export class UpdateBaseUserInformationDto {
   nickname: string;
 
   @IsNotEmpty()
-  @ApiProperty({example: 'FEMALE', description: '사용자 성별'})
+  @ApiProperty({example: 'FEMALE', description: '사용자 성별', enum: Gender})
   gender: Gender;
 
   @IsNotEmpty()
@@ -24,15 +24,15 @@ export class UpdateBaseUserInformationDto {
   weight: number;
 
   @IsNotEmpty()
-  @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택'})
+  @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택', enum: SplitType})
   splitType: SplitType;
 
   @IsNotEmpty()
-  @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택'})
+  @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택', enum: AudioCoach})
   audioCoach: AudioCoach;
 
   @IsNotEmpty()
-  @ApiProperty({example: 'FAST', description: '어떤 속도로 운동'})
+  @ApiProperty({example: 'FAST', description: '어떤 속도로 운동', enum: Speed})
   speed: Speed;
 
   @IsNotEmpty()

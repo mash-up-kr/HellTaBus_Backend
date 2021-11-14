@@ -37,7 +37,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
               required: true,
               type: String,
               description: '조회하고 싶은 운동 부위 목록 (빈칸은 모든 운동 부위 목록으로 처리)',
-              example: 'lower,back',
+              example: 'LOWER,BACK',
             },
         ),
         ApiResponse({
