@@ -1,4 +1,4 @@
-import {Injectable} from '@nestjs/common';
+import {ConsoleLogger, Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Repository} from 'typeorm';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
@@ -64,16 +64,26 @@ export class ExerciseHistoryService {
     if (!user) {
       throw Error(`Can't find user`);
     }
-    let exerciseHistoryList;
     if (exerciseIdList === undefined) {
       exerciseIdList = [];
-      const exerciseNumber = await this.exerciseRepository.count();
-      for (let i = 0; i < exerciseNumber; i++) {
-        exerciseIdList.push(i);
+      const exerciseList = await this.exerciseRepository
+          .createQueryBuilder('exercise')
+          .select('id')
+          .getRawMany();
+      for (const exercise of exerciseList) {
+        exerciseIdList.push(exercise.id);
       }
     }
+    if (from === undefined) {
+      from = '1800-01-01 00:00';
+    }
+    if (to === undefined) {
+      to = '2800-01-01 00:00';
+    }
+    let exerciseHistoryList;
     if (duration === 'recent') {
       exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+        console.log(exerciseId);
         const exerciseHistorykEntity = await this.ExerciseHistoryRepository
             .createQueryBuilder('exerciseHistory')
             .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
@@ -86,12 +96,6 @@ export class ExerciseHistoryService {
         return exerciseHistorykEntity;
       }));
     } else {
-      if (from === undefined) {
-        from = '1800-01-01';
-      }
-      if (to === undefined) {
-        to = '2800-01-01';
-      }
       exerciseHistoryList = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
           .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
