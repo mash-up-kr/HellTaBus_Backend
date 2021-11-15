@@ -1,4 +1,4 @@
-import {ConsoleLogger, Injectable} from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Repository} from 'typeorm';
 import {CreateExerciseHistoryDto} from './dto/create-exercise-history.dto';
@@ -7,7 +7,6 @@ import {User} from './../user/entities/user.entity';
 import {Feedback} from './../feedback/entities/feedback.entity';
 import {Set} from './entities/set.entity';
 import {Exercise} from 'src/exercise/entities/exercise.entity';
-import {ConfigModule} from '@nestjs/config';
 
 @Injectable()
 export class ExerciseHistoryService {
