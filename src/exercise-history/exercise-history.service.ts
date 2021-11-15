@@ -82,7 +82,6 @@ export class ExerciseHistoryService {
     let exerciseHistoryList;
     if (duration === 'recent') {
       exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
-        console.log(exerciseId);
         const exerciseHistorykEntity = await this.ExerciseHistoryRepository
             .createQueryBuilder('exerciseHistory')
             .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
