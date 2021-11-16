@@ -19,15 +19,15 @@ export class UpdateUserDto {
   @IsNumber()
   weight: number;
 
-  @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택'})
+  @ApiProperty({example: 'FULL_BODY_WORKOUT', description: '사용자 분할 선택', enum: SplitType})
   @IsEnum(SplitType)
   splitType: SplitType;
 
-  @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택'})
+  @ApiProperty({example: 'COMFORTABLE', description: '오디오 코치 선택', enum: AudioCoach})
   @IsEnum(AudioCoach)
   audioCoach: AudioCoach;
 
-  @ApiProperty({example: 'FAST', description: '어떤 속도로 운동'})
+  @ApiProperty({example: 'FAST', description: '어떤 속도로 운동', enum: Speed})
   @IsEnum(Speed)
   speed: Speed;
 

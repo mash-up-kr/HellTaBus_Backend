@@ -15,7 +15,7 @@ export class CreateExerciseDto {
 
   @IsString()
   @IsNotEmpty()
-  @ApiProperty({example: 'CHEST', description: '운동 부위'})
+  @ApiProperty({example: 'CHEST', description: '운동 부위', enum: ExercisePart})
   part: ExercisePart;
 
   @IsNumber()
