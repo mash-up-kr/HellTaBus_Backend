@@ -7,7 +7,7 @@ export class CreateExerciseHistoryDto {
   @IsNumber()
   @IsNotEmpty()
   @ApiProperty({example: '1', description: '운동 id 값'})
-  exerciseId: number;
+  id: number;
 
   @IsNotEmpty()
   @ApiProperty({example: '2021-10-31T07:43Z', description: '운동 시작 시간'})

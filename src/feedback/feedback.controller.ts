@@ -1,6 +1,6 @@
 import {Controller, Post, Body, Get, Query, ParseArrayPipe, Req} from '@nestjs/common';
 import {FeedbackService} from './feedback.service';
-import {CreateFeedbackDto} from './dto/create-feedback.dto';
+import {CreateFeedbackDto} from './dto/feedback-response.dto';
 import {User} from '../user/entities/user.entity';
 import {ApiTags} from '@nestjs/swagger';
 import {ApiDocs} from './feedback.docs';

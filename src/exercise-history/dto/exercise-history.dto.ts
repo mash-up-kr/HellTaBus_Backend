@@ -1,10 +1,10 @@
 import {IsNotEmpty, IsNumber} from 'class-validator';
-import {ApiProperty} from '@nestjs/swagger';
+import {ApiProperty, OmitType} from '@nestjs/swagger';
 import {CreateExerciseHistoryDto} from './create-exercise-history.dto';
+import {CreateFeedbackDto} from '../../feedback/dto/feedback-response.dto';
 
-export class ExerciseHistoryDto extends CreateExerciseHistoryDto {
-  @IsNumber()
-  @IsNotEmpty()
-  @ApiProperty({example: '1', description: '고유 아이디'})
-  id: number;
+export class ExerciseHistoryResponseDto extends OmitType(
+    CreateExerciseHistoryDto, ['difficulty'] as const) {
+      @ApiProperty({type: [CreateFeedbackDto]})
+      feedback: [CreateFeedbackDto];
 }

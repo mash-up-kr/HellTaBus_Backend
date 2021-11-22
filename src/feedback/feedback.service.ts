@@ -1,5 +1,5 @@
 import {Injectable} from '@nestjs/common';
-import {CreateFeedbackDto} from './dto/create-feedback.dto';
+import {CreateFeedbackDto} from './dto/feedback-response.dto';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Feedback} from './entities/feedback.entity';
 import {Repository} from 'typeorm';
