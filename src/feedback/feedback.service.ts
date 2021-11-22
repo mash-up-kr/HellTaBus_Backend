@@ -1,9 +1,9 @@
 import {Injectable} from '@nestjs/common';
-import {CreateFeedbackDto} from './dto/feedback-response.dto';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Feedback} from './entities/feedback.entity';
 import {Repository} from 'typeorm';
 import {User} from '../user/entities/user.entity';
+import {CreateFeedbackDto} from './dto/create-feedback.dto';
 
 @Injectable()
 export class FeedbackService {

@@ -2,7 +2,8 @@ import {applyDecorators} from '@nestjs/common';
 import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/swagger';
 import {ExerciseHistoryController} from './exercise-history.controller';
 import {CreateExerciseHistoryResponseDto} from './dto/create-exercise-history-response.dto';
-import {FindAllExerciseHistoryResponseDto} from './dto/find-all-exercise-history-response.dto';
+import {FindRecentExerciseHistoryDto} from './dto/find-recent-exercise-history.dto';
+import {FindByPeriodExerciseHistoryResponseDto} from './dto/find-recent-exercise-history-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -27,7 +28,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: '기간내 운동 기록을 조회합니다. 운동과 세트 정보를 반환합니다.',
+          description: '기간내 운동 기록을 조회합니다. 운동 정보와 세트 정보를 반환합니다.',
         }),
         ApiQuery(
             {
@@ -47,7 +48,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
         ),
         ApiResponse({
           status: 200,
-          type: FindAllExerciseHistoryResponseDto,
+          type: FindByPeriodExerciseHistoryResponseDto,
           description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
@@ -57,7 +58,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: 'ID에 해당하는 최신 운동 기록을 조회합니다. 운동, 세트, 피드백 정보를 반환합니다.',
+          description: 'ID에 해당하는 최신 운동 기록을 조회합니다. 운동정보, 세트 리스트 정보, 피드백 정보를 반환합니다.',
         }),
         ApiQuery(
             {
@@ -70,7 +71,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
         ),
         ApiResponse({
           status: 200,
-          type: FindAllExerciseHistoryResponseDto,
+          type: FindRecentExerciseHistoryDto,
           description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),
