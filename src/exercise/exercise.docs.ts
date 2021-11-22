@@ -34,9 +34,9 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseController> = {
         ApiQuery(
             {
               name: 'partList',
-              required: true,
+              required: false,
               type: String,
-              description: '조회하고 싶은 운동 부위 목록 (빈칸은 모든 운동 부위 목록으로 처리)',
+              description: '조회하고 싶은 운동 부위 목록 (없으면 모든 운동 부위 목록으로 처리)',
               example: 'LOWER,BACK',
             },
         ),
