@@ -57,8 +57,34 @@ export class ExerciseHistoryService {
     return createExerciseHistoryDto;
   }
 
-  async findAll(exerciseIdList: number[], userId: number,
-      duration: string, from: string, to: string) {
+  async findByPeriod(userId: number, from: string, to: string) {
+    const user = await this.userRepository.findOne({id: userId});
+    if (!user) {
+      throw Error(`Can't find user`);
+    }
+    if (from === undefined) {
+      from = '1800-01-01 00:00';
+    }
+    if (to === undefined) {
+      to = '2800-01-01 00:00';
+    }
+    let exerciseHistoryList;
+    exerciseHistoryList = await this.ExerciseHistoryRepository
+        .createQueryBuilder('exerciseHistory')
+        .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
+        .innerJoinAndSelect('exerciseHistory.setList', 'setList')
+        .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
+        .andWhere(`exerciseHistory.startTime 
+          BETWEEN '${from}' AND '${to}'`)
+        .getMany();
+
+    exerciseHistoryList = exerciseHistoryList.filter(function(item) {
+      return item !== null && item !== undefined && item !== '';
+    });
+    return exerciseHistoryList;
+  }
+
+  async findRecentExercise(exerciseIdList: number[], userId: number) {
     const user = await this.userRepository.findOne({id: userId});
     if (!user) {
       throw Error(`Can't find user`);
@@ -73,38 +99,19 @@ export class ExerciseHistoryService {
         exerciseIdList.push(exercise.id);
       }
     }
-    if (from === undefined) {
-      from = '1800-01-01 00:00';
-    }
-    if (to === undefined) {
-      to = '2800-01-01 00:00';
-    }
     let exerciseHistoryList;
-    if (duration === 'recent') {
-      exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
-        const exerciseHistorykEntity = await this.ExerciseHistoryRepository
-            .createQueryBuilder('exerciseHistory')
-            .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
-            .innerJoinAndSelect('exerciseHistory.setList', 'setList')
-            .innerJoinAndSelect('exerciseHistory.feedback', 'feedback')
-            .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
-            .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-            .orderBy('exerciseHistory.startTime', 'DESC')
-            .getOne();
-        return exerciseHistorykEntity;
-      }));
-    } else {
-      exerciseHistoryList = await this.ExerciseHistoryRepository
+    exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
+      const exerciseHistorykEntity = await this.ExerciseHistoryRepository
           .createQueryBuilder('exerciseHistory')
           .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
           .innerJoinAndSelect('exerciseHistory.setList', 'setList')
           .innerJoinAndSelect('exerciseHistory.feedback', 'feedback')
-          .where('exerciseHistory.exerciseId In (:exerciseIdList)', {exerciseIdList})
+          .where('exerciseHistory.exerciseId = :exerciseId', {exerciseId})
           .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-          .andWhere(`exerciseHistory.startTime 
-          BETWEEN '${from}' AND '${to}'`)
-          .getMany();
-    }
+          .orderBy('exerciseHistory.startTime', 'DESC')
+          .getOne();
+      return exerciseHistorykEntity;
+    }));
     exerciseHistoryList = exerciseHistoryList.filter(function(item) {
       return item !== null && item !== undefined && item !== '';
     });

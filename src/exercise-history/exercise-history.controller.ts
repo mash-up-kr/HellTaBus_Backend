@@ -25,31 +25,21 @@ export class ExerciseHistoryController {
 
   @ApiBearerAuth()
   @Get()
-  @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
+  @ApiDocs.findByPeriod('기간내 운동 기록 조회 API (Author by 선우)')
   @UseGuards(JwtAuthGuard)
-  findAll(
+  findByPeriod(
     @Req() req,
-    @Query(
-        'exerciseIdList',
-        new ParseArrayPipe({
-          optional: true,
-          items: Number,
-          separator: ',',
-        }),
-    )
-        exerciseIdList: number[],
-    @Query('duration') duration: string,
     @Query('from') from: string,
     @Query('to') to: string,
   ) {
-    return this.exerciseHistoryService.findAll(exerciseIdList, req.user.id, duration, from, to);
+    return this.exerciseHistoryService.findByPeriod(req.user.id, from, to);
   }
 
   @ApiBearerAuth()
-  @Get()
-  @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
+  @Get('recent')
+  @ApiDocs.findRecentExercise('최근 운동 기록 조회 API (Author by 선우)')
   @UseGuards(JwtAuthGuard)
-  findByRecent(
+  findRecentExercise(
     @Req() req,
     @Query(
         'exerciseIdList',
@@ -60,10 +50,7 @@ export class ExerciseHistoryController {
         }),
     )
         exerciseIdList: number[],
-    @Query('duration') duration: string,
-    @Query('from') from: string,
-    @Query('to') to: string,
   ) {
-    return this.exerciseHistoryService.findAll(exerciseIdList, req.user.id, duration, from, to);
+    return this.exerciseHistoryService.findRecentExercise(exerciseIdList, req.user.id);
   }
 }
