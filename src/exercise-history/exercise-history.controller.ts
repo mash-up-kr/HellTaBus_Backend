@@ -44,4 +44,26 @@ export class ExerciseHistoryController {
   ) {
     return this.exerciseHistoryService.findAll(exerciseIdList, req.user.id, duration, from, to);
   }
+
+  @ApiBearerAuth()
+  @Get()
+  @ApiDocs.findAll('운동 기록 조회 API (Author by 선우)')
+  @UseGuards(JwtAuthGuard)
+  findByRecent(
+    @Req() req,
+    @Query(
+        'exerciseIdList',
+        new ParseArrayPipe({
+          optional: true,
+          items: Number,
+          separator: ',',
+        }),
+    )
+        exerciseIdList: number[],
+    @Query('duration') duration: string,
+    @Query('from') from: string,
+    @Query('to') to: string,
+  ) {
+    return this.exerciseHistoryService.findAll(exerciseIdList, req.user.id, duration, from, to);
+  }
 }

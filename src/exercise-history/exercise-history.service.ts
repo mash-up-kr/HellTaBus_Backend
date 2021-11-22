@@ -54,7 +54,7 @@ export class ExerciseHistoryService {
         exerciseHistory,
       });
     }
-    return exerciseHistory;
+    return createExerciseHistoryDto;
   }
 
   async findAll(exerciseIdList: number[], userId: number,
