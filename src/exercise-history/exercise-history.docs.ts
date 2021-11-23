@@ -2,7 +2,8 @@ import {applyDecorators} from '@nestjs/common';
 import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/swagger';
 import {ExerciseHistoryController} from './exercise-history.controller';
 import {CreateExerciseHistoryResponseDto} from './dto/create-exercise-history-response.dto';
-import {FindAllExerciseHistoryResponseDto} from './dto/find-all-exercise-history-response.dto';
+import {FindRecentExerciseHistoryDto} from './dto/find-recent-exercise-history.dto';
+import {FindByPeriodExerciseHistoryResponseDto} from './dto/find-recent-exercise-history-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -23,29 +24,12 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
         ApiResponse({status: 403, description: 'Forbidden.'}),
     );
   },
-  findAll(summary: string) {
+  findByPeriod(summary: string) {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: '운동 기록을 조회합니다. 최신 운동기록 조회는 duration를 사용해주세요. 기간내 운동기록 조회는 from, to를 사용해주세요.',
+          description: '기간내 운동 기록을 조회합니다. 운동 정보와 세트 정보를 반환합니다.',
         }),
-        ApiQuery(
-            {
-              name: 'exerciseIdList',
-              required: true,
-              type: String,
-              description: '조회하고 싶은 운동 Id 목록',
-              example: '1,2',
-            },
-        ),
-        ApiQuery(
-            {
-              name: 'duration',
-              required: false,
-              description: 'exerciseIdList에 해당하는 운동 목록에 대해 최근에 운동한 기록을 조회합니다.',
-              example: 'recent',
-            },
-        ),
         ApiQuery(
             {
               name: 'from',
@@ -64,7 +48,30 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
         ),
         ApiResponse({
           status: 200,
-          type: FindAllExerciseHistoryResponseDto,
+          type: FindByPeriodExerciseHistoryResponseDto,
+          description: 'The record has been successfully searched.',
+        }),
+        ApiResponse({status: 403, description: 'Forbidden.'}),
+    );
+  },
+  findRecentExercise(summary: string) {
+    return applyDecorators(
+        ApiOperation({
+          summary,
+          description: 'ID에 해당하는 최신 운동 기록을 조회합니다. 운동정보, 세트 리스트 정보, 피드백 정보를 반환합니다.',
+        }),
+        ApiQuery(
+            {
+              name: 'exerciseIdList',
+              required: false,
+              type: String,
+              description: '조회하고 싶은 운동 Id 목록 (입력하지 않을 시 모든 운동 Id를 조회)',
+              example: '1,2',
+            },
+        ),
+        ApiResponse({
+          status: 200,
+          type: FindRecentExerciseHistoryDto,
           description: 'The record has been successfully searched.',
         }),
         ApiResponse({status: 403, description: 'Forbidden.'}),

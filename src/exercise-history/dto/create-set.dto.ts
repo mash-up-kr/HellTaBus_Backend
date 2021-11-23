@@ -2,6 +2,9 @@ import {IsNotEmpty, IsNumber} from 'class-validator';
 import {ApiProperty} from '@nestjs/swagger';
 
 export class SetDto {
+  @ApiProperty({example: '1'})
+  id: number;
+
   @IsNumber()
   @IsNotEmpty()
   @ApiProperty({example: '1', description: '세트 순서'})
@@ -9,7 +12,7 @@ export class SetDto {
 
   @IsNumber()
   @IsNotEmpty()
-  @ApiProperty({example: '1', description: '세트 무게'})
+  @ApiProperty({example: '10', description: '세트 무게'})
   weight: number;
 
   @IsNumber()
