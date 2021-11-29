@@ -15,7 +15,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: '운동 기록을 생성하는 API 입니다.',
+          description: '운동 기록을 생성하는 API 입니다. Request Body id 에는 exerciseId를 넣어주세요.',
         }),
         ApiResponse({
           status: 201,
