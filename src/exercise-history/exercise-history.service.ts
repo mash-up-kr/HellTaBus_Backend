@@ -29,7 +29,7 @@ export class ExerciseHistoryService {
       throw Error(`Can't find user`);
     }
     const exercise = await this.exerciseRepository.findOne({
-      id: createExerciseHistoryDto.exerciseId,
+      id: createExerciseHistoryDto.id,
     });
     if (!exercise) {
       throw Error(`Can't find exercise`);
