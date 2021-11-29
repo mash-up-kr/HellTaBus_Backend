@@ -3,7 +3,8 @@ import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/s
 import {ExerciseHistoryController} from './exercise-history.controller';
 import {CreateExerciseHistoryResponseDto} from './dto/create-exercise-history-response.dto';
 import {FindRecentExerciseHistoryDto} from './dto/find-recent-exercise-history.dto';
-import {FindByPeriodExerciseHistoryResponseDto} from './dto/find-recent-exercise-history-response.dto';
+import {FindByPeriodExerciseHistoryResponseDto}
+  from './dto/find-recent-exercise-history-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -14,7 +15,7 @@ export const ApiDocs: SwaggerMethodDoc<ExerciseHistoryController> = {
     return applyDecorators(
         ApiOperation({
           summary,
-          description: '운동 기록을 생성하는 API 입니다.',
+          description: '운동 기록을 생성하는 API 입니다. Request Body id 에는 exerciseId를 넣어주세요.',
         }),
         ApiResponse({
           status: 201,
