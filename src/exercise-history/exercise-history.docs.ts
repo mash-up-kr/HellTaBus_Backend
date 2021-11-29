@@ -3,7 +3,8 @@ import {ApiCreatedResponse, ApiOperation, ApiResponse, ApiQuery} from '@nestjs/s
 import {ExerciseHistoryController} from './exercise-history.controller';
 import {CreateExerciseHistoryResponseDto} from './dto/create-exercise-history-response.dto';
 import {FindRecentExerciseHistoryDto} from './dto/find-recent-exercise-history.dto';
-import {FindByPeriodExerciseHistoryResponseDto} from './dto/find-recent-exercise-history-response.dto';
+import {FindByPeriodExerciseHistoryResponseDto}
+  from './dto/find-recent-exercise-history-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
