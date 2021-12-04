@@ -48,10 +48,29 @@ export class Exercise {
   @Column()
   priority: number; // 우선순위
 
+  @Column({
+    type: 'text',
+  })
+  what: string; // 어떤 운동인가요?
+
+  @Column({
+    type: 'text',
+  })
+  where: string; // 어느 부위가 운동되나요?
+
+  @Column({
+    type: 'text',
+  })
+  how: string; // 운동 방법을 알려주세요
+
+  @Column({
+    type: 'text',
+  })
+  caution: string; // 주의 사항이 있나요?
+
   /* Relations */
 
-  @OneToMany(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.exercise)
+  @OneToMany(() => ExerciseHistory, exerciseHistory => exerciseHistory.exercise)
   exerciseHistoryList: ExerciseHistory[];
 
   /* Date Columns */
