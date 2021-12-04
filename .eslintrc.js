@@ -6,9 +6,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
+    'google',
+    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'google',
   ],
   root: true,
   env: {
@@ -24,7 +25,6 @@ module.exports = {
     'new-cap': 0,
     'require-jsdoc': 0,
     'no-unused-vars': 'off',
-    'max-len': ["error", { "code": 100 }],
     strict: 0,
   },
 };
