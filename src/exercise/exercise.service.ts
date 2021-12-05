@@ -20,7 +20,7 @@ export class ExerciseService {
     private readonly userRepository: Repository<User>,
     @InjectRepository(Feedback)
     private readonly feedbackRepository: Repository<Feedback>,
-  ) { }
+  ) {}
 
   async create(createExerciseDto: CreateExerciseDto) {
     const createExercise = await this.exerciseRepository.save({
@@ -42,17 +42,15 @@ export class ExerciseService {
   async findAll(partList: string[]) {
     let exerciseList;
     if (partList.length === 0 || partList[0] === '') {
-      exerciseList = await this.exerciseRepository
-          .createQueryBuilder('exercise')
-          .getMany();
+      exerciseList = await this.exerciseRepository.createQueryBuilder('exercise').getMany();
     } else {
       if (partList.includes(ExercisePart.ARM)) {
         partList.push(...[ExercisePart.BICEPS, ExercisePart.TRICEPS]);
       }
       exerciseList = await this.exerciseRepository
-          .createQueryBuilder('exercise')
-          .where('exercise.part In (:partList)', {partList})
-          .getMany();
+        .createQueryBuilder('exercise')
+        .where('exercise.part In (:partList)', {partList})
+        .getMany();
     }
     return exerciseList;
   }
@@ -60,24 +58,23 @@ export class ExerciseService {
   async getSuggestionExerciseListFromHistory(exercisePart, exerciseHistoryList, number = 1) {
     const exerciseList = [];
     if (exercisePart === ExercisePart.ARM) {
-      exerciseList.push(...(await this.exerciseRepository.find({
-        where: [
-          {part: ExercisePart.BICEPS},
-          {part: ExercisePart.TRICEPS},
-        ],
-        order: {
-          priority: 'ASC',
-        },
-      })));
+      exerciseList.push(
+        ...(await this.exerciseRepository.find({
+          where: [{part: ExercisePart.BICEPS}, {part: ExercisePart.TRICEPS}],
+          order: {
+            priority: 'ASC',
+          },
+        })),
+      );
     } else {
-      exerciseList.push(...(await this.exerciseRepository.find({
-        where: [
-          {part: exercisePart},
-        ],
-        order: {
-          priority: 'ASC',
-        },
-      })));
+      exerciseList.push(
+        ...(await this.exerciseRepository.find({
+          where: [{part: exercisePart}],
+          order: {
+            priority: 'ASC',
+          },
+        })),
+      );
     }
 
     interface ExerciseCountTable {
@@ -100,9 +97,9 @@ export class ExerciseService {
         exerciseCountTable[userExerciseHistory.exercise.id].cnt++;
       }
     }
-    const sortedExerciseCountTable =
-      Object.fromEntries(Object.entries(exerciseCountTable).
-          sort(([, a], [, b]) => a.cnt - b.cnt));
+    const sortedExerciseCountTable = Object.fromEntries(
+      Object.entries(exerciseCountTable).sort(([, a], [, b]) => a.cnt - b.cnt),
+    );
     const suggestionExerciseList = [];
     for (let i = 0; i < number; i++) {
       if (!Object.values(sortedExerciseCountTable)[i]) {
@@ -171,42 +168,78 @@ export class ExerciseService {
         [Split3DayWorkoutPart.LOWER_AND_SHOULDER]: 0,
       };
       for (const userExerciseHistory of userExerciseHistoryList) {
-        if (userExerciseHistory.exercise.part === ExercisePart.BACK ||
-          userExerciseHistory.exercise.part === ExercisePart.TRICEPS) {
+        if (
+          userExerciseHistory.exercise.part === ExercisePart.BACK ||
+          userExerciseHistory.exercise.part === ExercisePart.TRICEPS
+        ) {
           partSetCount[Split3DayWorkoutPart.BACK_AND_TRICEPS]++;
-        } else if (userExerciseHistory.exercise.part === ExercisePart.CHEST ||
-          userExerciseHistory.exercise.part === ExercisePart.BICEPS) {
+        } else if (
+          userExerciseHistory.exercise.part === ExercisePart.CHEST ||
+          userExerciseHistory.exercise.part === ExercisePart.BICEPS
+        ) {
           partSetCount[Split3DayWorkoutPart.CHEST_AND_BICEPS]++;
-        } else if (userExerciseHistory.exercise.part === ExercisePart.LOWER ||
-          userExerciseHistory.exercise.part === ExercisePart.SHOULDER) {
+        } else if (
+          userExerciseHistory.exercise.part === ExercisePart.LOWER ||
+          userExerciseHistory.exercise.part === ExercisePart.SHOULDER
+        ) {
           partSetCount[Split3DayWorkoutPart.LOWER_AND_SHOULDER]++;
         } else {
           throw Error(`Unknown part (${userExerciseHistory.exercise.part})`);
         }
       }
-      const sortedPartSetCount = Object.entries(partSetCount).
-          sort(([, a], [, b]) => a - b).
-          reduce((r, [k, v]) => ({...r, [k]: v}), {});
+      const sortedPartSetCount = Object.entries(partSetCount)
+        .sort(([, a], [, b]) => a - b)
+        .reduce((r, [k, v]) => ({...r, [k]: v}), {});
 
       const leastPartSet = Object.keys(sortedPartSetCount)[0];
       if (leastPartSet === Split3DayWorkoutPart.BACK_AND_TRICEPS) {
         suggestionPartList.push(...[ExercisePart.BACK, ExercisePart.TRICEPS]);
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.BACK, userExerciseHistoryList, 2)));
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.TRICEPS, userExerciseHistoryList, 2)));
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.BACK,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.TRICEPS,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
       } else if (leastPartSet === Split3DayWorkoutPart.CHEST_AND_BICEPS) {
         suggestionPartList.push(...[ExercisePart.CHEST, ExercisePart.BICEPS]);
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.CHEST, userExerciseHistoryList, 2)));
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.BICEPS, userExerciseHistoryList, 2)));
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.CHEST,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.BICEPS,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
       } else if (leastPartSet === Split3DayWorkoutPart.LOWER_AND_SHOULDER) {
         suggestionPartList.push(...[ExercisePart.LOWER, ExercisePart.SHOULDER]);
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.LOWER, userExerciseHistoryList, 2)));
-        suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-            ExercisePart.SHOULDER, userExerciseHistoryList, 2)));
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.LOWER,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
+        suggestionExerciseList.push(
+          ...(await this.getSuggestionExerciseListFromHistory(
+            ExercisePart.SHOULDER,
+            userExerciseHistoryList,
+            2,
+          )),
+        );
       } else {
         throw Error(`Unknown leastPartSet (${leastPartSet})`);
       }
@@ -220,38 +253,56 @@ export class ExerciseService {
         [ExercisePart.SHOULDER]: 0,
       };
       for (const userExerciseHistory of userExerciseHistoryList) {
-        if (userExerciseHistory.exercise.part === ExercisePart.BICEPS ||
-          userExerciseHistory.exercise.part === ExercisePart.TRICEPS) {
+        if (
+          userExerciseHistory.exercise.part === ExercisePart.BICEPS ||
+          userExerciseHistory.exercise.part === ExercisePart.TRICEPS
+        ) {
           partCount[ExercisePart.ARM]++;
         } else {
           partCount[userExerciseHistory.exercise.part]++;
         }
       }
-      const sortedPartCount = Object.entries(partCount).
-          sort(([, a], [, b]) => a - b).
-          reduce((r, [k, v]) => ({...r, [k]: v}), {});
+      const sortedPartCount = Object.entries(partCount)
+        .sort(([, a], [, b]) => a - b)
+        .reduce((r, [k, v]) => ({...r, [k]: v}), {});
       const leastExercisePart = ExercisePart[Object.keys(sortedPartCount)[0]];
       suggestionPartList.push(leastExercisePart);
 
       // 가장 적게한 부위에서 운동 3개 추천
-      suggestionExerciseList.push(...(await this.getSuggestionExerciseListFromHistory(
-          leastExercisePart, userExerciseHistoryList, 3)));
-    } else if (user.splitType === SplitType.FULL_BODY_WORKOUT) { // 무분할
-      suggestionPartList.push(...[ExercisePart.SHOULDER, ExercisePart.ARM,
-        ExercisePart.CHEST, ExercisePart.BACK, ExercisePart.LOWER]);
+      suggestionExerciseList.push(
+        ...(await this.getSuggestionExerciseListFromHistory(
+          leastExercisePart,
+          userExerciseHistoryList,
+          3,
+        )),
+      );
+    } else if (user.splitType === SplitType.FULL_BODY_WORKOUT) {
+      // 무분할
+      suggestionPartList.push(
+        ...[
+          ExercisePart.SHOULDER,
+          ExercisePart.ARM,
+          ExercisePart.CHEST,
+          ExercisePart.BACK,
+          ExercisePart.LOWER,
+        ],
+      );
 
-      suggestionExerciseList.push(...[
-        await this.getSuggestionExerciseFromHistory(
-            ExercisePart.SHOULDER, userExerciseHistoryList),
-        await this.getSuggestionExerciseFromHistory(
-            ExercisePart.TRICEPS, userExerciseHistoryList),
-        await this.getSuggestionExerciseFromHistory(
-            ExercisePart.CHEST, userExerciseHistoryList),
-        await this.getSuggestionExerciseFromHistory(
-            ExercisePart.BACK, userExerciseHistoryList),
-        await this.getSuggestionExerciseFromHistory(
-            ExercisePart.LOWER, userExerciseHistoryList),
-      ]);
+      suggestionExerciseList.push(
+        ...[
+          await this.getSuggestionExerciseFromHistory(
+            ExercisePart.SHOULDER,
+            userExerciseHistoryList,
+          ),
+          await this.getSuggestionExerciseFromHistory(
+            ExercisePart.TRICEPS,
+            userExerciseHistoryList,
+          ),
+          await this.getSuggestionExerciseFromHistory(ExercisePart.CHEST, userExerciseHistoryList),
+          await this.getSuggestionExerciseFromHistory(ExercisePart.BACK, userExerciseHistoryList),
+          await this.getSuggestionExerciseFromHistory(ExercisePart.LOWER, userExerciseHistoryList),
+        ],
+      );
     } else {
       throw Error(`Invalid splitType!!!!! (${user.splitType})`);
     }
@@ -260,7 +311,6 @@ export class ExerciseService {
       suggestionExerciseList,
     };
   }
-
 
   async update(id: number, updateExerciseDto: UpdateExerciseDto) {
     await this.exerciseRepository.update(id, updateExerciseDto);

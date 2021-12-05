@@ -9,6 +9,5 @@ import {Exercise} from '../exercise/entities/exercise.entity';
   imports: [TypeOrmModule.forFeature([Feedback, Exercise])],
   controllers: [FeedbackController],
   providers: [FeedbackService],
-
 })
 export class FeedbackModule {}

@@ -5,7 +5,7 @@ import {ApiTags} from '@nestjs/swagger';
 @Controller('feedback')
 @ApiTags('feedback')
 export class FeedbackController {
-  constructor(private readonly feedbackService: FeedbackService) { }
+  constructor(private readonly feedbackService: FeedbackService) {}
 
   // @Post()
   // @ApiDocs.create('피드백 생성 API')

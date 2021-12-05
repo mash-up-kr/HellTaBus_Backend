@@ -9,11 +9,11 @@ import {
 
 export const setupSwagger = (app: INestApplication) => {
   const config = new DocumentBuilder()
-      .setTitle(SWAGGER_API_TITLE)
-      .setDescription(SWAGGER_API_DESCRIPTION)
-      .setVersion(SWAGGER_API_CURRENT_VERSION)
-      .addBearerAuth()
-      .build();
+    .setTitle(SWAGGER_API_TITLE)
+    .setDescription(SWAGGER_API_DESCRIPTION)
+    .setVersion(SWAGGER_API_CURRENT_VERSION)
+    .addBearerAuth()
+    .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
 };

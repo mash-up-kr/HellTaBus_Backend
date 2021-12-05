@@ -20,8 +20,8 @@ export class ExerciseHistoryService {
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
     @InjectRepository(Exercise)
-    private readonly exerciseRepository: Repository<Exercise>
-  ) { }
+    private readonly exerciseRepository: Repository<Exercise>,
+  ) {}
 
   async create(userId: number, createExerciseHistoryDto: CreateExerciseHistoryDto) {
     const user = await this.userRepository.findOne({id: userId});
@@ -69,16 +69,17 @@ export class ExerciseHistoryService {
       to = '2800-01-01 00:00';
     }
     let exerciseHistoryList;
-    exerciseHistoryList = await this.ExerciseHistoryRepository
-        .createQueryBuilder('exerciseHistory')
-        .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
-        .innerJoinAndSelect('exerciseHistory.setList', 'setList')
-        .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
-        .andWhere(`exerciseHistory.startTime 
-          BETWEEN '${from}' AND '${to}'`)
-        .getMany();
+    exerciseHistoryList = await this.ExerciseHistoryRepository.createQueryBuilder('exerciseHistory')
+      .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
+      .innerJoinAndSelect('exerciseHistory.setList', 'setList')
+      .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
+      .andWhere(
+        `exerciseHistory.startTime 
+          BETWEEN '${from}' AND '${to}'`,
+      )
+      .getMany();
 
-    exerciseHistoryList = exerciseHistoryList.filter(function(item) {
+    exerciseHistoryList = exerciseHistoryList.filter(function (item) {
       return item !== null && item !== undefined && item !== '';
     });
     return exerciseHistoryList;
@@ -92,17 +93,19 @@ export class ExerciseHistoryService {
     if (exerciseIdList === undefined) {
       exerciseIdList = [];
       const exerciseList = await this.exerciseRepository
-          .createQueryBuilder('exercise')
-          .select('id')
-          .getRawMany();
+        .createQueryBuilder('exercise')
+        .select('id')
+        .getRawMany();
       for (const exercise of exerciseList) {
         exerciseIdList.push(exercise.id);
       }
     }
     let exerciseHistoryList;
-    exerciseHistoryList = await Promise.all(exerciseIdList.map(async (exerciseId) => {
-      const exerciseHistorykEntity = await this.ExerciseHistoryRepository
-          .createQueryBuilder('exerciseHistory')
+    exerciseHistoryList = await Promise.all(
+      exerciseIdList.map(async exerciseId => {
+        const exerciseHistorykEntity = await this.ExerciseHistoryRepository.createQueryBuilder(
+          'exerciseHistory',
+        )
           .innerJoinAndSelect('exerciseHistory.exercise', 'exercise')
           .innerJoinAndSelect('exerciseHistory.setList', 'setList')
           .innerJoinAndSelect('exerciseHistory.feedback', 'feedback')
@@ -110,9 +113,10 @@ export class ExerciseHistoryService {
           .andWhere('exerciseHistory.userId = :userId', {userId: user.id})
           .orderBy('exerciseHistory.startTime', 'DESC')
           .getOne();
-      return exerciseHistorykEntity;
-    }));
-    exerciseHistoryList = exerciseHistoryList.filter(function(item) {
+        return exerciseHistorykEntity;
+      }),
+    );
+    exerciseHistoryList = exerciseHistoryList.filter(function (item) {
       return item !== null && item !== undefined && item !== '';
     });
     return exerciseHistoryList;

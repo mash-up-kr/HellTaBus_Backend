@@ -13,4 +13,4 @@ import {Feedback} from 'src/feedback/entities/feedback.entity';
   providers: [ExerciseService],
   exports: [ExerciseService],
 })
-export class ExerciseModule { }
+export class ExerciseModule {}

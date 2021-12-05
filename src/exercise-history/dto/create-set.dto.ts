@@ -22,4 +22,3 @@ export class CreateSetDto {
   @ApiProperty({example: '2021-10-31T07:43Z', description: '세트 끝난 시간'})
   finishTime: Date;
 }
-

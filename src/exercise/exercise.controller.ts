@@ -1,6 +1,15 @@
 import {
-  Controller, Get, Post, Body,
-  Param, Delete, Req, Query, ParseArrayPipe, Patch, UseGuards,
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Delete,
+  Req,
+  Query,
+  ParseArrayPipe,
+  Patch,
+  UseGuards,
 } from '@nestjs/common';
 import {ExerciseService} from './exercise.service';
 import {CreateExerciseDto} from './dto/create-exercise.dto';
@@ -14,7 +23,7 @@ import {JwtAuthGuard} from '../user/jwt-auth.guard';
 @UseGuards(JwtAuthGuard)
 @ApiTags('exercise')
 export class ExerciseController {
-  constructor(private readonly exerciseService: ExerciseService) { }
+  constructor(private readonly exerciseService: ExerciseService) {}
 
   @ApiBearerAuth()
   @Post()
@@ -34,12 +43,15 @@ export class ExerciseController {
   @Get()
   @ApiDocs.findAll('운동 로직 조회 API (Author by 선우)')
   findAll(
-    @Query('partList', new ParseArrayPipe({
-      optional: true,
-      items: String,
-      separator: ',',
-    }))
-        partList: string[],
+    @Query(
+      'partList',
+      new ParseArrayPipe({
+        optional: true,
+        items: String,
+        separator: ',',
+      }),
+    )
+    partList: string[],
   ) {
     return this.exerciseService.findAll(partList || []);
   }
@@ -47,8 +59,7 @@ export class ExerciseController {
   @ApiBearerAuth()
   @Get('suggestion')
   @ApiDocs.findSuggestion('추천 운동 조회 API')
-  findSuggestion(@Req() req, @Query('from') from: string,
-    @Query('to') to: string) {
+  findSuggestion(@Req() req, @Query('from') from: string, @Query('to') to: string) {
     return this.exerciseService.findSuggestion(req.user, from, to);
   }
 

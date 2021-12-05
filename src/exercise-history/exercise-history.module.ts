@@ -13,4 +13,4 @@ import {Feedback} from 'src/feedback/entities/feedback.entity';
   controllers: [ExerciseHistoryController],
   providers: [ExerciseHistoryService],
 })
-export class ExerciseHistoryModule { }
+export class ExerciseHistoryModule {}
