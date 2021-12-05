@@ -51,22 +51,7 @@ export class Exercise {
   @Column({
     type: 'text',
   })
-  what: string; // 어떤 운동인가요?
-
-  @Column({
-    type: 'text',
-  })
-  where: string; // 어느 부위가 운동되나요?
-
-  @Column({
-    type: 'text',
-  })
-  how: string; // 운동 방법을 알려주세요
-
-  @Column({
-    type: 'text',
-  })
-  caution: string; // 주의 사항이 있나요?
+  description: string; // 운동 설명 전체
 
   /* Relations */
 
