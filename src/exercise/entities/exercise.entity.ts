@@ -48,10 +48,14 @@ export class Exercise {
   @Column()
   priority: number; // 우선순위
 
+  @Column({
+    type: 'text',
+  })
+  description: string; // 운동 설명 전체
+
   /* Relations */
 
-  @OneToMany(() => ExerciseHistory,
-      (exerciseHistory) => exerciseHistory.exercise)
+  @OneToMany(() => ExerciseHistory, exerciseHistory => exerciseHistory.exercise)
   exerciseHistoryList: ExerciseHistory[];
 
   /* Date Columns */
