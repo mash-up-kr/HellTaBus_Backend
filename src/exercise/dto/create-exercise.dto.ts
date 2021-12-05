@@ -50,6 +50,18 @@ export class CreateExerciseDto {
 
   @IsString()
   @IsNotEmpty()
-  @ApiProperty({example: 'https://www.....', description: '이미지 링크'})
+  @ApiProperty({
+    example:
+      'https://gif.helltabus.com/17601301/17601301-Dumbbell-Goblet-Squat_Thighs-FIX_1080.gif',
+    description: '이미지 링크',
+  })
   imageLink: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @ApiProperty({
+    example: 'what: Squart는 쪼그리고 앉다는 뜻으로 데드리프트, 벤치프레스와 더불어...',
+    description: '운동 설명(what, where, how, caution)',
+  })
+  description: string;
 }
