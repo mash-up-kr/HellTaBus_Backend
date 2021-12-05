@@ -4,7 +4,8 @@ import {
   DeleteDateColumn,
   Entity,
   JoinColumn,
-  ManyToOne, OneToMany,
+  ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -27,17 +28,16 @@ export class ExerciseHistory {
 
   /* Relations */
 
-  @ManyToOne(() => User, (user) => user.exerciseHistoryList)
+  @ManyToOne(() => User, user => user.exerciseHistoryList)
   user!: User;
 
-  @ManyToOne(() => Exercise, (exercise) => exercise.exerciseHistoryList)
+  @ManyToOne(() => Exercise, exercise => exercise.exerciseHistoryList)
   exercise: Exercise;
 
-  @OneToMany(() => Set, (set) => set.exerciseHistory)
+  @OneToMany(() => Set, set => set.exerciseHistory)
   setList: Set[];
 
-  @OneToOne(() => Feedback,
-      (feedback) => feedback.exerciseHistory, {nullable: true})
+  @OneToOne(() => Feedback, feedback => feedback.exerciseHistory, {nullable: true})
   @JoinColumn()
   feedback: Feedback;
 
