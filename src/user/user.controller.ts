@@ -1,4 +1,4 @@
-import {Controller, Get, Post, Body, Patch, UseGuards, Req} from '@nestjs/common';
+import {Controller, Get, Post, Body, Patch, UseGuards, Req, Delete, Param} from '@nestjs/common';
 import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
@@ -50,5 +50,13 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   updateUser(@Req() req, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.updateUser(req.user, updateUserDto);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':id')
+  @ApiDocs.deleteUser('사용자 삭제 API (Author by 선우)')
+  @UseGuards(JwtAuthGuard)
+  deleteUser(@Param('id') id: number) {
+    return this.userService.deleteUser(id);
   }
 }
