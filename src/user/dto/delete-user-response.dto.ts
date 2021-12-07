@@ -7,6 +7,9 @@ export class DeleteUserResponseDto extends BaseResponseDto {
   @ApiProperty({example: 200})
   code: number;
 
-  @ApiProperty({example: 'Successfully deleted User 1', nullable: true})
+  @ApiProperty({example: '', nullable: true})
   message: string;
+
+  @ApiProperty({example: 'Successfully deleted User 1', nullable: true})
+  data: string;
 }
