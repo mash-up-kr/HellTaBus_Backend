@@ -25,7 +25,7 @@ export class Feedback {
 
   /* Relations */
 
-  @ManyToOne(() => User, user => user.feedbackList, {nullable: false})
+  @ManyToOne(() => User, user => user.feedbackList, {nullable: false, onDelete: 'CASCADE'})
   user: User;
 
   @OneToOne(() => ExerciseHistory, exerciseHistory => exerciseHistory.feedback)
