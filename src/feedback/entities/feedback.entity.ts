@@ -25,11 +25,10 @@ export class Feedback {
 
   /* Relations */
 
-  @ManyToOne(() => User, (user) => user.feedbackList, {nullable: false})
+  @ManyToOne(() => User, user => user.feedbackList, {nullable: false, onDelete: 'CASCADE'})
   user: User;
 
-  @OneToOne(() => ExerciseHistory, (exerciseHistory) => exerciseHistory.feedback,
-  )
+  @OneToOne(() => ExerciseHistory, exerciseHistory => exerciseHistory.feedback)
   exerciseHistory: ExerciseHistory;
 
   /* Date Columns */
@@ -43,4 +42,3 @@ export class Feedback {
   @DeleteDateColumn()
   deletedAt: Date | null;
 }
-

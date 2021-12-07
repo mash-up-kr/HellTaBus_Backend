@@ -1,4 +1,4 @@
-import {Controller, Get, Post, Body, Patch, UseGuards, Req} from '@nestjs/common';
+import {Controller, Get, Post, Body, Patch, UseGuards, Req, Delete, Param} from '@nestjs/common';
 import {UserService} from './user.service';
 import {ApiDocs} from './user.docs';
 import {GoogleUserDto} from './dto/google-user.dto';
@@ -8,11 +8,10 @@ import {ApiBearerAuth, ApiTags} from '@nestjs/swagger';
 import {JwtAuthGuard} from './jwt-auth.guard';
 import {UpdateBaseUserInformationDto} from './dto/update-base-information-user.dto';
 
-
 @Controller('user')
 @ApiTags('user')
 export class UserController {
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly userService: UserService) {}
 
   @Post()
   @ApiDocs.create('회원가입 API (Author by 소연)')
@@ -40,7 +39,7 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   updateBaseUserInformation(
     @Req() req,
-    @Body() updateBaseUserInformationDto: UpdateBaseUserInformationDto
+    @Body() updateBaseUserInformationDto: UpdateBaseUserInformationDto,
   ) {
     return this.userService.updateBaseUserInformation(req.user, updateBaseUserInformationDto);
   }
@@ -49,10 +48,15 @@ export class UserController {
   @Patch('/my')
   @ApiDocs.updateUser('사용자 정보 수정 API (Author by 소연)')
   @UseGuards(JwtAuthGuard)
-  updateUser(
-    @Req() req,
-    @Body() updateUserDto: UpdateUserDto
-  ) {
+  updateUser(@Req() req, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.updateUser(req.user, updateUserDto);
+  }
+
+  @ApiBearerAuth()
+  @Delete(':id')
+  @ApiDocs.deleteUser('사용자 계정 삭제 API (Author by 선우)')
+  @UseGuards(JwtAuthGuard)
+  deleteUser(@Param('id') id: number) {
+    return this.userService.deleteUser(id);
   }
 }

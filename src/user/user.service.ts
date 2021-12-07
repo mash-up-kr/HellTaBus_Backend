@@ -40,10 +40,7 @@ export class UserService {
     }
 
     const existingUser = await this.userRepository.findOne({
-      where: [
-        {googleAccount: payload.sub},
-        {email: payload.email},
-      ],
+      where: [{googleAccount: payload.sub}, {email: payload.email}],
     });
 
     if (existingUser) throw new BadRequestException(Err.USER.ALREADY_EXIST);
@@ -122,10 +119,19 @@ export class UserService {
   }
 
   async updateBaseUserInformation(
-      user: User,
-      {
-        nickname, gender, age, height, weight, splitType, audioCoach, speed, explanation,
-      }: UpdateBaseUserInformationDto) {
+    user: User,
+    {
+      nickname,
+      gender,
+      age,
+      height,
+      weight,
+      splitType,
+      audioCoach,
+      speed,
+      explanation,
+    }: UpdateBaseUserInformationDto,
+  ) {
     const existingUser = await this.findOneById(user.id);
 
     existingUser.nickname = nickname;
@@ -143,8 +149,9 @@ export class UserService {
   }
 
   async updateUser(
-      user: User,
-      {nickname, age, height, weight, splitType, audioCoach, speed, explanation}: UpdateUserDto) {
+    user: User,
+    {nickname, age, height, weight, splitType, audioCoach, speed, explanation}: UpdateUserDto,
+  ) {
     const existingUser = await this.findOneById(user.id);
     existingUser.nickname = nickname;
     existingUser.age = age;
@@ -159,7 +166,10 @@ export class UserService {
     return updateUser;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async deleteUser(id: number) {
+    const user = await this.userRepository.findOne({id});
+    if (!user) throw new NotFoundException(Err.USER.NOT_FOUND);
+    await this.userRepository.delete(id);
+    return `Successfully deleted User ${id}`;
   }
 }
