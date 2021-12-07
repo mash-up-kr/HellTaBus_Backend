@@ -1,4 +1,5 @@
-import {MigrationInterface, QueryRunner} from "typeorm";
+import {getRepository, MigrationInterface, QueryRunner} from "typeorm";
+import {ExerciseSeed} from "../seed/exercise.seed";
 
 export class generate1638855266783 implements MigrationInterface {
     name = 'generate1638855266783'
@@ -14,6 +15,7 @@ export class generate1638855266783 implements MigrationInterface {
         await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_1cdf1e212555b1d4abf7b463d18\` FOREIGN KEY (\`userId\`) REFERENCES \`hell_ta_bus\`.\`user\`(\`id\`) ON DELETE CASCADE ON UPDATE NO ACTION`);
         await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_d823182de5cc105f7ec3860d45c\` FOREIGN KEY (\`exerciseId\`) REFERENCES \`hell_ta_bus\`.\`exercise\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
         await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_c6bcfe9a7cc70fa5f3f1cb242f5\` FOREIGN KEY (\`feedbackId\`) REFERENCES \`hell_ta_bus\`.\`feedback\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
+        await getRepository('exercise').save(ExerciseSeed);
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
