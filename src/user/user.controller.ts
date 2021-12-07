@@ -54,7 +54,7 @@ export class UserController {
 
   @ApiBearerAuth()
   @Delete(':id')
-  @ApiDocs.deleteUser('사용자 삭제 API (Author by 선우)')
+  @ApiDocs.deleteUser('사용자 계정 삭제 API (Author by 선우)')
   @UseGuards(JwtAuthGuard)
   deleteUser(@Param('id') id: number) {
     return this.userService.deleteUser(id);

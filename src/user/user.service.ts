@@ -168,6 +168,6 @@ export class UserService {
 
   async deleteUser(id: number) {
     await this.userRepository.delete(id);
-    return 'Successfully deleted ${id} user';
+    return `Successfully deleted User ${id}`;
   }
 }

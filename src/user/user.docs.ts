@@ -85,4 +85,18 @@ export const ApiDocs: SwaggerMethodDoc<UserController> = {
       }),
     );
   },
+
+  deleteUser(summary) {
+    return applyDecorators(
+      ApiOperation({
+        summary,
+        description: '사용자 계정을 삭제합니다.',
+      }),
+      ApiResponse({
+        status: 201,
+        type: UpdateUserResponseDto,
+        description: '사용자 계정 삭제',
+      }),
+    );
+  },
 };
