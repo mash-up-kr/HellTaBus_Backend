@@ -7,6 +7,7 @@ import {GetLoginInfoResponseDto} from './dto/get-login-info-response.dto';
 import {} from './dto/update-base-information-user.dto';
 import {UpdateUserResponseDto} from './dto/update-user-response.dto';
 import {UpdateBaseUserInformationResponseDto} from './dto/update-base-information-user-response.dto';
+import {DeleteUserResponseDto} from './dto/delete-user-response.dto';
 
 type SwaggerMethodDoc<T> = {
   [K in keyof T]: (description: string) => MethodDecorator;
@@ -93,8 +94,8 @@ export const ApiDocs: SwaggerMethodDoc<UserController> = {
         description: '사용자 계정을 삭제합니다.',
       }),
       ApiResponse({
-        status: 201,
-        type: UpdateUserResponseDto,
+        status: 200,
+        type: DeleteUserResponseDto,
         description: '사용자 계정 삭제',
       }),
     );
