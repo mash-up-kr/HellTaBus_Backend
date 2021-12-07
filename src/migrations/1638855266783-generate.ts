@@ -1,8 +1,8 @@
 import {getRepository, MigrationInterface, QueryRunner} from "typeorm";
 import {ExerciseSeed} from "../seed/exercise.seed";
 
-export class generate1638720780224 implements MigrationInterface {
-    name = 'generate1638720780224'
+export class generate1638855266783 implements MigrationInterface {
+    name = 'generate1638855266783'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE TABLE \`hell_ta_bus\`.\`feedback\` (\`id\` int NOT NULL AUTO_INCREMENT, \`difficulty\` enum ('EASY', 'NORMAL', 'HARD') NOT NULL, \`createdAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updatedAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`deletedAt\` datetime(6) NULL, \`userId\` int NOT NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
@@ -10,9 +10,9 @@ export class generate1638720780224 implements MigrationInterface {
         await queryRunner.query(`CREATE TABLE \`hell_ta_bus\`.\`exercise\` (\`id\` int NOT NULL AUTO_INCREMENT, \`name\` varchar(255) NOT NULL, \`part\` enum ('LOWER', 'BACK', 'CHEST', 'SHOULDER', 'BICEPS', 'TRICEPS', 'ARM') NOT NULL, \`baseCount\` int NOT NULL, \`setCount\` int NOT NULL, \`startWeight\` int NOT NULL, \`changeWeight\` int NOT NULL, \`setBreakTime\` int NOT NULL, \`breakTime\` int NOT NULL, \`imageLink\` varchar(255) NOT NULL, \`priority\` int NOT NULL, \`description\` text NOT NULL, \`createdAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updatedAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`deletedAt\` datetime(6) NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
         await queryRunner.query(`CREATE TABLE \`hell_ta_bus\`.\`set\` (\`id\` int NOT NULL AUTO_INCREMENT, \`index\` int NOT NULL, \`weight\` int NOT NULL, \`startTime\` datetime NOT NULL, \`finishTime\` datetime NOT NULL, \`createdAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updatedAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`deletedAt\` datetime(6) NULL, \`exerciseHistoryId\` int NOT NULL, PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
         await queryRunner.query(`CREATE TABLE \`hell_ta_bus\`.\`exercise-history\` (\`id\` int NOT NULL AUTO_INCREMENT, \`startTime\` datetime NOT NULL, \`finishTime\` datetime NOT NULL, \`createdAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), \`updatedAt\` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6), \`deletedAt\` datetime(6) NULL, \`userId\` int NULL, \`exerciseId\` int NULL, \`feedbackId\` int NULL, UNIQUE INDEX \`REL_c6bcfe9a7cc70fa5f3f1cb242f\` (\`feedbackId\`), PRIMARY KEY (\`id\`)) ENGINE=InnoDB`);
-        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`feedback\` ADD CONSTRAINT \`FK_4a39e6ac0cecdf18307a365cf3c\` FOREIGN KEY (\`userId\`) REFERENCES \`hell_ta_bus\`.\`user\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
-        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`set\` ADD CONSTRAINT \`FK_a6b0bea800657ebfb5ed1e784cf\` FOREIGN KEY (\`exerciseHistoryId\`) REFERENCES \`hell_ta_bus\`.\`exercise-history\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
-        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_1cdf1e212555b1d4abf7b463d18\` FOREIGN KEY (\`userId\`) REFERENCES \`hell_ta_bus\`.\`user\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
+        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`feedback\` ADD CONSTRAINT \`FK_4a39e6ac0cecdf18307a365cf3c\` FOREIGN KEY (\`userId\`) REFERENCES \`hell_ta_bus\`.\`user\`(\`id\`) ON DELETE CASCADE ON UPDATE NO ACTION`);
+        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`set\` ADD CONSTRAINT \`FK_a6b0bea800657ebfb5ed1e784cf\` FOREIGN KEY (\`exerciseHistoryId\`) REFERENCES \`hell_ta_bus\`.\`exercise-history\`(\`id\`) ON DELETE CASCADE ON UPDATE NO ACTION`);
+        await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_1cdf1e212555b1d4abf7b463d18\` FOREIGN KEY (\`userId\`) REFERENCES \`hell_ta_bus\`.\`user\`(\`id\`) ON DELETE CASCADE ON UPDATE NO ACTION`);
         await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_d823182de5cc105f7ec3860d45c\` FOREIGN KEY (\`exerciseId\`) REFERENCES \`hell_ta_bus\`.\`exercise\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
         await queryRunner.query(`ALTER TABLE \`hell_ta_bus\`.\`exercise-history\` ADD CONSTRAINT \`FK_c6bcfe9a7cc70fa5f3f1cb242f5\` FOREIGN KEY (\`feedbackId\`) REFERENCES \`hell_ta_bus\`.\`feedback\`(\`id\`) ON DELETE NO ACTION ON UPDATE NO ACTION`);
         await getRepository('exercise').save(ExerciseSeed);

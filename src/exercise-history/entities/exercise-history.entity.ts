@@ -28,7 +28,7 @@ export class ExerciseHistory {
 
   /* Relations */
 
-  @ManyToOne(() => User, user => user.exerciseHistoryList)
+  @ManyToOne(() => User, user => user.exerciseHistoryList, {onDelete: 'CASCADE'})
   user!: User;
 
   @ManyToOne(() => Exercise, exercise => exercise.exerciseHistoryList)
