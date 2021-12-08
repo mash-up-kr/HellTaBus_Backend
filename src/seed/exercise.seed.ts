@@ -20,6 +20,7 @@ export const ExerciseSeed = [
       caution: '스쿼트는 분명히 프리 웨이트 중에서 최고의 운동효과를 낼 수 있는 운동입니다. 하지만 최고의 프리 웨이트답게 생각보다 높은 난이도를 자랑하는 운동입니다. 지도자들이나 트레이너들도 조금 더 깊이 있게 들어가면 스쿼트에 관해서 쩔쩔매는 것이 사실입니다. 또한 인터넷이나 책으로만 접하거나 제대로 된 교육을 받지 않은 많은 사람들이 잘못된 자세로 스쿼트를 시행하는 경우를 볼 수 있습니다. 잘못된 자세로 시행되는 스쿼트는 무릎-허리와 같은 회복 불가능의 퇴행성 질환을 유발하며 어깨와 손목에도 심각한 부상을 유발하기도 합니다. 무조건 달려가서 무거운 중량으로 하기보다는 반드시 정확한 자세를 습득 후에 시행하기 바랍니다.'
     }), 
     imageLink: 'https://gif.helltabus.com/17601301/17601301-Dumbbell-Goblet-Squat_Thighs-FIX_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRroBAABXRUJQVlA4IK4BAACUEQCdASq0ALQAADj+Bu4XBxDJgH6mC9F8iEcWHkJSLRj5k8PEGu1fgIkw9vIvNgr5jE3SQPT5k7mpsxOxmkXmR8AfD02iYhJQSPTaJjLn8Qve2d0gEq+2jHNeIe0bGOWNxTLQZPFI6bvh0Jp8WowOFlY1Bk8SASZh1KhM07QZM4kF/ivwQuDJ2jgcmAMJ402iY02bgAD++pyKBg8w5li87hXCrwB/JI7AHDtllrI4um6p+eHRSSTHAtYvOOUPXW9uL0dVEqJHbhJZmEvLxBUMsYg/SiCyQL5seehqszLVJUl8AzQIz58HfePy1ZBjNTiivKd59wlXR2pKBYXd3LR5aHJHyL8ZDa639DME0K1Bw3tiCjs+JBlNvZZLpw1IBkvTQaaMQxasEOwj3lXStL55tYhSbU8TlS4H/LAkwyDJ2zX6FyFP/f9VQ6qV3oGvuxfjboA3yxGN/lmBJE83+0is/KeVyszbWmvqHcO8NqUpHQxQiNO32nN/hJa2vI1ejALM8ogZq+nQYZMiVDdg2EpuqgMpnNY1qMRAog4EEq1RlTdSl1rCna18WMIAAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -47,6 +48,7 @@ export const ExerciseSeed = [
       caution: '앞으로 내민 무릎이 발끝으로 벗어나지 않도록 합니다. 허리가 앞으로 숙여지지 않도록 합니다. 몸통이 수직으로 내려가는 느낌으로 내려가며 운동을 합니다. 발목이 일자가 되도록 유지합니다. 뒤에 있는 발의 엄지발가락에 힘을 주고 일어납니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03361301/03361301-Dumbbell-Lunge_Hips_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRiwBAABXRUJQVlA4ICABAACUDgCdASq0ALQAADj+Bu4XSQEsHlr0+ZPGmttobBS9s0PGWWvT5XgSljh/sODJmc3dqhPmTxnDk2M3gkm82iY0rfKwBRzdscgJz5k8Z/k0E9JjafQCCKBBCxMaa6QkE8q9j8mHBk8abRMabQ4kEXJCeNNocPNtomNNomMsAAD+/YRBsxwfPOFrElIwLpUHFJUqFouTapTpSBWB8Wz16KF6HMu8xN04cE2iVk2yQxTHObFpClfFKM++NWyrShs70NsGZvxEx/ArnGrAUBSAOZTWEtWVa+B16sqjCsv63ZNNL6atoctB+oMOCCXAFLoJrRrwxGaLdHamozxzRUcxAM6d3nl0/yGU8Ug2G9hYstlOLxM90rDBn2KQ9tYHAxAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -74,6 +76,7 @@ export const ExerciseSeed = [
       caution: '손잡이를 꼭 잡아야 하고 뒤꿈치를 발판에서 떼거나 엉덩이를 의자에서 들어 올리면 안 됩니다. 운동하는 동안 양측 허벅지를 평행하게 유지하고 무릎을 안으로 모으거나 바깥으로 벌리면 안 됩니다.'
     }),
     imageLink: 'https://gif.helltabus.com/07391301/07391301-Sled-45-370-Leg-Press_Hips_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRoACAABXRUJQVlA4IHQCAACUFwCdASq0ALQAADj+Bu4W5xG6nQJHGm0TGm0TGllua6FLh5a6sxnrkxw0czw2WnbQt5nYTRdSw/EKlay5box7t+2yLb2g6rlOdieud9vPAcBu3sEX3/+y8tyveCYZ77ctf6a8gr52tWIzoWm2WFP3W5XcQupSe3Y5Be3KeHml8pGuponY4ez0vvuH2Xwjqw0LX46nJtdIXu80dRhexIjxY5Hgi8fh5/u3fT8WaorkXiLvhG45fGH7aMfObZFtenzJ402bgAD++VqA3Buqc6PlGUYvD6nmAa6JawzDDhTXVKVhHv3x0Z90mS8yhuo+cD/QjLHvE1FtOwV2c3H6eVf5yxw4hfdMgajlS3J0GAUoamt0GEzdJ8KoPS/w84e57u00vcYgYH6LTbi3P2jpswqrGVnbntSQAIt57qyWeZhrqMaGg2Z2T4enmC7t4z718Us3Kr1UgIqhKbJlzqo8ekbMX97ncnTs48yHHT0gktBa0e0dvQQcG5Z4192R6+myzGTMHEQLy1r6g+xQAM97dxDdPQ8Yl3HygQBB89VPH40wLHVgaVdrKEWJ8GJHTXZ9Bba/jnQXZHAvf6LN5heGWPSqir+qubME/W/seg8LjiXQ8r4WTa81qBnQ/pPIJiwcR/Zbgzjg3/E3NrOLJo9or3N32ykoOqRjCXLhZZe99e1cV1O8X4NTlbzOmUwnraf1pHjRM5oE3RXvZBuzolXhchepTkFU//AAOyR53dY37EltVTfTFs5iwQaGZRg8+BEfRHCcq1yYfY7GPnTm3tomA0ITNAXTdrOW2Okjge6XalkdjuG2RLHqw3Nc4BbhtwqyrdAAAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -101,6 +104,7 @@ export const ExerciseSeed = [
       caution: '레그컬을 하는 중에는 호흡에 신경을 많이 써주셔야 합니다. 운동 범위를 올릴 때는 부드럽게 올리고, 호흡을 조절하면서 올라갔을 때 햄스트링을 쥐어짠다는 느낌으로 힘을 줍니다. 호흡을 내쉬면서 천천히 내려줍니다. 들어 올릴 때 엉덩이와 허리가 같이 들리는 보상작용을 조심해야 합니다. 엉덩이가 패드에 봉긋 솟아버리는 동작을 주의해야 하고 그렇게 하도록 가벼운 무게부터 선택하여 운동하시는 것이 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05861301/05861301-Lever-Lying-Leg-Curl_Thighs_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRkICAABXRUJQVlA4IDYCAAA0GQCdASq0ALQAADj+Bu4W0AEsHlr0+ZOuU3LwtDrI9hwZQVqBEmNVyY3sODLjD1IMi24buHJJbajV/k8+ASSgUIMBERiT953Wl2feGBcCJJyHcc9M5poXB1zfSvKgHxQTKl3tXoa8glyg96nlIbrm7OqSFuJubXr55uNWkrtky0Gp1WzTAFIKuYVUb+eBdQvP64K4lLZ9/yRDOs7kK0y73BIpR015M1eCF2cbU3lNfPY5L0RrzwUmlhXsjRdmGSXLSzyXwVXFsaPNqXaDJ41CgiAA/vhAARYzUfxComBCGMxgCenRnTerA8Cx/IALP7RAAEAUmE+6AhOc5HFkSmqqJYlkdj4o7w0CD5IN6WrG8nf+UiGrjb9BIi6QEaeVTvEI3aPpgrlvtNjscl90BUvs20nZLvNpFc0fMWatU0MafGFElV2iyyrrZiPol1OD+OwbY8m33eVtwq0z3gVp/Yup3Msl6uef6bZ0yVyS+SkOrzIAPLf6oGit4HXcklczyoE/8f06vMfneZpsQpIs5/kL4nEjAUMa8ejWPPEA9VRz9pXGN/Ra4aHYlVGm2u5rbabKHwXRprAXblDP8xxlZ/OwlNKqv7mvxSe0wtgl0pCqcePTxIichg3IePZoQtykIpKgnrlhmxDcGeqDYdSLaIyN5VSkFGKj/Z6xgbtQjw1ap04B9QbDLQKjn2FRsRm0+fWNLPhBxc6J9zOfScB2qdx5FoEGYqBDDqkwBFxysSpZiyICAQAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -127,6 +131,7 @@ export const ExerciseSeed = [
       caution: '발목 패드가 높거나 너무 낮으면 안 됩니다. 수축 지점에서 다리를 완전히 펴지 않습니다. 이는 관절에 부담을 주게 됩니다. 수축-이완 시 힘을 다 풀면 안 됩니다. 상체에 반동이 일어나지 않도록 천천히 실시하여야 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05851301/05851301-Lever-Leg-Extension_Thighs_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRjwCAABXRUJQVlA4IDACAAB0FgCdASq0ALQAADj+Bu3QBsNNoVy/64bRj5GeF14usr2JTtrA4KJ3xsG3wYdje32dRA1THtGPUvtv090jLUlShQRH24CQnkBx1Dsa4eak5RUca8eeWcUoi00N2y4QAHLmwDYgSZ+m0O/nYt5JFOZyCSjg3m2SnDuhfxqKEPgmKvGFxDHWuZStSp2vrUUN2RCjFse6vRWQSBAWx6Y/beJFp2frU2jHqkn+uaSg9hwZO9NOLlafMnjTaJjLAAD+5W55cWEVsUJXx5b/piXXo35zIRkPnr9iaQ28nyoJgAfzZ+OtMOOckwkozDrH76JCkWx0tsVkXlMyDAJorqmSc+sghwcJIEiBnAMa6MFH7uB/mczrg5S38GEFB99Wpkm/A9+CPh2/E94qmYKXJqfp9PaGzlwaTdS4D0K/0Fzjc/rAPDdAz4x6WP0gXbsiegXFPIK8UqUMJWjulBhn/RSStE6XLKJRop932aSsnP+kCDcZwn91hbfsq0ZYfVkQlskpLVk8RfdpYbJ0NC2bSW4m9AADkMxaxASBbwIbjvwT9GKSBNs/R8BAcmSJFzIOVzBA6h7bjxu0agiNE6r7o5yVgEBcW6JS/EreHqEgX3RGHQZ5wLXYp3PbV2PK9oaF1xV4LDJ2WXvpR403KabUxaTiAH47A3JQQlYNMuCUy68NMks2dwdJfzRNTz7fznyU4gVYt50pAABaYqPhiR+kQ3ofBlkGqC7kwbaUloj4F2rAAAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -154,6 +159,7 @@ export const ExerciseSeed = [
       caution: '허리가 절대 구부러져서는 안됩니다. 항상 등은 곧게 펴고 허리는 아치를 만듭니다. 머리를 숙이지 않습니다. 동작 내내 고개를 들어 시선을 전방을 향하게 해야 허리가 자연스레 펴집니다. 덤벨을 복부 쪽으로 끌어올려야 합니다. 가슴 쪽으로 올리면 광배근의 참여가 줄어들고, 상완이두근의 참여가 늘어납니다. 허리를 사용하여 들어 올리지 않도록 하고 등의 중상부 근육을 이용하여 들어 올리도록 노력합니다. 허리와 하체 스트레칭을 반드시 실시하며, 워밍업 세트 역시 필수적으로 실시합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02931301/02931301-Dumbbell-Bent-Over-Row_Back-FIX_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRkwCAABXRUJQVlA4IEACAABUGQCdASq0ALQAADj+Bu4XEhMeS9ZF4uNh73GcPLXo1reQtZng4rOPLXfgVcyMGHBALRwh6a/6rnHKiJ/YBwY2oLjQDQKDJEocUb5qmCGGQ91f+tg72LCzJBvDggdY27ZjXXpdIltpzEs/bQEiWFnj5MAowBXu5RdkOQrHXouQsnXL0BDxsPWhkOr8cVUzAJA0BAwTxpqk/fdOtmhjDgue4NkGToApS3rcStYcGR5KgiJw6FjdoSWoEN9nAMlg8tbs/ZnvEgJ7gydRE56fMnjTaJh4AP77CJrTipZwMx645rZAkvcrler8tP4XVUn3i28M+wv23NvjB/2A+ktvkF071JQtra11GclJYwH/cLe42m9Xc7wLzns2dIWo4aUOQvaQ52dpnTSH+bt2xIBUuUPUVbif9lApGeIJcOuDN+2UVylW9ue9FwLss44mJ3DfI6HPRACjMEeJvaH6JPxNnuVhtORuM+JJ06+9YEtqoxy13Ieaz2lI/3xJfCd2fgPAc4wneJY/KdFlJmT1v1hVtmOc5AfvINYcHkOBURotTNBCtQbihSN6j6S3O9TeAkWTjPbll//j9MtsWV5snC34NjW7sCqVOH/a4HQawK5DXTpCBt3sh5UwwdvdQa1yvQbv29TGRHlhPxPpIxQ3C1GALlwUojrsAWPUg80ewhs3CsHfcACtUrptTmJV70K3yXhwaQsvUZj9ZSNOgmqT9PLqcz4NLIFDAiU+FsI6zu7FXO9BC9BzB85Sx99U5e6p8AAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -180,6 +186,7 @@ export const ExerciseSeed = [
       caution: '무거운 중량은 견관절(Shoulder joint)에 부담을 주기 때문에 가벼운 중량을 사용합니다. 팔의 각도는 90도 정도가 좋으며 두 손의 넓이는 어깨의 폭보다 좁게 하여 동작을 실시합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/04331301/04331301-Dumbbell-Straight-Arm-Pullover_Chest-FIX_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRvoBAABXRUJQVlA4IO4BAADUFACdASq0ALQAADj+Bu4XPhCLBJ402iY02iY02iY02iY02iY02iY00aVKU1lq/Jp+Jlfxm7fWr9NHWYx/fxzgN888Sh2M8s2ufY8SRNuTL6j3VnfuaK5PZTBqY/2T+vi6IWGI0Dp4YhXpHAvNHwlmwwuXfgytWIrMLW4JTydXprPAbkMULX5odXmVPUh8AbZQ8fAABJgWmS4eTi0aEE1QOfNxptExrSzh5a9PmSgAAP79G0AAFMVEl3rqloINpAZaeaKgzHuHMTPz/yt/G3TfUJ3NIu/ugjzkBjvUgWB0ouAeDH28w/jYYku1KS/MNhxjp+PwM0NH1D75dE5QrOxpdyW+TbAAXCWw/ZhvHfrFOmExCSKgINvkDbTTDQhu46XNmwZ/4TjZYsozwhtxrzVAF0miV0eZjOxwAvMOHPyPGkHpa96fxAoyK7pJT8ANabEcL5o8Z1s6DZSHEipwToCUKrS49Q/X09agMS63WXEnx7fDyoo/JhUoD8ivIf3NfZcVpUJ9SRYYmuKj9Jj6cOSbKuBkaduVhS/zFpcPDoCUUhqMmSz4h1ha4t0/ZMoI6/YIMigl27sel1y7yYa8xfMOEUja0XGKBh1FdQNc9/eBWZ4BAsQMWV9DeYdE6NAh1AFR9+hyFwY0J+wAAAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -208,6 +215,7 @@ export const ExerciseSeed = [
       caution: '몸통은 동일한 자세를 유지하고 있어야 하며 홱 움직이거나 바를 내리는데 도움을 주기 위해 빠르게 뒤로 기울이면 안됩니다. 이것은 광배근이 아닌 몸통의 다른 근육을 사용하여 동작을 완료하려는 시도들입니다. 랫풀다운은 어깨 손상시에도 비교적 안전하게 수행할 수 있으나 바를 어깨 뒤로 내리는 동작은 앞쪽으로 하는 동작에 비해 어깨 손상 가능성이 높아서 금하는게 좋습니다. 손잡이를 등뒤로 하는 백 랫풀다운 (back lat pull-downs)은 일차적으로 광배근의 외측 아래부분을 훈련시켜 등의 폭(width)을 발달시키며 초보자들이 턱걸이를 할 수 있도록 충분한 근력을 키우는데 도움이 되지만 어깨 손상가능성이 높은 자세입니다.'
     }),
     imageLink: 'https://gif.helltabus.com/01971301/01971301-Cable-Pulldown-(pro-lat-bar)_Back_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRjoCAABXRUJQVlA4IC4CAAD0FQCdASq0ALQAADj+Bu4W2wEsHkZFSFMqdtFk02dbWM4PLXmLZkodZaLnp2AxWXIBpjM7fBElixwKJmcDE+PXaAQDw/k0I/nECmEeBpcGw0BhLpVi0aAOU7f42Ra171c+ZO0i/L8BTKo5M6rHoRk8aYwoqWoCulgV1gC3/sOC4K6mExFLt7ZpfNky4u6aPK/Mf3a/Tzn0XX1s8psXZ77mdKLOADiWSP7aMfdIvFZAZcyeNNpRib0AAP74sVo9V5MSMkCE3FjdOG8GtMYrzVPHH0zfn8WdiVvNoW0wmDhSQrd4xce3+qTh+9YOyMzpqEMVcCeS3nUDfIDO7pBi8Zs95kcBkYI6tmvaeyU+lon8EMoxu7PP8C8XVMhrdzZAeDsJHXeerE3Q7mW8xM+RWgAe84jFDAjuI6MI8BArcNLePXgZdsjJaT/x7uARJJYPxRzTPPi/0NKfzaM3odtym03qUkHmDqR94yxmKoVxI0+91eAfb0ARDnFd+Ky+WvL6NgsuIsfJ9AgRONd9VbRSw9UbkRiBrBSdN14lUAtD5CfFP9RbV1SsIR74K+gnpdDLFgblQcdEznsoeKsDBtRt7AkZnlu9DYZi6II9b6uJxJZ2gLvECpbVHOcQnDfmz8LY5Yw3lBbUTpoVkNAiFB9o/vOuHUpc1m4dHdDc8hp3dQuKPWDC3+3nLUOqqQd26296sB0VWCQwws/SGW+fBKxg6PJwVPpjgAlpt9RJf6wAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -235,6 +243,7 @@ export const ExerciseSeed = [
       caution: '케이블을 당길 때 견갑을 모으게 되는데 이때 어깨를 올리면 안됩니다. 그러면 승모근 개입이 많이 될 수 있습니다. 케이블을 잡아당길 때에는 빠르게 당기지만 이완할 때는 천천히 동작을 수행해야 합니다. 케이블을 잡아 당길때 D형 바는 배꼽부터 명치 사이에 위치하도록 신경 써줘야 합니다. 케이블을 당기다 보면 몸이 뒤로 젖혀지는데, 이때 몸이 너무 많이 뒤로 가지 않도록 주의해야 합니다. 시티드 로우가 등받이가 없는 운동이기에 코어 근육이나 등이 받쳐주지 않는다면 무게를 너무 무겁게 하지 않는게 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02391301/02391301-Cable-Straight-Back-Seated-Row_Back_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRnACAABXRUJQVlA4IGQCAAB0FgCdASq0ALQAADj+AADWcUryCkdYAGxten19fC16fNuWDHJl9tGaSGOmnwWbLH8hM/PizO8Xk0emWcLovan4XKPgV0KrqfEpZaera3vKu3rNystPqyro6sDqADyqWF7ges30Hjn+d0VPcOLhKfLpuvlQ/EbZsj4p6WV1AjSGHs0vM8dWzLF6yqwJsK0urcvSsEDyqki27z4nyYxHirA3DlboqZBwR5Jt/GhBmaNrmNREiMX99E8abRUEAAD+47Ro4YbBbbi12qXCpdnKPDbEIKX9ynrVip5Cal4vYB1CtHB8HuAA89aCzilF+OyBFoIKRoRIfPg16yiorX981RaHwdehkA5c46T9ZbzQnYaDcmn7/C6CnE6aYSE5UKyIo07odItVPSYwSyGl9IBVv09ZdXyqYZW+m8sNZ/dIFOTStpmAC1i86phiJrP2ZZertJSQAEAgn8ySE0F02jfwfOBe+ASVA/uZvXkpIo6u16tiFOxs9jZsyoFCsk6ANAA8myoZRdQNzcNDgT0V70/kFCOS2Wk2aTAWv00RcE/Ij5FSrc1r8Dy4cC6XbbZEXJE/92qiFx00PjVN8x9m97QjjleP2hbAdNAupAZ4JWl5LYd91dqJyNtjF0Ehm+toIDE0EbFJmGn8FfvSz/dOuG7de53FENnfHytG19wYf1MnNQA4lRrTpvHQOKWkD5VGQdeFGUAD4GxHLNxZkIIa+unrzrfkaLme+njCyf8SeMjUqroK2SqdoXtFG0YKqc/XKZALncu3FRaUatyZyRZDGVMSoaU1Batb+OHP9Vao8Ul1GxorRAAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -262,6 +271,7 @@ export const ExerciseSeed = [
       caution: '올라오실 때, 허리가 꺽이도록 과하게 올라오시면 허리 통증이 유발됩니다. 몸을 빠르게 움직이는 것 보다는 수축과 이완을 충분히 느끼면서 몸을 움직여야합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/08771301/08771301-45-degree-hyperextension-(arms-in-front-of-chest)_Back_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqICAABXRUJQVlA4IJYCAAB0GgCdASq0ALQAADj+Bu4XExDQdwZPGLhORU9/uc8Lu16fMdumzCyU8iyHt4RJh8L+16FvYWuPmQwnjSqHomVDd7ylRZxZOcNdjr1NCST4L53UDvxwtSDtLmTqW1hXg5gjVUo3W3wjIYmADWHMJK9bYu8PfWS0b90/A+eBATsqxFmjO5W0g2PFeHBlMTxpnZ4jOuJv4cB+LZuO3rAk0XxuxcwD/1GO50w1RMIBXxNTqQALbrFwQL/6DIfPs2O8KBMxufq+n3aE0tkqB5bJDAexlzfOHlrihmw9ElQAAP77CLxjmbo9ig0umuQKM9Q6Y7m32EM02xIqCWFeg6i4UX4yR3wEEPa2erF7Ww5Zc7/DjY7piy83UdMhdZC49rA7vhE6A53zZ5GhFnfm4qrhOsx0F/L9vcADwAQI3SqaF57ck1mxMVZxtyw0As2wqyMhXOASTVosbAaevZ4P0H7D67tOatJNnGCinxfCgJIYeWAInN4zJGdoyrRKHUJoHN8rctF1hMKscJsFwE+EHNGz54+br+cLfXDt0VPkGeXwsImsu8DiGm7DXdGbRjhVAP1W1CWlQSMAAfHoFKjxOZtvbXKi89sOK3Wv38If1Ynw2bovbpSjzSCAwZCifsalPQJyK+lAMehX/kXL5Cmr3PZVXRTYaRObeA72N//03xEPGtq2GaTY7gyHUTfLQaiEFDzL0a/stXM/BlzXKExhSo1YfmmuhbJP05+mridgVW62J/8gFrdSekvI1xkOWU6vlMS6IQrOzmoXCi6ftd2s72QVNNTADb3ud2rC2cSmQLc6GXq3zQMa75GMGW16v8aMce+/ioj1mhjb3T5LZlNtJ2q0B0K2mOvFnFXZVMCQQekKC8rgFdXQgAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -288,6 +298,7 @@ export const ExerciseSeed = [
       caution: '덤벨을 내리면서 어깨가 등 뒤로 과도하게 젖혀지면 어깨 주변 근육의 부상 위험이 커질 수 있습니다. 벤치에 누울 때는 엉덩이, 허리, 등, 어깨가 순서대로 닿을 수 있도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02891301/02891301-Dumbbell-Bench-Press_Chest_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRj4CAABXRUJQVlA4IDICAAB0FwCdASq0ALQAADj+Bu4WxF7AJp8yeNNomNNomNLJEz/ohVpQhFG8sGxJjQuv8/3HXP+KBbiomZMxJNv8jChjQ3UKd5Nxmw0S1CR4YIvPu9ni180iAM8wSwdntWL8Vzv5RiB0QkkK2s98jskT4yGwiPQ2T6/dKuTD4fyLwRtLE/D554C7tMpVZ8I5Yzj+AlS8XOnHuQdYwpplE0+QtSVzJ4WU22RivGe+NnrVE/57wtXA2izh16fMnpCTnDy16fMnjSoAAP73ZABBdsSbUXDF0lg3YdHbiZZOxgloDuXdEoCBDrfwmHHccUNvcCFJDjaT2i/dqbwsl0YqKbVHXZm3GV7ZNHXfiXaqgC1IMQGT10pze5QAgvVyXrJIkA5f1GO2Bq4BKqOxZ+P0EUeEj6XI5yAhKYZV2vri7ykCOp4VVxrQUtbT7eJT4i9uUnBuVgILXVDZC7H8hll4DF5gixF+fm72+Dz6y9bg8Hx/vPSaq8O+2mngWb3fhxGiSl/w2h/UvZzPnpApQ0jkrR6+ezFbyvU3In1JKiCBSGnQeziJVOsIsX0ezSm9GS4rwOujNst2wk5G/aYPGME1tGmTZYgu9Hc5kKdep9ITMq1W/ZWgd8peTE6LJd9n8mc0vUHcvx4PoGaT4vn04og/muS8UxhFQlRPgRwlwHIuyov3Cokm0x6CBiZQVqkNudlcUz7/+jHy0MMXbABjtPRgz8jb+dV7In7wAE0ERF0UCBMMrJvkEAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -315,6 +326,7 @@ export const ExerciseSeed = [
       caution: '덤벨을 내릴 때 팔꿈치를 완전히 펴면 동작이 부자연스러워 지고, 팔꿈치를 너무 많이 굽히면 충분한 스트레칭 효과를 얻기 어려우므로 밋밋한 곡선이 이루어지게끔 살짝만 구부리셔야합니다. 어깨에 통증이 일어나지 않는 범위하에서 가동범위를 충분히 활용하셔야합니다. 각도 조절이 가능한 벤치일 경우 1칸씩 미세하게 변화를 주어 운동한다면 변화된 각도에 따라 조금씩 다른 근섬유가 개입되어 가슴부위의 발달을 극대화하는데 도움이 될 것입니다. 이러한 방법을 덤벨 플라이 뿐만 아니라 다른 가슴운동들에 까지 확대해 나간다면 가슴근육의 최대발달을 이룰 수 있을 것입니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03081301/03081301-Dumbbell-Fly_Chest-FIX_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRtICAABXRUJQVlA4IMYCAAB0GwCdASq0ALQAADj+Bu3QBsNNomNNbNxI0LvgbRj5fEM1N3Vgu3qyNw4Jc4yokE+LkaFNLJsjUxcx4E7BCBaYUQaOxRFGHNBebStRxSk0pUyq0TwQKaGYsMxn/FA/89qk407IJZ5omvzZBRwrhBOaGN0EL52TUcGQ/euDeL6O+9ae7UoFhdNTv+TudBV/tT4mxJUtryzwP51utYGXdSKW2mEOcoydAcHLVXmMX40VVyBVZkMuMc1of/J8FpeD/DIUotAjOGPLXp9zQHpXtR70Y+ZPAxCzbvfyrYz0+ZPGm0TGWAAA/uVqATz8NOhkUBCF99HDSH5Vz0JdvSdJceH+QgPI1xeKWfKmd2osIuAZuW/Bz1T00u8PPsq1BfUeWHB+pzgA8Ix5x6hIU2Sjl52YMRt0QS35P7rhfHin9A712ja2BFfZp5KXqdU0nLtj8BpBsAzfiH0/ew907PekpDR2UvpNwHmuqOuY+yq69+u1qrfnWpOyT9Qzw5km29GssiqFvmvWY5aONc1oo4YgWyBuVcp7tUnA5UTINMoeO1cPdQTfAm+cNMmoNGTNtwpKhkXfnylHEq2hgGMgk1xu7GrQxkJEkuMabNHOU9AM7PiIIQyIk1Yx27l8F2/H8wHsizlO9yAq52+KAIs8N36n+DQG05wdk3yypEAasocW+7WbLY01Cul3BIPw5AGsRBtM5JdzLQwi24IiaMUqfjpz517BWZykcTTqmHxlXlLJVtDXkfQ70myop69ZXOkpWuuFk0pO+MtafvP3gyrMH4ThPIN2H77pmyiWEqn+0J5ysgHOFBMkC0AD/hPuY0WiGPt6AGMVH6N6DlUGPJ+zRwmJ8S0PE5/ew2fF+r+PhWWXVNuGw0PiWTN7+7NwQ0iPz1fZFMThvG6aLEhT4DNZpDD3W8CEgB3noU3qudn/qkA7a904uAAAAAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -341,6 +353,7 @@ export const ExerciseSeed = [
       caution: '팔꿈치가 뒤쪽으로 쳐진다거나 움직이면 안됩니다. 바로 고정된 상태에서 가슴 자극만 주는것이 효과적인데 축이 무너져 흔들리게되면 운동효과가 전혀 없는 것은 물론 부상의 위험도 높을수있으니 이런 경우가 생긴다면 중량을 낮춰 윗가슴 운동을 수행해주세요.'
     }),
     imageLink: 'https://gif.helltabus.com/03141301/03141301-Dumbbell-Incline-Bench-Press_Chest_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRsQBAABXRUJQVlA4ILgBAABUFACdASq0ALQAADj+Bu4XKAEsHXvdd47DxM4eWvNNdie402mNfqWUtPmTxljcPvVJaRke4zvGm0KDzBmIvI4Qs+8d1g0mNNomLiW82ixbowYYuD3l0j5krxXWCh0ckj/E7VKodYeJCx8CoT+CFanNxN5S2qch36bRLBuIzF0sd7mJ/xPVwxQJcPkU0TGlhUbfiCsV2mC+2jHrlrPmTxpsbxNw2jHzJ402hwAA/vwgCfdECve+EWbHtT8vToepV6rNa+OJfvvLAWgo/3JXJfEv4QnXiGRoJXarTiKFcKMcjiZMKwmGI3RkZWwyBIQLYJqelEzqhQ8FgJadNJRMPPZv2Z8ebUZ+8GipVI4UFTJ9/U8JHYVn4COACYY8rdjOkz/gmG0IY0FZGfVrvDjIAeaVaDjuOYjZSPVxvSPFFcqDQx99DqXISBQOuCAVDxk/zdU0TnE+UV1i9nZw+OrLliZRQrbPgPowjm2oRbZaqVaf88S9rkcbvyFb0HiuhzOilEIVjmjM0NbMOLCso9K6o6+19uNibcqksF7uI3e3V4E3zFMfTASfLuhjvFHvzBqeflz8ZZcAoFCAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -367,6 +380,7 @@ export const ExerciseSeed = [
       caution: '팔꿈치가 어깨와 일직선이거나 어깨 위로 올라가면 안됩니다. 팔꿈치가 위로 올라가면 어깨에 힘이 많이 들어가게 됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 안됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 팔에 힘이 많이 들어가게 됩니다. 프레스 했을 때 어깨가 앞으로 나오면 안됩니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05771301/05771301-Lever-Chest-Press_Chest_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqQCAABXRUJQVlA4IJgCAAD0FQCdASq0ALQAADj+BuugfiAu16fMnjTaHFmAIvCe2jHyVaJ82DbFk87whfUVIWJGGSJwOftS7K7K7QVCoVRZHLBeC1CVp2vvaOZrb8QxaN12Qy3Lp2eXMFq4u0YpNKUXZgbVFRMM8nZzqlswmexKppAtTWEfa1bvVli5SsGOWI6K8XoZetnzIe3NNagQ8jLAFj9m+3W7G2ghK5JWAw8HHw41o5jOsE5GKSQVDObgZL0yE5w8telwAP7laqbIcBaisH9jBld3TMeAU+uuGAzKdcI7iuazrfXTxM78usQsZpdePZmcBOw3cnzS/jInvmxPa+EGKX5JEujFswssysN4Ei7YkdEIkk2V1pMVfpdVP7WqzVlBrF2QsAAeRbJGE/j6if5YAugsR02qzmoAyAICXNM39MNmbgeqwxekzczG/XJS8L8xpQlO4yxD7BSYmHk44LGjJOFC3TAF3ZDpU8OOFenVDxXOAapBrW2B85il40SxLljGqcfnMzK0Tme4knHYB93Eky3Q6j8YMMNIJjpY+aIMmS04DRmlHMLGwNwQRtsoxIG5Mr9CZ4Qc7TlWjbH6UVaNsG8Cu/E0FpFe32nPdJWkkdIgDPygzmRIl7moRcC4U1VsZ7JHwGYlVyLv3sSfy3uGMgg8oiREur/mCvStcjblZGww6IwtlCh/0Ddr04W49oxGCLUYgUIC24ZXxZClqYI/4yhl6UHfPeJlFwnq+9WrTZ6wl9Tu3Jd+hq5ZqGS40uwqBqCJ8fh63QnYVm2/fuonow+jE4CwaWwHt8P46z7s1WZHYaB13MkSRZGUIK+Llwg19G/89N05H8HxM2wj/mPqUyVbpOPbxbm54VQ4tmp9nf1X9DLkZG92xuY3ZGGEeTxAAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -396,6 +410,7 @@ export const ExerciseSeed = [
       caution: '손이나 팔에 힘을 빼고 팔이 아니라 팔꿈치로 밀듯이 동작을 행합니다. 팔을 너무 올리거나 무게가 너무 많으면 어깨 주변 근육에 상해를 입을 수 있으므로 중량 선택 시 가급적 가벼운 중량을 하도록 합니다. 어깨가 올라가지 않게 주의합니다. 운동 시 팔꿈치 각도를 90도 이하로 굽히지 않습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05961301/05961301-Lever-Seated-Fly_Chest_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAABUFwCdASq0ALQAADj+BuumBlplTRemR4aKwx3hyXR/2GBUKd4YcyXXJX0moa3bzVFlr7pybUPBn63Xrmieb8g63YkbqAMOvWNfPAJdIinIk2Zw0hDOIRRZ+UrB6QgxJWWH/lk2Ftx2gFg8oN7+2EjAlIMOmyV0Dmztq4pu9cJ41R6icYqDFOid/cMPIBHN20ZgDQ0aqBliL90d2IDHqogH+AV6K8tHBQSZofIJ7HgPDqDJ2pm9WAcWA3PHTtBlEJycuAAA/uVqZOj+wCmlSwkJkNyHLXQAByRgSnHlmmxdjORtt5Xvh31fSIsTDmL4Pwt0g8KS+7QcAlATCFX8joPCi/9WdJU98W7W24B52tyPgPwCosN4i3ZhjeShBOBPxEGg/A20Tl9PyZXmES9gWf/2Wnlmf7PzSkUUvnyvU85baJ/yOo12fl+4BTT8DC1NmNS335ms+xtcIm8RcNC+95vVj9GH7ix4/N1bECvwe2GIrDAxz5hBlWSmOLUz+YPkSJH/zT2GxjB82ePsxmfwQwi5nmJBw0eAQrJyeUHhYxgls09PDcMFnfKYoXjN4CowMm4/6DYrNX6JmJ3F6Wl1HD3LWQ+7O4jJO50vlUUoE47mpQGdPCKjb94MoxIIgtoMTMw9Wjhfgk27go9PT+lI3FI4goW9AC67MFCIR4hsF6NWOA+An4LIk3Yr8aIe0bZovf4P32ohCGASipeoqdCVOwrQr4p2gUfzG/qxCQLS/LuinOd20w8lpy8jQZF5EwtdZdE8y5RlZ2bIyGlIrP1uOFP0Ea/zqGvbGHn4e8+FBzIphMyXQbTR3niZHbrARElYDIQxhWfkFnpfAQxSYnjOW6eHZwcPjfWSlHWAAAAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -421,6 +436,7 @@ export const ExerciseSeed = [
       caution: '지나치게 넓은 가동 범위는 어꺠에 무리를 줄 수 있습니다. 어깨 들석임을 포함한 반동을 이용하지 않아야 합니다. 등과 허리가 구부러지면, 운동효과가 반감될 수 있습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03341301/03341301-Dumbbell-Lateral-Raise_shoulder-AFIX_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqwBAABXRUJQVlA4IKABAAD0EgCdASq0ALQAADj+Bu4XEhDO5p2b5AipDUlpJjTaINYPbY6fMnfBO57j5W7Prlq5JaJjPN+X2f9ulLl+nB8XCJjTaFyE1PrS6lUSbk5w8FhlUi6BXtUhLkzN6rvkNIR5PbRMTTIht5YEDh6MX1D5eLtGPmTYSc5A2szOHlrnHPeM3Rj5k31zt/NP9tGPVbS09KujzR0UkcabRMabRKgAAP77CIghI89wz456W17cE3dn4FrHPj62N1rm0b893U5E3qMSGsVu/JLS9+AeEBDTXg2t6pbTjUihyltmLn8krFGARetfApcxzvFCZESOK2Yy2RyuK5xcLVURuigQB1GWwKEy8youeDTw9Sy1qQTEhX8yE+dNFXYOT/XItkqP3aWliOAD9T7ntzd+r4o/H5kUMoCA+1P4qj1TxGJSO/7SsuXpToaTYA4xFiBERfziKklhZZwOM//EgAGpExqBUbuqdtl9kiuoVUCFwhFOMi8jhW1L/dS+0fGmhpGeeRDirOSzcLISKyUDsBdxLoEvRG59O9FsnW7zami0QZOBAAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -447,6 +463,7 @@ export const ExerciseSeed = [
       caution: '어깨가 부상을 당하지 않게 주의해야 합니다. 어깨는 생각하는 것보다 더 쉽게 자극을 받고 손상을 입기 때문에 지나치게 무겁거나 가동 범위의 한계를 벗어나지 않게 주의하셔야합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03101301/03101301-Dumbbell-Front-Raise_Shoulders_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRswBAABXRUJQVlA4IMABAAA0EwCdASq0ALQAADj+Bu4XEg9BonZvkLzDPV6aE8abRAZadGeausaMfMngNq2TRzKzUzq0Y+YpprN2gPznDy0QWDBLK5KC8onjS9t6ZIHbbik/FRlsX1YPg66Li+2jCO8OfVs2+m2ysxHz07D9ieNKhU11L/kq1QjFPXIjLze7vWWvT3a7iYzLGJHGm0RRpYZe+QQU9k0nomOfMnjWvNPmSgAA/vsIoEG/8aA76UhepQu7dk7Q3jQCB2vqYClmPRoB9OlRZNpEroLRMp78A8Cqb9T0QTmp0TO2oZjk6nr4/+P9+LbOITG2UK7f9WOC92L34QHsodcc/6/Xq49GCyMaat5iBUrpyKPlgMO2VG97CgyI/Yj+mH5pqUquUftoZ9jJBLDzubL27hy8lfCPn/BxOQrjlS4yHfJK5plU8KrflIddYseBvPy+erZh9vmkLTNJT6HckwZTe7cGGKiuSddTSEUWavZxxl+PVf2jOo0fGLxD5Hlbp1bjgb7LrOws9CqRMVXdEARi87HCd2+z6V67T/mJ7YVJ9NngEWHlG2AwJh7MLA+xzTU6ad7Al1xfyCvx4Xh5yR9AkkD5EE4AAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -473,6 +490,7 @@ export const ExerciseSeed = [
       caution: '등을 곧게 유지합니다. 몸통이 흔들리지 않게 합니다. (반동을 주지 않습니다.) 처음부터 너무 무거운 무게로 운동하지 않습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03801301/03801301-Dumbbell-Rear-Lateral-Raise_Shoulders_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqwBAABXRUJQVlA4IKABAAD0EgCdASq0ALQAADj+Bu4XEhDO5p2b5AipDUlpJjTaINYPbY6fMnfBO57j5W7Prlq5JaJjPN+X2f9ulLl+nB8XCJjTaFyE1PrS6lUSbk5w8FhlUi6BXtUhLkzN6rvkNIR5PbRMTTIht5YEDh6MX1D5eLtGPmTYSc5A2szOHlrnHPeM3Rj5k31zt/NP9tGPVbS09KujzR0UkcabRMabRKgAAP77CIghI89wz456W17cE3dn4FrHPj62N1rm0b893U5E3qMSGsVu/JLS9+AeEBDTXg2t6pbTjUihyltmLn8krFGARetfApcxzvFCZESOK2Yy2RyuK5xcLVURuigQB1GWwKEy8youeDTw9Sy1qQTEhX8yE+dNFXYOT/XItkqP3aWliOAD9T7ntzd+r4o/H5kUMoCA+1P4qj1TxGJSO/7SsuXpToaTYA4xFiBERfziKklhZZwOM//EgAGpExqBUbuqdtl9kiuoVUCFwhFOMi8jhW1L/dS+0fGmhpGeeRDirOSzcLISKyUDsBdxLoEvRG59O9FsnW7zami0QZOBAAAAAA==',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -499,6 +517,7 @@ export const ExerciseSeed = [
       caution: '동작 내내 허리가 꺾이지 않고, 몸통이 움직이지 않도록 코어를 잘 잡아야 합니다. 내려올 땐 동작을 천천히 통제하며 내려와야 합니다. 한 팔씩 교대로 운동해도 좋습니다. 모든 어깨 운동에서 과한 무게를 주의해야 하지만, 다른 어떤 운동보다도 가벼운 무게로 시작해야 하는 운동입니다. 어깨 관절이 불안정한 사람에게는 좋은 운동이 아닐 수 있습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/21371301/21371301-Dumbbell-Arnold-Press_Shoulders_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRroBAABXRUJQVlA4IK4BAAA0FACdASq0ALQAADj+Bu4XEgEsHlr0+ZPGm0TGm0PBmHrJzh5Q9T46hYQdXoEqsH6bRLOY9Ce34UbRb5gIteu9Bm1COakuZOyM+xMZzsxQlZwrtyxwjECki9CdMGm0S1QoqFLQwUyx87tcfMni+/uQJrK4uheAuPsq0UT2402h2m1mZLdXMdRA9f7tUtel3VZN8dbPCUBTzeCfrRMaX5M/BmkxweWv/80GSAD++wiACYJLOSo71+2oXHLiJu/gYCgEmxbaX72o3UJOgaA1ERCeUY0eOLNYpQv+SJvn5YAUghncg4bDn1vElf9e2aAk7/rpT+onf9u9rqCGcMCm/O2xdWU10zCL4G2CPUKrM6kHeHbRyaPSQFbO+GAuwcs3fcXzRLrtxwtsmA5tx3j8yuZ9XhydjnoUB+vi3Q7SKLfsC+cvTZcIFbSzlB0c3JZCEbFyxQClvS8w9ZHL2rD6EXE+A4ePNPxw15vjztC5QjFjbHaSMeuE77OZXuPY17e6osUxGZmHoLCDjYh+u/otdP/ezDUfq4Dm+DU9vE81Rdkb7EyYDs2OenHnI4TuAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -528,6 +547,7 @@ export const ExerciseSeed = [
       caution: '숄더 프레스시 바를 얼굴 앞쪽이 아니라 뒷쪽으로 내리는 프레스(back presses 혹은 비하인드넥 숄더프레스(behind neck shoulder press))는 어깨 손상위험이 더 높습니다. 회전근개의 운동은 회전근개의 충돌을 최소화하는 안전한 범위내에서 시행되어야 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/14541103/14541103-Lever-Seated-Shoulder-Press_Shoulders_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAD0FACdASq0ALQAADj+Bu4W5hDEBp2gyeNNnU8AxJjTVv8K2LZBW5ARmFFFRkTcGhLr25npWboj7h7fjBZT7gy1jFRZFB+wwsrjXps8dNMHj063FlYTJBF1wj9GPlX1yUuYxz03MUsYhsRZjGWvJ4a0qbRE+eiMiC2NVyjQg1noWwHpzIOY106Q4IGaxFjMGbPZmqE/MiXDycDqNj6z1lr03d4TqCHf7FwZPGtLOHk4AAD++VqBxCMfhbxtJQJge67eErrSk/JTP1liYo/N8k9sELlcts/nBkisZxOWpXb2r2psflC5NbgxPVkjJJtkweqtKF+ImA9MIoWEyHoVpvY7oTtU/t5P8nW/3c/cxOFqa8h9Ik1XtvMMaOYbzWmZ81GVvN0oaL+LtWQIQVfzG3G4yMbjXh5Z8MPlG69AEpfFmFCeVGL/yqoojgYR5/UWCp/6V6wbLh+VaKtlPr6lKbuUq5H2sVUcW+KOTRyU4g2LIzhAmwOwGDLvM5AqIhvFN6bcnBM2CLpUsIN2Jdj4+K7FsDjJ2BiChUTkoZejojjoi3DnavcAkVRlh6MqXljLmIelkATxvsM1QtICWXo9Lfmx1ORb3xYlqlrkC7yvYFPWcvh87yXYBO+2wIJgFsimyeWrh1LZ7JRKQZALZtND3EYvPgAf3Z2Jw4oJqUfP8dy+JwKWk1dsxtIeo45lleOsRsxa/HALP5bK6dUnf6OZ35NR4umIFuzFJJhOYgc0EX+wXIS0D3iUvLmmr3RaYf0zuSqidy1FHx9F3bC6yksaROuMC7cAMAAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -553,6 +573,7 @@ export const ExerciseSeed = [
       caution: '팔꿈치가 앞으로 나가지 않도록 고정시킵니다. 덤벨이 몸 바깥쪽으로 벗어나지 않도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02941301/02941301-Dumbbell-Biceps-Curl_Upper-Arms_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRq4BAABXRUJQVlA4IKIBAAA0EACdASq0ALQAADj+Bu4XKAEsHkZEMM+nzJ40usG8yeNLNzDFIsiTGmvY4sa2dTEnOHlatqKc6zL7aLpZ9yLyo8w+sLMoFpjCgmbExpmVw7jpOE3C6ePrfkxwBG42MOU7aL7aIZbUfhPGmzvHOPgNox8g6KhPcGTxQBJYrapc8aUS4e3yY02iYeAA/vwgChfjCe4UAUXXd3uk3JJn/VntxQSPpFt//EY7SX5ID7zJAR70lbJUSIGxXKVu2VVuAGPggh9DtMtPGQmwj/FmHzsz+IykNEGiEjJGrhzQL25EKoZ2KnFmpi6lj1mbjgOxfcmgzix1Pm6ETEY0GMeIAJUNQXtwgJArtYb+zPX4OyOFY9XveUUHEEM8KEtNfNKRxMJfN8EwWt/XI8k1vFf9VJzZebVeccYdCtVwqqiES9iyCelvfHobOCtvKRyGG7YGcKX0mEiadJ0A16DdheLNX9DWmWIqOInTKzulGqsSoHqTzonW/16Hwnw0xasvi5HO17LQL6kp43tgQl4m5Tdaffbnjk19H3wEaNJ/0xgGYEWBAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -579,6 +600,7 @@ export const ExerciseSeed = [
       caution: '양 손바닥을 마주보게 하여 덤벨을 잡고 선 후 그 상태에서 그대로 팔을 말아 올려 줍니다. 이 때 중요한 포인트는 팔 운동시 포인트가 있는데 팔꿈치를 고정시켜야 합니다. 팔을 올리고 내릴때 팔꿈치가 움직이지 않고 고정이 되게 옆구리에 붙인 후 운동을 합니다. 팔 앞부분인 이두에 힘이 들어가는 것을 느끼면서 팔을 올릴때는 숨을 들이마시고 내릴때는 숨을 내쉬시면서 동작을 해줍니다. 처음부터 빠르게 하지 마시고 천천히 운동부위와 동작에 집중을 하시면서 운동을 하셔야 합니다. 팔을 올릴 때의 속도보다 내릴때의 속도를 천천히 하여 최대한 집중하셔서 하는 것이 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03131301/03131301-Dumbbell-Hammer-Curl_Forearm_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRoYBAABXRUJQVlA4IHoBAAC0EQCdASq0ALQAADj+Bu4XKRG6n6JHGkUeuTnDy1vGlZ3jTaHw7CHTsBkCMLoMyxETxps+1IoK0cuNS5bg5WHBk2zb7m6fu4GxGmztRd/VYLoh8/pMptZ5EmNDOaYh6zMzr9vcX4dAHLXp7gEpU1eZIL7aMXJ+vkPvHCfMnYETQrDyeaJ4ywJ6LyyNoBwCRxptExptDgAA/vwgI7Q+CGeGl5EWX0RygkDJpI9FGWvdef3hp8ZNdHrWWxMu6khxWr6dLtqV5G7BwsF2p7YtC5rTo6Y5xj9RwlIoQyM4BhYluCtaukPN7SJ9gKcOKcV14fEJeve+tgAmcJIkMe/klV46Vflrzh8/Dlz//7LBcx9TsVv4Ab4rq5mH96+5t6z9E7gmWtDxk9IBAqpxGze2R3PXDillnJClTD1ffBt4nELla1U/yfyBhGq1Xp9+1h7xvFWRCwxXw1U4XYDaZckJRiEeadZ0i7H8DEkj0XsAr+z5lcqqe+Ty35QAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -606,6 +628,7 @@ export const ExerciseSeed = [
       caution: '익스텐션은 영어로 확장이라는 뜻으로 삼두를 확장시키는 운동입니다. 삼두 익스텐션의 장점은 운동 시작자세가 삼두근이 스트레칭 된 자세에서 시작하기 때문에 삼두근에 조금 더 많은 자극을 느끼게 할 수 있습니다. 하지만 어깨 통증이 있는 사람들은 가벼운 중량이나 팔을 머리 위로 올려서 시작하는 삼두근 운동을 피하시는 것이 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/21881301/21881301-Dumbbell-Seated-Triceps-Extension_Upper-Arms_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqgBAABXRUJQVlA4IJwBAADUEQCdASq0ALQAADj+Bu4XSQEsHlr0+ZPGm0TGmztF3UWDUixyF2e15acF9tDxyUynI6Nv+jQ3GDxqbRLO8AXYtXHTOfMnjNeE2RMXkzeSJA7MabRA3U1VX9YSt5QkBrda9PlPQApwS+lBBP4F0ZfCrOD6HTiZXaCD4MbYX0jTa9LuiBx59OgEuHlryu8hHsODJ49Y5vAAAP79hEAbcVGNah83+xAMp/z0bic74ikYrDGFe1kLGRkcCeeswLQ563gG0/fgSpm1YYfbOFBgaMB0PTpqa44GR82OHrxn8Nvij00KWABsN1QMBGdqm/qoHVk/KsnOHV30RYhS6E+soO1Sj7UfaY7A1GXCXidVaDsiciGnROs9ahTQ0GZCPpUpAHt3ZTBXTCVpl5UQYG8AjAl+4uKv3J+pPcoyOFlbGhTYEZwU0IkzJsK1f++8Ymx4n2e2LXuYzcTlIW6fqq7USP86zczs7WgQuTjIUSvcJWWTRy0gD7ujVzoQjjs4Iupcxug6JcMsC05+/NVsRGSQMMRe+XPmrznwch3gAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -632,6 +655,7 @@ export const ExerciseSeed = [
       caution: '삼두근을 자극할 때는 팔을 쥐어짠다는 느낌으로 운동을 해줘야 합니다. 가장 자극을 많이 받는 순간은 최대 수축지점 즉, 팔을 올리고 2초 정도 머무르는 상황에서 가장 많은 자극이 갑니다. 이때 힘들다고 팔이 추욱 떨어지지 않도록 잘 잡아 버텨줘야 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03331301/03331301-Dumbbell-Kickback_Upper-Arms_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRkACAABXRUJQVlA4IDQCAABUFwCdASq0ALQAADj+Buvm0RG0dwZPGm0SwrkUH3ODpJfpBk8Z7csXhHO0zcW/QV6L/V/Ys21cbn/bf3WDaM/kJ+LCze70ihXuBCKRUMEAeWukG8jhEwpuB1NaCdXoYgPYbuzIDYtjdntWDTlvaa1wmw+2DYCjF9lNmvauyYuOLGUPjV40HnEY3dgO6mSoYIjBQblm3IW+Pmtn6Qg2SLimUD/7iHTfEjtGkUjIPFZm4jN9fgpMCgNExp24lfbRj5k8ZYAA/vhAAuPknELkiovBNe4rqOTwQ5FThjt7auNZ0ZlPA7bAnix8YbAuhSt3fvu+NlXZb0P5NiNMlkmATAFGYhL5C1r8Sdedq/tVgPrCjblqpZ8HoGMQh1p5n5cxJv42vCphY8ZsZ4ZIkldM0NNk7qN7bsWuRypZa+i4uszonT2D018tYQLElS6MD8+dk6Cf7UGZkFbL6JDghxHI1gc6ZRlkrt4ltGJXK++tlerCBdfmyMeACfpGTH3DTvzYbUqerT35CeWaWqLtGzyobw1ew99l+EFvS5dhDfMx7HLIaB8uK/JhY26/ehYXEYZQc4ZCYSfrNkRqCDXHFmMJXxLg6SvvuxcfBFXgfLovdz73EQc4iHvZCamXNCuwLdRwOWiIXBb/JDNI3w7s1k8FmVxX02bHjpIt42u56GC9V8fbxTodNDyxyDLtcDr6vwHnIT3lfbwtfLPmMQ5ZFO9QJ3VKwFJqmh9ygFe7S1B8e55h4AAAAAA=',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -659,6 +683,7 @@ export const ExerciseSeed = [
       caution: '상체를 너무 숙이거나 세우지 않습니다. 바를 내렸을 때, 몸에 닿아 진행 방향을 막지 않도록 하고, 손목이 꺾이지 않도록 합니다. 팔꿈치가 앞뒤로 움직이지 않도록, 옆구리에 붙여 고정하고 어깨가 개입 되지 않도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02411301/02411301-Cable-Triceps-Pushdown-(V-bar-attachment)_Upper-Arms_1080.gif',
+    placeHolderImage: 'data:image/webp;base64,UklGRqIBAABXRUJQVlA4IJYBAACUDwCdASq0ALQAADj+Bu3QBsNNx4LFRWN8temjgmPDRj19HwEZizuYWvS669a1Ul8PUgxzSooY5J5YIb2GQDhCSqZqMbDlBS+zvCP/GGiztTVOIcE+R/JPipJtFgcTpN31k4gkKWh/1WN31U3G+R9y+bBtowW15x+KlQpGE+WvT5mPNKgAAP7lbSHwaV0QtqvRBKfjGJigYpENhR42IpNGtjQzbhunWzIVLORgpifn5aP/eqUVXVff9RVW3M7szTCOoC7Wx3fRi2AHObWVuREeXPrSLIeWMZoqHyO3J4V/U4liJp6VZaBiWFspktcktEpnCX8N4sDw2kkDbg8ieV0F2xVVythUZLywk/v2uymgXmzBEYeAem3IR5l2bXwrJ5LxZpZT0NdFUwKlfUH9S2orBPszoEn+eq/FRoQhhxlb75iDMo6gKRzOy5zfX9BVcZXoMMUzv+9KrQBBef/sdJHUSoDNwdMrKIbIs/NR0hz0GdjOUVdRXuVKQqWh1biz7Zmrw1/jqVmZVdZr2sOFRy3tLgAAAAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
