@@ -48,7 +48,7 @@ export class Exercise {
   @Column({
     type: 'text',
   })
-  placeHolderImage: string; // 운동 설명 전체
+  placeHolderImage: string; // 운동 base64 인코딩 이미지 링크
 
   @Column()
   priority: number; // 우선순위
