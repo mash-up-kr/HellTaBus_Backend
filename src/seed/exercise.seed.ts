@@ -230,7 +230,7 @@ export const ExerciseSeed = [
     changeWeight: 5,
     setBreakTime: 120,
     breakTime: 600,
-    ddescription: JSON.stringify({
+    description: JSON.stringify({
       what: '시티드 로우는 말 그대로 앉아서 로우 자세를 취하는 운동으로 등을 고립시키는데 중점을 주는 운동입니다. 등을 넓히기 위해선 안 할 수 없는 운동 중 하나입니다.',
       where: '시티드 로우는 광배근을 타겟으로 한 등 하부의 운동입니다. 등 상부의 견갑골 운동이 아닙니다. 그렇기에 먼저 등 하부 광배근이 움직여줘야 하는 운동입니다.',
       how: [
