@@ -60,6 +60,14 @@ export class CreateExerciseDto {
   @IsString()
   @IsNotEmpty()
   @ApiProperty({
+    example: 'data:image/webp;base64,UklGRroBAABXRU...',
+    description: 'base64 인코딩 이미지 링크',
+  })
+  placeHolderImage: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @ApiProperty({
     example: 'what: Squart는 쪼그리고 앉다는 뜻으로 데드리프트, 벤치프레스와 더불어...',
     description: '운동 설명(what, where, how, caution)',
   })
