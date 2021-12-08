@@ -13,13 +13,12 @@ export const ExerciseSeed = [
       what: 'Squat는 쪼그리고 앉다는 뜻으로 데드리프트, 벤치프레스와 더불어 웨이트 트레이닝의 3대 운동 중 하나입니다. 특히 하체 운동에서는 절대 빠지면 안 되는 운동입니다. 바벨 또는 덤벨을 들고 혹은 맨몸으로 무릎 관절을 굽혀다 펴는 행동을 반복함으로써 하반신의 근육을 성장시키는 운동입니다.',
       where: '대퇴사두근, 둔근, 척주기립근, 복부 근육, 대퇴근 후면 근육이 집중적으로 운동됩니다. 위 근육들이 스쿼트 자극 부위라고 생각하고 운동해 주셔야 합니다.',
       how: [
-      '앉았다 일어나는 동작을 기본으로 하는데 어깨너비로 발을 벌리고 서서 발가락이 전면을 향하도록 선 후, 허리는 곧게 펴고, 상체도 최대한 꼿꼿하게 펴는 것이 좋습니다.',
-      '무릎의 위치를 신경 쓰기보다는 의자에 앉는다는 느낌으로 자연스럽게 엉덩이를 낮추면 됩니다. 개인마다 신체 비율이 다르기 때문에 스쿼트를 처음 시작할 때는 누군가 봐주거나 거울을 통해 자신의 모습을 지켜보는 것이 좋습니다.',
-      '스쿼트에서 가장 중요한 것은 엉덩이를 낮췄다가 일어나는 동작에서 반동으로 움직이는 것이 아니라 복부와 엉덩이의 힘으로 일어나야 합니다. 반동을 주며 횟수를 많이 하는 것은 운동 효과에 도움이 되지 않으며, 천천히 바른 자세로 제대로 하는 것이 중요합니다.',
+        '앉았다 일어나는 동작을 기본으로 하는데 어깨너비로 발을 벌리고 서서 발가락이 전면을 향하도록 선 후, 허리는 곧게 펴고, 상체도 최대한 꼿꼿하게 펴는 것이 좋습니다.',
+        '무릎의 위치를 신경 쓰기보다는 의자에 앉는다는 느낌으로 자연스럽게 엉덩이를 낮추면 됩니다. 개인마다 신체 비율이 다르기 때문에 스쿼트를 처음 시작할 때는 누군가 봐주거나 거울을 통해 자신의 모습을 지켜보는 것이 좋습니다.',
+        '스쿼트에서 가장 중요한 것은 엉덩이를 낮췄다가 일어나는 동작에서 반동으로 움직이는 것이 아니라 복부와 엉덩이의 힘으로 일어나야 합니다. 반동을 주며 횟수를 많이 하는 것은 운동 효과에 도움이 되지 않으며, 천천히 바른 자세로 제대로 하는 것이 중요합니다.'
       ],
-      caution: '스쿼트는 분명히 프리 웨이트 중에서 최고의 운동효과를 낼 수 있는 운동입니다. 하지만 최고의 프리 웨이트답게 생각보다 높은 난이도를 자랑하는 운동입니다. 지도자들이나 트레이너들도 조금 더 깊이 있게 들어가면 스쿼트에 관해서 쩔쩔매는 것이 사실입니다. 또한 인터넷이나 책으로만 접하거나 제대로 된 교육을 받지 않은 많은 사람들이 잘못된 자세로 스쿼트를 시행하는 경우를 볼 수 있습니다. 잘못된 자세로 시행되는 스쿼트는 무릎-허리와 같은 회복 불가능의 퇴행성 질환을 유발하며 어깨와 손목에도 심각한 부상을 유발하기도 합니다. 무조건 달려가서 무거운 중량으로 하기보다는 반드시 정확한 자세를 습득 후에 시행하기 바랍니다.',
-      })
-      , 
+      caution: '스쿼트는 분명히 프리 웨이트 중에서 최고의 운동효과를 낼 수 있는 운동입니다. 하지만 최고의 프리 웨이트답게 생각보다 높은 난이도를 자랑하는 운동입니다. 지도자들이나 트레이너들도 조금 더 깊이 있게 들어가면 스쿼트에 관해서 쩔쩔매는 것이 사실입니다. 또한 인터넷이나 책으로만 접하거나 제대로 된 교육을 받지 않은 많은 사람들이 잘못된 자세로 스쿼트를 시행하는 경우를 볼 수 있습니다. 잘못된 자세로 시행되는 스쿼트는 무릎-허리와 같은 회복 불가능의 퇴행성 질환을 유발하며 어깨와 손목에도 심각한 부상을 유발하기도 합니다. 무조건 달려가서 무거운 중량으로 하기보다는 반드시 정확한 자세를 습득 후에 시행하기 바랍니다.'
+    }), 
     imageLink: 'https://gif.helltabus.com/17601301/17601301-Dumbbell-Goblet-Squat_Thighs-FIX_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRroBAABXRUJQVlA4IK4BAACUEQCdASq0ALQAADj+Bu4XBxDJgH6mC9F8iEcWHkJSLRj5k8PEGu1fgIkw9vIvNgr5jE3SQPT5k7mpsxOxmkXmR8AfD02iYhJQSPTaJjLn8Qve2d0gEq+2jHNeIe0bGOWNxTLQZPFI6bvh0Jp8WowOFlY1Bk8SASZh1KhM07QZM4kF/ivwQuDJ2jgcmAMJ402iY02bgAD++pyKBg8w5li87hXCrwB/JI7AHDtllrI4um6p+eHRSSTHAtYvOOUPXW9uL0dVEqJHbhJZmEvLxBUMsYg/SiCyQL5seehqszLVJUl8AzQIz58HfePy1ZBjNTiivKd59wlXR2pKBYXd3LR5aHJHyL8ZDa639DME0K1Bw3tiCjs+JBlNvZZLpw1IBkvTQaaMQxasEOwj3lXStL55tYhSbU8TlS4H/LAkwyDJ2zX6FyFP/f9VQ6qV3oGvuxfjboA3yxGN/lmBJE83+0is/KeVyszbWmvqHcO8NqUpHQxQiNO32nN/hJa2vI1ejALM8ogZq+nQYZMiVDdg2EpuqgMpnNY1qMRAog4EEq1RlTdSl1rCna18WMIAAAAA',
     createdAt: `${new Date()}`,
@@ -40,15 +39,14 @@ export const ExerciseSeed = [
       what: '런지란 사전적 의미로는 달려들다, 돌진, 찌르기 등의 의미를 가지고 있으며 앞으로 나아가는 자세를 취하게 되는데, 이는 펜싱의 찌르기 공격에서 유래된 운동법입니다. 모두들 쉽게 따라 하는 런지 운동이지만 런지는 매우 복잡한 운동이며 한 관절의 운동이 아닌 다관절에서 이루어지는 복합적인 움직임이 필요로 하는 운동입니다.',
       where: '대퇴사두근, 대둔근, 슬굴곡근 근육이 집중적으로 운동됩니다.',
       how: [
-      '두 발을 골반 너비로 벌린 자세로 바로 섭니다.',
-      '한 발은 다른 발 앞쪽 방향으로 70~100cm 정도 이동시킵니다. 이때 시선은 정면을 바라봅니다.',
-      '등과 허리를 바로 편 상태에서 양 무릎을 90도 굽힙니다. 이때 뒤 쪽 무릎이 바닥에 닿는 느낌으로 몸을 내립니다.',
-      '다리의 힘을 이용하여 천천히 처음 자세로 돌아옵니다. 이런 동작을 반복합니다.',
-      '반대쪽도 같은 방법으로 반복 실시합니다.',
+        '두 발을 골반 너비로 벌린 자세로 바로 섭니다.',
+        '한 발은 다른 발 앞쪽 방향으로 70~100cm 정도 이동시킵니다. 이때 시선은 정면을 바라봅니다.',
+        '등과 허리를 바로 편 상태에서 양 무릎을 90도 굽힙니다. 이때 뒤 쪽 무릎이 바닥에 닿는 느낌으로 몸을 내립니다.',
+        '다리의 힘을 이용하여 천천히 처음 자세로 돌아옵니다. 이런 동작을 반복합니다.',
+        '반대쪽도 같은 방법으로 반복 실시합니다.'
       ],
-      caution: '앞으로 내민 무릎이 발끝으로 벗어나지 않도록 합니다. 허리가 앞으로 숙여지지 않도록 합니다. 몸통이 수직으로 내려가는 느낌으로 내려가며 운동을 합니다. 발목이 일자가 되도록 유지합니다. 뒤에 있는 발의 엄지발가락에 힘을 주고 일어납니다.',
-      })
-      ,
+      caution: '앞으로 내민 무릎이 발끝으로 벗어나지 않도록 합니다. 허리가 앞으로 숙여지지 않도록 합니다. 몸통이 수직으로 내려가는 느낌으로 내려가며 운동을 합니다. 발목이 일자가 되도록 유지합니다. 뒤에 있는 발의 엄지발가락에 힘을 주고 일어납니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/03361301/03361301-Dumbbell-Lunge_Hips_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRiwBAABXRUJQVlA4ICABAACUDgCdASq0ALQAADj+Bu4XSQEsHlr0+ZPGmttobBS9s0PGWWvT5XgSljh/sODJmc3dqhPmTxnDk2M3gkm82iY0rfKwBRzdscgJz5k8Z/k0E9JjafQCCKBBCxMaa6QkE8q9j8mHBk8abRMabQ4kEXJCeNNocPNtomNNomMsAAD+/YRBsxwfPOFrElIwLpUHFJUqFouTapTpSBWB8Wz16KF6HMu8xN04cE2iVk2yQxTHObFpClfFKM++NWyrShs70NsGZvxEx/ArnGrAUBSAOZTWEtWVa+B16sqjCsv63ZNNL6atoctB+oMOCCXAFLoJrRrwxGaLdHamozxzRUcxAM6d3nl0/yGU8Ug2G9hYstlOLxM90rDBn2KQ9tYHAxAAAAA=',
     createdAt: `${new Date()}`,
@@ -69,15 +67,14 @@ export const ExerciseSeed = [
       what: '머신을 이용하여, 사선으로 고중량의 무게를 밀어내는 운동, 스쿼트을 머신에서 하는 운동입니다. 프레스가 들어가는 운동은 미는 운동입니다. 레그 프레스는 다리(leg)로 발판을 미는(press) 운동입니다.',
       where: '무릎은 펴지고 엉덩이(고관절)도 펴지는 방향으로 힘을 쓰게 되고 그 근육들이 단련됩니다. 무릎과 힙관절 모두를 사용하므로 다관절 운동이라 하며 한 관절만 운동시킬 때보다 운동 목표를 달성하는데 효과적이기 때문에 주요 운동에 해당됩니다. 레그 프레스 운동을 통해 단련되는 근육은 일차적으로는 대퇴사두근이며 이차적으로는 엉덩이 근육(대둔근), 대퇴 뒤편의 근육(햄스트링), 대퇴내전근입니다.',
       how: [
-      '머리 등 엉덩이가 등 받침 패드에 단단히 밀착 고정되어야 합니다. 등 받침이 허리를 지지해 주기 때문에 허리 통증으로 인해 스쿼트을 실행할 수 없는 환자도 하체 단련을 할 수 있습니다.',
-      '의자 양옆의 손잡이를 잡아야 합니다. 허벅지와 종아리는 직각이 되어야 하며 허벅지와 발판은 평행이 되도록 의자의 위치를 조정합니다.',
-      '발은 엉덩이 너비로 벌려 발판의 중간에 위치시키고 바깥으로 약간 벌립니다. 발판의 놓는 발의 위치에 따라 트레이닝 되는 근육이 달라집니다. 위에 위치하면 엉덩이 및 대퇴 후면의 근육이 더 단련되고 아래에 위치하면 허벅지 앞쪽이 더 단련됩니다. 발을 멀리하면 대퇴를 안족으로 모으는 내전근이 단련됩니다.',
-      '밀 때는 엉덩이와 무릎관절을 천천히 펴면서 발판을 앞으로 밉니다. 이때 양측 허벅지와 종아리는 평행한 상태를 유지해야 하며 안쪽이나 바깥쪽으로 움직이면 안 됩니다. 무릎이 완전히 펴질 때까지 밀어야 합니다.',
-      '되돌아올 때는 엉덩이와 무릎관절을 천천히 굽히면서 시작자세로 되돌아 옵니다. 머리, 어깨, 등, 엉덩이를 패드에 밀착하여 균등하게 압력을 가하도록 유지하여야 합니다.',
+        '머리 등 엉덩이가 등 받침 패드에 단단히 밀착 고정되어야 합니다. 등 받침이 허리를 지지해 주기 때문에 허리 통증으로 인해 스쿼트을 실행할 수 없는 환자도 하체 단련을 할 수 있습니다.',
+        '의자 양옆의 손잡이를 잡아야 합니다. 허벅지와 종아리는 직각이 되어야 하며 허벅지와 발판은 평행이 되도록 의자의 위치를 조정합니다.',
+        '발은 엉덩이 너비로 벌려 발판의 중간에 위치시키고 바깥으로 약간 벌립니다. 발판의 놓는 발의 위치에 따라 트레이닝 되는 근육이 달라집니다. 위에 위치하면 엉덩이 및 대퇴 후면의 근육이 더 단련되고 아래에 위치하면 허벅지 앞쪽이 더 단련됩니다. 발을 멀리하면 대퇴를 안족으로 모으는 내전근이 단련됩니다.',
+        '밀 때는 엉덩이와 무릎관절을 천천히 펴면서 발판을 앞으로 밉니다. 이때 양측 허벅지와 종아리는 평행한 상태를 유지해야 하며 안쪽이나 바깥쪽으로 움직이면 안 됩니다. 무릎이 완전히 펴질 때까지 밀어야 합니다.',
+        '되돌아올 때는 엉덩이와 무릎관절을 천천히 굽히면서 시작자세로 되돌아 옵니다. 머리, 어깨, 등, 엉덩이를 패드에 밀착하여 균등하게 압력을 가하도록 유지하여야 합니다.'
       ],
-      caution: '손잡이를 꼭 잡아야 하고 뒤꿈치를 발판에서 떼거나 엉덩이를 의자에서 들어 올리면 안 됩니다. 운동하는 동안 양측 허벅지를 평행하게 유지하고 무릎을 안으로 모으거나 바깥으로 벌리면 안 됩니다.',
-      })
-      ,
+      caution: '손잡이를 꼭 잡아야 하고 뒤꿈치를 발판에서 떼거나 엉덩이를 의자에서 들어 올리면 안 됩니다. 운동하는 동안 양측 허벅지를 평행하게 유지하고 무릎을 안으로 모으거나 바깥으로 벌리면 안 됩니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/07391301/07391301-Sled-45-370-Leg-Press_Hips_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRoACAABXRUJQVlA4IHQCAACUFwCdASq0ALQAADj+Bu4W5xG6nQJHGm0TGm0TGllua6FLh5a6sxnrkxw0czw2WnbQt5nYTRdSw/EKlay5box7t+2yLb2g6rlOdieud9vPAcBu3sEX3/+y8tyveCYZ77ctf6a8gr52tWIzoWm2WFP3W5XcQupSe3Y5Be3KeHml8pGuponY4ez0vvuH2Xwjqw0LX46nJtdIXu80dRhexIjxY5Hgi8fh5/u3fT8WaorkXiLvhG45fGH7aMfObZFtenzJ402bgAD++VqA3Buqc6PlGUYvD6nmAa6JawzDDhTXVKVhHv3x0Z90mS8yhuo+cD/QjLHvE1FtOwV2c3H6eVf5yxw4hfdMgajlS3J0GAUoamt0GEzdJ8KoPS/w84e57u00vcYgYH6LTbi3P2jpswqrGVnbntSQAIt57qyWeZhrqMaGg2Z2T4enmC7t4z718Us3Kr1UgIqhKbJlzqo8ekbMX97ncnTs48yHHT0gktBa0e0dvQQcG5Z4192R6+myzGTMHEQLy1r6g+xQAM97dxDdPQ8Yl3HygQBB89VPH40wLHVgaVdrKEWJ8GJHTXZ9Bba/jnQXZHAvf6LN5heGWPSqir+qubME/W/seg8LjiXQ8r4WTa81qBnQ/pPIJiwcR/Zbgzjg3/E3NrOLJo9or3N32ykoOqRjCXLhZZe99e1cV1O8X4NTlbzOmUwnraf1pHjRM5oE3RXvZBuzolXhchepTkFU//AAOyR53dY37EltVTfTFs5iwQaGZRg8+BEfRHCcq1yYfY7GPnTm3tomA0ITNAXTdrOW2Okjge6XalkdjuG2RLHqw3Nc4BbhtwqyrdAAAAAA',
     createdAt: `${new Date()}`,
@@ -98,15 +95,14 @@ export const ExerciseSeed = [
       what: '라잉 레그컬은 넓은 패드 기구에 엎드려서 하는 운동입니다. 앉아서 하는 운동은 힘을 잘 못줘서 하체를 바로 고정하지 못하고 운동을 할 우려가 있는데, 라잉 레그컬은 패드에 몸을 부착시켜 엎드려 운동하므로 그럴 우려가 적고 고중량을 사용할 수 있습니다.',
       where: '레그컬은 대퇴이두근을 발달시키는 운동입니다. 단순 관절 운동인만큼 적당한 무게로 정확한 자세를 유지하는 것이 중요합니다. 단순 관절 운동인만큼 적당한 무게로 정확한 자세를 유지하는 것이 중요합니다.',
       how: [
-      '처음에는 중량을 꼭 낮게 설정하여 운동하는 게 좋습니다. 위 패드에는 상체를 대고 밑의 패드에는 허벅지 앞쪽부터 무릎 전까지 부착시켜 엎드립니다. 발목 뒤의 패드도 잘 고정합니다.',
-      '속도는 천천히 하여 무릎을 굽혀줍니다. 이때 발 모양은 발바닥이 평평한 상태를 유지하고 다리는 어중간하게 굽히지 않고 최대한 깊이 끌어당겨 줍니다. 최고 지점에서는 아주 잠깐 멈추고 다시 천천히 다리를 폅니다.',
-      '발목의 모양에 변화를 줄 수도 있습니다. 힘을 줘서 발끝을 최대한 위로 올린 1자 모양을 유지하며 운동을 하게 되면 허벅지 종아리의 자극을 더 높여 운동할 수 있습니다.',
-      '발목의 모양에 변화를 줄 수도 있습니다. 힘을 줘서 발끝을 최대한 위로 올린 1자 모양을 유지하며 운동을 하게 되면 허벅지 종아리의 자극을 더 높여 운동할 수 있습니다.',
-      '다리를 굽히고 천천히 펴주는데 다리를 펼 때도 완전히 쫙 다 펴지는 않고 바로 다시 굽혀줄 수 있도록 합니다. 패드에 몸을 잘 부착하고 운동 시 들썩거리지 않도록 몸과 허벅지에 제대로 힘을 주고 수행합니다.',
+        '처음에는 중량을 꼭 낮게 설정하여 운동하는 게 좋습니다. 위 패드에는 상체를 대고 밑의 패드에는 허벅지 앞쪽부터 무릎 전까지 부착시켜 엎드립니다. 발목 뒤의 패드도 잘 고정합니다.',
+        '속도는 천천히 하여 무릎을 굽혀줍니다. 이때 발 모양은 발바닥이 평평한 상태를 유지하고 다리는 어중간하게 굽히지 않고 최대한 깊이 끌어당겨 줍니다. 최고 지점에서는 아주 잠깐 멈추고 다시 천천히 다리를 폅니다.',
+        '발목의 모양에 변화를 줄 수도 있습니다. 힘을 줘서 발끝을 최대한 위로 올린 1자 모양을 유지하며 운동을 하게 되면 허벅지 종아리의 자극을 더 높여 운동할 수 있습니다.',
+        '발목의 모양에 변화를 줄 수도 있습니다. 힘을 줘서 발끝을 최대한 위로 올린 1자 모양을 유지하며 운동을 하게 되면 허벅지 종아리의 자극을 더 높여 운동할 수 있습니다.',
+        '다리를 굽히고 천천히 펴주는데 다리를 펼 때도 완전히 쫙 다 펴지는 않고 바로 다시 굽혀줄 수 있도록 합니다. 패드에 몸을 잘 부착하고 운동 시 들썩거리지 않도록 몸과 허벅지에 제대로 힘을 주고 수행합니다.'
       ],
-      caution: '레그컬을 하는 중에는 호흡에 신경을 많이 써주셔야 합니다. 운동 범위를 올릴 때는 부드럽게 올리고, 호흡을 조절하면서 올라갔을 때 햄스트링을 쥐어짠다는 느낌으로 힘을 줍니다. 호흡을 내쉬면서 천천히 내려줍니다. 들어 올릴 때 엉덩이와 허리가 같이 들리는 보상작용을 조심해야 합니다. 엉덩이가 패드에 봉긋 솟아버리는 동작을 주의해야 하고 그렇게 하도록 가벼운 무게부터 선택하여 운동하시는 것이 좋습니다.',
-      })
-      ,
+      caution: '레그컬을 하는 중에는 호흡에 신경을 많이 써주셔야 합니다. 운동 범위를 올릴 때는 부드럽게 올리고, 호흡을 조절하면서 올라갔을 때 햄스트링을 쥐어짠다는 느낌으로 힘을 줍니다. 호흡을 내쉬면서 천천히 내려줍니다. 들어 올릴 때 엉덩이와 허리가 같이 들리는 보상작용을 조심해야 합니다. 엉덩이가 패드에 봉긋 솟아버리는 동작을 주의해야 하고 그렇게 하도록 가벼운 무게부터 선택하여 운동하시는 것이 좋습니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/05861301/05861301-Lever-Lying-Leg-Curl_Thighs_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRkICAABXRUJQVlA4IDYCAAA0GQCdASq0ALQAADj+Bu4W0AEsHlr0+ZOuU3LwtDrI9hwZQVqBEmNVyY3sODLjD1IMi24buHJJbajV/k8+ASSgUIMBERiT953Wl2feGBcCJJyHcc9M5poXB1zfSvKgHxQTKl3tXoa8glyg96nlIbrm7OqSFuJubXr55uNWkrtky0Gp1WzTAFIKuYVUb+eBdQvP64K4lLZ9/yRDOs7kK0y73BIpR015M1eCF2cbU3lNfPY5L0RrzwUmlhXsjRdmGSXLSzyXwVXFsaPNqXaDJ41CgiAA/vhAARYzUfxComBCGMxgCenRnTerA8Cx/IALP7RAAEAUmE+6AhOc5HFkSmqqJYlkdj4o7w0CD5IN6WrG8nf+UiGrjb9BIi6QEaeVTvEI3aPpgrlvtNjscl90BUvs20nZLvNpFc0fMWatU0MafGFElV2iyyrrZiPol1OD+OwbY8m33eVtwq0z3gVp/Yup3Msl6uef6bZ0yVyS+SkOrzIAPLf6oGit4HXcklczyoE/8f06vMfneZpsQpIs5/kL4nEjAUMa8ejWPPEA9VRz9pXGN/Ra4aHYlVGm2u5rbabKHwXRprAXblDP8xxlZ/OwlNKqv7mvxSe0wtgl0pCqcePTxIichg3IePZoQtykIpKgnrlhmxDcGeqDYdSLaIyN5VSkFGKj/Z6xgbtQjw1ap04B9QbDLQKjn2FRsRm0+fWNLPhBxc6J9zOfScB2qdx5FoEGYqBDDqkwBFxysSpZiyICAQAAAA==',
     createdAt: `${new Date()}`,
@@ -127,14 +123,13 @@ export const ExerciseSeed = [
       what: '허벅지 전면 즉, 주동근인 대퇴사두근을 발달시키는 운동입니다. 흔히 말하는 꿀벅지와 매끄럽고 탄력 있는 허벅지를 만드는데 효과적인 운동입니다. 재활치료 운동으로 쓰일 만큼 무릎관절이 좋지 않은 환자에게도 안성맞춤이라고 볼 수 있습니다.',
       where: '허벅지 앞쪽인 대퇴사두근 부위만 사용하며 대표적인 하체 운동인 스쿼트와 다르게 다른 부분은 개입시키지 않고 오로지 허벅지 근육만을 위해 하는 운동입니다.',
       how: [
-      '등받이에 등을 대고 손잡이를 잡은 다음, 발목을 어깨너비보다 좁게 벌려서 롤 패드에 고정시켜줍니다.',
-      '다리를 들어 올려 무릎을 펴서 허벅지 근육을 수축시켜줍니다.',
-      '천천히 저항을 느끼면서 다리를 내리며 긴장을 유지합니다.',
-      '일정 횟수만큼 해당 동작을 반복해줍니다.',
+        '등받이에 등을 대고 손잡이를 잡은 다음, 발목을 어깨너비보다 좁게 벌려서 롤 패드에 고정시켜줍니다.',
+        '다리를 들어 올려 무릎을 펴서 허벅지 근육을 수축시켜줍니다.',
+        '천천히 저항을 느끼면서 다리를 내리며 긴장을 유지합니다.',
+        '일정 횟수만큼 해당 동작을 반복해줍니다.'
       ],
-      caution: '발목 패드가 높거나 너무 낮으면 안 됩니다. 수축 지점에서 다리를 완전히 펴지 않습니다. 이는 관절에 부담을 주게 됩니다. 수축-이완 시 힘을 다 풀면 안 됩니다. 상체에 반동이 일어나지 않도록 천천히 실시하여야 합니다.',
-      })
-      ,
+      caution: '발목 패드가 높거나 너무 낮으면 안 됩니다. 수축 지점에서 다리를 완전히 펴지 않습니다. 이는 관절에 부담을 주게 됩니다. 수축-이완 시 힘을 다 풀면 안 됩니다. 상체에 반동이 일어나지 않도록 천천히 실시하여야 합니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/05851301/05851301-Lever-Leg-Extension_Thighs_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRjwCAABXRUJQVlA4IDACAAB0FgCdASq0ALQAADj+Bu3QBsNNoVy/64bRj5GeF14usr2JTtrA4KJ3xsG3wYdje32dRA1THtGPUvtv090jLUlShQRH24CQnkBx1Dsa4eak5RUca8eeWcUoi00N2y4QAHLmwDYgSZ+m0O/nYt5JFOZyCSjg3m2SnDuhfxqKEPgmKvGFxDHWuZStSp2vrUUN2RCjFse6vRWQSBAWx6Y/beJFp2frU2jHqkn+uaSg9hwZO9NOLlafMnjTaJjLAAD+5W55cWEVsUJXx5b/piXXo35zIRkPnr9iaQ28nyoJgAfzZ+OtMOOckwkozDrH76JCkWx0tsVkXlMyDAJorqmSc+sghwcJIEiBnAMa6MFH7uB/mczrg5S38GEFB99Wpkm/A9+CPh2/E94qmYKXJqfp9PaGzlwaTdS4D0K/0Fzjc/rAPDdAz4x6WP0gXbsiegXFPIK8UqUMJWjulBhn/RSStE6XLKJRop932aSsnP+kCDcZwn91hbfsq0ZYfVkQlskpLVk8RfdpYbJ0NC2bSW4m9AADkMxaxASBbwIbjvwT9GKSBNs/R8BAcmSJFzIOVzBA6h7bjxu0agiNE6r7o5yVgEBcW6JS/EreHqEgX3RGHQZ5wLXYp3PbV2PK9oaF1xV4LDJ2WXvpR403KabUxaTiAH47A3JQQlYNMuCUy68NMks2dwdJfzRNTz7fznyU4gVYt50pAABaYqPhiR+kQ3ofBlkGqC7kwbaUloj4F2rAAAAAAA==',
     createdAt: `${new Date()}`,
@@ -155,15 +150,14 @@ export const ExerciseSeed = [
       what: '상체를 숙인 자세를 벤트 오버라고 하고 노를 젓듯이 뒤로 등을 조으는 운동을 로우라고 합니다. 바벨을 이용해서 상체를 숙여서 노를 젓듯이 하는 운동을 덤벨 벤트 오버 로우입니다.',
       where: '등근육와 광배근을 단련시키는 운동으로, 광배근은 날개뼈 대각선 아랫쪽에 위치해있는 근육으로 등근육을 하는데있어 반드시 자극을 해줘야하는 부분입니다.',
       how: [
-      '상체는 데드리프트 할 때와 마찬가지로 숙이고 허리는 핍니다.',
-      '상체를 숙이면서 다리는 약간 굽은 형태를 취합니다.',
-      '덤벨을 잡고 팔꿈치가 등 뒤에 모인다는 생각으로 당깁니다.',
-      '덤벨을 내릴 때(이완시킬 때)에는 등으로 버티면서 당길 때 속도의 반 정도로 냅니다.',
-      '바벨 로우 할 때보다 팔꿈치를 더 안쪽으로 당기고 이때 덤벨은 허벅지 옆에 위치하도록 합니다.',
+        '상체는 데드리프트 할 때와 마찬가지로 숙이고 허리는 핍니다.',
+        '상체를 숙이면서 다리는 약간 굽은 형태를 취합니다.',
+        '덤벨을 잡고 팔꿈치가 등 뒤에 모인다는 생각으로 당깁니다.',
+        '덤벨을 내릴 때(이완시킬 때)에는 등으로 버티면서 당길 때 속도의 반 정도로 냅니다.',
+        '바벨 로우 할 때보다 팔꿈치를 더 안쪽으로 당기고 이때 덤벨은 허벅지 옆에 위치하도록 합니다.'
       ],
-      caution: '허리가 절대 구부러져서는 안됩니다. 항상 등은 곧게 펴고 허리는 아치를 만듭니다. 머리를 숙이지 않습니다. 동작 내내 고개를 들어 시선을 전방을 향하게 해야 허리가 자연스레 펴집니다. 덤벨을 복부 쪽으로 끌어올려야 합니다. 가슴 쪽으로 올리면 광배근의 참여가 줄어들고, 상완이두근의 참여가 늘어납니다. 허리를 사용하여 들어 올리지 않도록 하고 등의 중상부 근육을 이용하여 들어 올리도록 노력합니다. 허리와 하체 스트레칭을 반드시 실시하며, 워밍업 세트 역시 필수적으로 실시합니다.',
-      })
-      ,
+      caution: '허리가 절대 구부러져서는 안됩니다. 항상 등은 곧게 펴고 허리는 아치를 만듭니다. 머리를 숙이지 않습니다. 동작 내내 고개를 들어 시선을 전방을 향하게 해야 허리가 자연스레 펴집니다. 덤벨을 복부 쪽으로 끌어올려야 합니다. 가슴 쪽으로 올리면 광배근의 참여가 줄어들고, 상완이두근의 참여가 늘어납니다. 허리를 사용하여 들어 올리지 않도록 하고 등의 중상부 근육을 이용하여 들어 올리도록 노력합니다. 허리와 하체 스트레칭을 반드시 실시하며, 워밍업 세트 역시 필수적으로 실시합니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/02931301/02931301-Dumbbell-Bent-Over-Row_Back-FIX_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRkwCAABXRUJQVlA4IEACAABUGQCdASq0ALQAADj+Bu4XEhMeS9ZF4uNh73GcPLXo1reQtZng4rOPLXfgVcyMGHBALRwh6a/6rnHKiJ/YBwY2oLjQDQKDJEocUb5qmCGGQ91f+tg72LCzJBvDggdY27ZjXXpdIltpzEs/bQEiWFnj5MAowBXu5RdkOQrHXouQsnXL0BDxsPWhkOr8cVUzAJA0BAwTxpqk/fdOtmhjDgue4NkGToApS3rcStYcGR5KgiJw6FjdoSWoEN9nAMlg8tbs/ZnvEgJ7gydRE56fMnjTaJh4AP77CJrTipZwMx645rZAkvcrler8tP4XVUn3i28M+wv23NvjB/2A+ktvkF071JQtra11GclJYwH/cLe42m9Xc7wLzns2dIWo4aUOQvaQ52dpnTSH+bt2xIBUuUPUVbif9lApGeIJcOuDN+2UVylW9ue9FwLss44mJ3DfI6HPRACjMEeJvaH6JPxNnuVhtORuM+JJ06+9YEtqoxy13Ieaz2lI/3xJfCd2fgPAc4wneJY/KdFlJmT1v1hVtmOc5AfvINYcHkOBURotTNBCtQbihSN6j6S3O9TeAkWTjPbll//j9MtsWV5snC34NjW7sCqVOH/a4HQawK5DXTpCBt3sh5UwwdvdQa1yvQbv29TGRHlhPxPpIxQ3C1GALlwUojrsAWPUg80ewhs3CsHfcACtUrptTmJV70K3yXhwaQsvUZj9ZSNOgmqT9PLqcz4NLIFDAiU+FsI6zu7FXO9BC9BzB85Sx99U5e6p8AAAAAA=',
     createdAt: `${new Date()}`,
@@ -184,14 +178,13 @@ export const ExerciseSeed = [
       what: '벤치에 누운 상태에서 바벨을 어깨 넓이로 잡고 들어올리는 운동입니다. 팔을 굽혀서 아치 형태로 만들어서 들어올리고, 광배근을 단련 시키는 운동입니다.',
       where: '광배근과 가슴근육을 주동근으로 하고, 등근육과 동시에 발달시킬 수 있는 장점을 가지고 있는 복합 운동입니다.',
       how: [
-      '벤치나 상체를 기댈 수 있는 운동기구를 이용해 하체는 바닥에 지탱하며 유지하고, 머리와 허리 부분을 제외한 상체를 이용해 몸을 지탱해줍니다.',
-      '양손으로 덤벨을 잡고 대흉근(가슴) 위치에 팔을 살짝 구부린 상태에서 위치합니다.',
-      '덤벨을 머리뒤로 천천히 넘기면서 대흉근과 광배근을 이완(근육이 늘어지도록) 시켜줍니다.',
-      '다시 천천히 원위치 시켜주며 대흉근과 광배근을 수축시켜줍니다.',
+        '벤치나 상체를 기댈 수 있는 운동기구를 이용해 하체는 바닥에 지탱하며 유지하고, 머리와 허리 부분을 제외한 상체를 이용해 몸을 지탱해줍니다.',
+        '양손으로 덤벨을 잡고 대흉근(가슴) 위치에 팔을 살짝 구부린 상태에서 위치합니다.',
+        '덤벨을 머리뒤로 천천히 넘기면서 대흉근과 광배근을 이완(근육이 늘어지도록) 시켜줍니다.',
+        '다시 천천히 원위치 시켜주며 대흉근과 광배근을 수축시켜줍니다.'
       ],
-      caution: '무거운 중량은 견관절(Shoulder joint)에 부담을 주기 때문에 가벼운 중량을 사용합니다. 팔의 각도는 90도 정도가 좋으며 두 손의 넓이는 어깨의 폭보다 좁게 하여 동작을 실시합니다.',
-      })
-      ,
+      caution: '무거운 중량은 견관절(Shoulder joint)에 부담을 주기 때문에 가벼운 중량을 사용합니다. 팔의 각도는 90도 정도가 좋으며 두 손의 넓이는 어깨의 폭보다 좁게 하여 동작을 실시합니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/04331301/04331301-Dumbbell-Straight-Arm-Pullover_Chest-FIX_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRvoBAABXRUJQVlA4IO4BAADUFACdASq0ALQAADj+Bu4XPhCLBJ402iY02iY02iY02iY02iY02iY00aVKU1lq/Jp+Jlfxm7fWr9NHWYx/fxzgN888Sh2M8s2ufY8SRNuTL6j3VnfuaK5PZTBqY/2T+vi6IWGI0Dp4YhXpHAvNHwlmwwuXfgytWIrMLW4JTydXprPAbkMULX5odXmVPUh8AbZQ8fAABJgWmS4eTi0aEE1QOfNxptExrSzh5a9PmSgAAP79G0AAFMVEl3rqloINpAZaeaKgzHuHMTPz/yt/G3TfUJ3NIu/ugjzkBjvUgWB0ouAeDH28w/jYYku1KS/MNhxjp+PwM0NH1D75dE5QrOxpdyW+TbAAXCWw/ZhvHfrFOmExCSKgINvkDbTTDQhu46XNmwZ/4TjZYsozwhtxrzVAF0miV0eZjOxwAvMOHPyPGkHpa96fxAoyK7pJT8ANabEcL5o8Z1s6DZSHEipwToCUKrS49Q/X09agMS63WXEnx7fDyoo/JhUoD8ivIf3NfZcVpUJ9SRYYmuKj9Jj6cOSbKuBkaduVhS/zFpcPDoCUUhqMmSz4h1ha4t0/ZMoI6/YIMigl27sel1y7yYa8xfMOEUja0XGKBh1FdQNc9/eBWZ4BAsQMWV9DeYdE6NAh1AFR9+hyFwY0J+wAAAAAAA==',
     createdAt: `${new Date()}`,
@@ -209,19 +202,18 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what: "랫(Lat)은 Latissimus dorsi muscle의 줄임말로서 등에 위치한 '광배근'('넓은 등 근육' 이라는 뜻)을 의미합니다. 풀다운은 말그대로 아래로(down) 당기는(pull) 동작을 뜻하므로 합치면 광배근육을 이용하여 아래로 당기는 운동입니다.",
+      what: '랫(Lat)은 Latissimus dorsi muscle의 줄임말로서 등에 위치한 \'광배근\'(\'넓은 등 근육\' 이라는 뜻)을 의미합니다. 풀다운은 말그대로 아래로(down) 당기는(pull) 동작을 뜻하므로 합치면 광배근육을 이용하여 아래로 당기는 운동입니다.',
       where: '손잡이를 어떻게 잡느냐에 따라 두가지로 나뉩니다. 와이드 그립(wide-grip)은 어깨너비보다 6인치(15cm)정도 넓게 회내그립(pronated grip or overhand grip)으로 잡으며 일차적으로는 광배근의 외측부분을, 이차적으로는 후삼각근 , 승모근아래부분, 능형근을 훈련시킵니다. 클로스 그립(close-grip)은 양 손을 6-12인치(15-30cm)정도 벌려서 회외그립(supinated grip or underhand grip)으로 잡으며 일차적으로는 광배근의 내측부분을, 이차적으로는 승모근아래부분, 능형근, 후삼각근, 이두근을 훈련시킵니다.',
       how: [
-      '양측 그립의 너비는 통상적으로 2번째 손가락을 바 양쪽끝에 구부러지기 시작한 부분에 위치하도록 합니다. 만약 바가 굽어져 있지않고 평평하다면 어깨너비보다 벌려서 넓게 잡습니다.',
-      '운동을 시작하기 전에 몸통을 약간 뒤로 기울여서(약 30도정도) 바를 내릴 때 얼굴 앞쪽을 지나가기 수월하게 해야합니다. 또한 이 자세는 어깨 관절에 충돌 스트레스를 줄여줄 수 있습니다.',
-      '팔꿈치는 아래 & 뒤 방향으로 움직여야 하며 (벌어지면 안됨) 가슴은 위,앞으로 내민다는 느낌으로 펴서 올립니다.',
-      '쇄골과 상부가슴부위에 살짝 닿을 때까지 내려주며 몸통은 여전히 뒤로 살짝 기울인 자세를 유지해야합니다.',
-      '바를 시작자세까지 광배근의 힘으로 통제하면서 천천히 올리며 이때 팔을 윗쪽 방향으로 확 움직이도록 하면 안됩니다.',
-      '팔꿈치는 올리는 동작의 끝에서 완전히 펴져야 합니다.',
+        '양측 그립의 너비는 통상적으로 2번째 손가락을 바 양쪽끝에 구부러지기 시작한 부분에 위치하도록 합니다. 만약 바가 굽어져 있지않고 평평하다면 어깨너비보다 벌려서 넓게 잡습니다.',
+        '운동을 시작하기 전에 몸통을 약간 뒤로 기울여서(약 30도정도) 바를 내릴 때 얼굴 앞쪽을 지나가기 수월하게 해야합니다. 또한 이 자세는 어깨 관절에 충돌 스트레스를 줄여줄 수 있습니다.',
+        '팔꿈치는 아래 & 뒤 방향으로 움직여야 하며 (벌어지면 안됨) 가슴은 위,앞으로 내민다는 느낌으로 펴서 올립니다.',
+        '쇄골과 상부가슴부위에 살짝 닿을 때까지 내려주며 몸통은 여전히 뒤로 살짝 기울인 자세를 유지해야합니다.',
+        '바를 시작자세까지 광배근의 힘으로 통제하면서 천천히 올리며 이때 팔을 윗쪽 방향으로 확 움직이도록 하면 안됩니다.',
+        '팔꿈치는 올리는 동작의 끝에서 완전히 펴져야 합니다.'
       ],
-      caution: '몸통은 동일한 자세를 유지하고 있어야 하며 홱 움직이거나 바를 내리는데 도움을 주기 위해 빠르게 뒤로 기울이면 안됩니다. 이것은 광배근이 아닌 몸통의 다른 근육을 사용하여 동작을 완료하려는 시도들입니다. 랫풀다운은 어깨 손상시에도 비교적 안전하게 수행할 수 있으나 바를 어깨 뒤로 내리는 동작은 앞쪽으로 하는 동작에 비해 어깨 손상 가능성이 높아서 금하는게 좋습니다. 손잡이를 등뒤로 하는 백 랫풀다운 (back lat pull-downs)은 일차적으로 광배근의 외측 아래부분을 훈련시켜 등의 폭(width)을 발달시키며 초보자들이 턱걸이를 할 수 있도록 충분한 근력을 키우는데 도움이 되지만 어깨 손상가능성이 높은 자세입니다.',
-      })
-      ,
+      caution: '몸통은 동일한 자세를 유지하고 있어야 하며 홱 움직이거나 바를 내리는데 도움을 주기 위해 빠르게 뒤로 기울이면 안됩니다. 이것은 광배근이 아닌 몸통의 다른 근육을 사용하여 동작을 완료하려는 시도들입니다. 랫풀다운은 어깨 손상시에도 비교적 안전하게 수행할 수 있으나 바를 어깨 뒤로 내리는 동작은 앞쪽으로 하는 동작에 비해 어깨 손상 가능성이 높아서 금하는게 좋습니다. 손잡이를 등뒤로 하는 백 랫풀다운 (back lat pull-downs)은 일차적으로 광배근의 외측 아래부분을 훈련시켜 등의 폭(width)을 발달시키며 초보자들이 턱걸이를 할 수 있도록 충분한 근력을 키우는데 도움이 되지만 어깨 손상가능성이 높은 자세입니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/01971301/01971301-Cable-Pulldown-(pro-lat-bar)_Back_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRjoCAABXRUJQVlA4IC4CAAD0FQCdASq0ALQAADj+Bu4W2wEsHkZFSFMqdtFk02dbWM4PLXmLZkodZaLnp2AxWXIBpjM7fBElixwKJmcDE+PXaAQDw/k0I/nECmEeBpcGw0BhLpVi0aAOU7f42Ra171c+ZO0i/L8BTKo5M6rHoRk8aYwoqWoCulgV1gC3/sOC4K6mExFLt7ZpfNky4u6aPK/Mf3a/Tzn0XX1s8psXZ77mdKLOADiWSP7aMfdIvFZAZcyeNNpRib0AAP74sVo9V5MSMkCE3FjdOG8GtMYrzVPHH0zfn8WdiVvNoW0wmDhSQrd4xce3+qTh+9YOyMzpqEMVcCeS3nUDfIDO7pBi8Zs95kcBkYI6tmvaeyU+lon8EMoxu7PP8C8XVMhrdzZAeDsJHXeerE3Q7mW8xM+RWgAe84jFDAjuI6MI8BArcNLePXgZdsjJaT/x7uARJJYPxRzTPPi/0NKfzaM3odtym03qUkHmDqR94yxmKoVxI0+91eAfb0ARDnFd+Ky+WvL6NgsuIsfJ9AgRONd9VbRSw9UbkRiBrBSdN14lUAtD5CfFP9RbV1SsIR74K+gnpdDLFgblQcdEznsoeKsDBtRt7AkZnlu9DYZi6II9b6uJxJZ2gLvECpbVHOcQnDfmz8LY5Yw3lBbUTpoVkNAiFB9o/vOuHUpc1m4dHdDc8hp3dQuKPWDC3+3nLUOqqQd26296sB0VWCQwws/SGW+fBKxg6PJwVPpjgAlpt9RJf6wAAAA=',
     createdAt: `${new Date()}`,
@@ -239,18 +231,17 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what: '시티드 로우는 말 그대로 앉아서 로우 자세를 취하는 운동으로 등을 고립시키는데 중점을 주는 운동입니다. 등을 넓히기 위해선 안 할 수 없는 운동 중 하나입니다.',
-      where: '시티드 로우는 광배근을 타겟으로 한 등 하부의 운동입니다. 등 상부의 견갑골 운동이 아닙니다. 그렇기에 먼저 등 하부 광배근이 움직여줘야 하는 운동입니다.',
+      what: '시티드로우는 말 그대로 앉아서 로우 자세를 취하는 운동으로 등을 고립시키는데 중점을 주는 운동입니다. 등을 넓히기 위해선 안 할 수 없는 운동 중 하나입니다.',
+      where: '시티드로우는 광배근을 타겟으로 한 등 하부의 운동입니다. 등 상부의 견갑골 운동이 아닙니다. 그렇기에 먼저 등 하부 광배근이 움직여줘야 하는 운동입니다.',
       how: [
-      '먼저 케이블에 착석하고 발을 받침대에 나두고 다리는 약간 구부린 상태를 유지합니다.',
-      '케이블을 잡고 허리를 곧게 폅니다.',
-      '케이블을 당기는데 팔꿈치는 너무 벌리지 않게 합니다.',
-      '당길 때 가슴을 앞으로 내밀고 견갑은 모아주고 등은 짜내듯이 수축시킵니다.',
-      '등을 이완할 때는 가슴을 앞으로 내민 상태에서 허리만 앞으로 숙이고 등은 긴장을 유지합니다.',
+        '먼저 케이블에 착석하고 발을 받침대에 나두고 다리는 약간 구부린 상태를 유지합니다.',
+        '케이블을 잡고 허리를 곧게 폅니다.',
+        '케이블을 당기는데 팔꿈치는 너무 벌리지 않게 합니다.',
+        '당길 때 가슴을 앞으로 내밀고 견갑은 모아주고 등은 짜내듯이 수축시킵니다.',
+        '등을 이완할 때는 가슴을 앞으로 내민 상태에서 허리만 앞으로 숙이고 등은 긴장을 유지합니다.'
       ],
-      caution: '케이블을 당길 때 견갑을 모으게 되는데 이때 어깨를 올리면 안됩니다. 그러면 승모근 개입이 많이 될 수 있습니다. 케이블을 잡아당길 때에는 빠르게 당기지만 이완할 때는 천천히 동작을 수행해야 합니다. 케이블을 잡아 당길때 D형 바는 배꼽부터 명치 사이에 위치하도록 신경 써줘야 합니다. 케이블을 당기다 보면 몸이 뒤로 젖혀지는데, 이때 몸이 너무 많이 뒤로 가지 않도록 주의해야 합니다. 시티드 로우가 등받이가 없는 운동이기에 코어 근육이나 등이 받쳐주지 않는다면 무게를 너무 무겁게 하지 않는게 좋습니다.',
-      })
-      ,
+      caution: '케이블을 당길 때 견갑을 모으게 되는데 이때 어깨를 올리면 안됩니다. 그러면 승모근 개입이 많이 될 수 있습니다. 케이블을 잡아당길 때에는 빠르게 당기지만 이완할 때는 천천히 동작을 수행해야 합니다. 케이블을 잡아 당길때 D형 바는 배꼽부터 명치 사이에 위치하도록 신경 써줘야 합니다. 케이블을 당기다 보면 몸이 뒤로 젖혀지는데, 이때 몸이 너무 많이 뒤로 가지 않도록 주의해야 합니다. 시티드 로우가 등받이가 없는 운동이기에 코어 근육이나 등이 받쳐주지 않는다면 무게를 너무 무겁게 하지 않는게 좋습니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/02391301/02391301-Cable-Straight-Back-Seated-Row_Back_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRnACAABXRUJQVlA4IGQCAAB0FgCdASq0ALQAADj+AADWcUryCkdYAGxten19fC16fNuWDHJl9tGaSGOmnwWbLH8hM/PizO8Xk0emWcLovan4XKPgV0KrqfEpZaera3vKu3rNystPqyro6sDqADyqWF7ges30Hjn+d0VPcOLhKfLpuvlQ/EbZsj4p6WV1AjSGHs0vM8dWzLF6yqwJsK0urcvSsEDyqki27z4nyYxHirA3DlboqZBwR5Jt/GhBmaNrmNREiMX99E8abRUEAAD+47Ro4YbBbbi12qXCpdnKPDbEIKX9ynrVip5Cal4vYB1CtHB8HuAA89aCzilF+OyBFoIKRoRIfPg16yiorX981RaHwdehkA5c46T9ZbzQnYaDcmn7/C6CnE6aYSE5UKyIo07odItVPSYwSyGl9IBVv09ZdXyqYZW+m8sNZ/dIFOTStpmAC1i86phiJrP2ZZertJSQAEAgn8ySE0F02jfwfOBe+ASVA/uZvXkpIo6u16tiFOxs9jZsyoFCsk6ANAA8myoZRdQNzcNDgT0V70/kFCOS2Wk2aTAWv00RcE/Ij5FSrc1r8Dy4cC6XbbZEXJE/92qiFx00PjVN8x9m97QjjleP2hbAdNAupAZ4JWl5LYd91dqJyNtjF0Ehm+toIDE0EbFJmGn8FfvSz/dOuG7de53FENnfHytG19wYf1MnNQA4lRrTpvHQOKWkD5VGQdeFGUAD4GxHLNxZkIIa+unrzrfkaLme+njCyf8SeMjUqroK2SqdoXtFG0YKqc/XKZALncu3FRaUatyZyRZDGVMSoaU1Batb+OHP9Vao8Ul1GxorRAAAAAA=',
     createdAt: `${new Date()}`,
@@ -271,15 +262,14 @@ export const ExerciseSeed = [
       what: '깊게 파인 척추기립근은 물론 힙라인도 탄탄하게 만들어 주는 운동입니다. 백익스텐션은 허리, 등의 아랫부분, 힙과 허벅지 뒤를 강화하는데 도움을 주며, 허리의 유연성을 길러주는데도 좋은 운동입니다.',
       where: '백익스텐션을 하면 척추 주변 근육인 척추기립근을 발달시킬 수 있고, 추가적으로 힙(둔근), 햄스트링(뒤 허벅지)를 발달시킬 수 있습니다.',
       how: [
-      '로망 체어(머신) 발판에 발을 올려주시고 발목을 고정시킵니다.',
-      '자신의 골발 아래쪽을 패드에 고정시킵니다.',
-      '팔은 머리 뒤를 감싸거나 크로스로 어깨위에 올립니다.',
-      '허벅지 뒤쪽이 늘어나는 자극을 느끼면서 상체를 숙입니다. ',
-      '머리부터 빌끝까지 일직선이 되도록 올라와줍니다. 엉덩이를 밀어주는 느낌으로 올라와주시면 더 좋습니다.',
+        '로망 체어(머신) 발판에 발을 올려주시고 발목을 고정시킵니다.',
+        '자신의 골발 아래쪽을 패드에 고정시킵니다.',
+        '팔은 머리 뒤를 감싸거나 크로스로 어깨위에 올립니다.',
+        '허벅지 뒤쪽이 늘어나는 자극을 느끼면서 상체를 숙입니다. ',
+        '머리부터 빌끝까지 일직선이 되도록 올라와줍니다. 엉덩이를 밀어주는 느낌으로 올라와주시면 더 좋습니다.'
       ],
-      caution: '올라오실 때, 허리가 꺽이도록 과하게 올라오시면 허리 통증이 유발됩니다. 몸을 빠르게 움직이는 것 보다는 수축과 이완을 충분히 느끼면서 몸을 움직여야합니다.',
-      })
-      ,
+      caution: '올라오실 때, 허리가 꺽이도록 과하게 올라오시면 허리 통증이 유발됩니다. 몸을 빠르게 움직이는 것 보다는 수축과 이완을 충분히 느끼면서 몸을 움직여야합니다.'
+    }),
     imageLink: 'https://gif.helltabus.com/08771301/08771301-45-degree-hyperextension-(arms-in-front-of-chest)_Back_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqICAABXRUJQVlA4IJYCAAB0GgCdASq0ALQAADj+Bu4XExDQdwZPGLhORU9/uc8Lu16fMdumzCyU8iyHt4RJh8L+16FvYWuPmQwnjSqHomVDd7ylRZxZOcNdjr1NCST4L53UDvxwtSDtLmTqW1hXg5gjVUo3W3wjIYmADWHMJK9bYu8PfWS0b90/A+eBATsqxFmjO5W0g2PFeHBlMTxpnZ4jOuJv4cB+LZuO3rAk0XxuxcwD/1GO50w1RMIBXxNTqQALbrFwQL/6DIfPs2O8KBMxufq+n3aE0tkqB5bJDAexlzfOHlrihmw9ElQAAP77CLxjmbo9ig0umuQKM9Q6Y7m32EM02xIqCWFeg6i4UX4yR3wEEPa2erF7Ww5Zc7/DjY7piy83UdMhdZC49rA7vhE6A53zZ5GhFnfm4qrhOsx0F/L9vcADwAQI3SqaF57ck1mxMVZxtyw0As2wqyMhXOASTVosbAaevZ4P0H7D67tOatJNnGCinxfCgJIYeWAInN4zJGdoyrRKHUJoHN8rctF1hMKscJsFwE+EHNGz54+br+cLfXDt0VPkGeXwsImsu8DiGm7DXdGbRjhVAP1W1CWlQSMAAfHoFKjxOZtvbXKi89sOK3Wv38If1Ynw2bovbpSjzSCAwZCifsalPQJyK+lAMehX/kXL5Cmr3PZVXRTYaRObeA72N//03xEPGtq2GaTY7gyHUTfLQaiEFDzL0a/stXM/BlzXKExhSo1YfmmuhbJP05+mridgVW62J/8gFrdSekvI1xkOWU6vlMS6IQrOzmoXCi6ftd2s72QVNNTADb3ud2rC2cSmQLc6GXq3zQMa75GMGW16v8aMce+/ioj1mhjb3T5LZlNtJ2q0B0K2mOvFnFXZVMCQQekKC8rgFdXQgAAAAA==',
     createdAt: `${new Date()}`,
@@ -297,22 +287,23 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'스쿼트, 데드리프트와 함께 웨이트 트레이닝을 대표하는 3대 운동 중 하나입니다. 덤벨 벤치 프레스는 비록 바벨만큼 고중량을 들기에는 어렵지만 범용성이라는 큰 장점이 있습니다. 양손의 가동범위가 자유로운만큼 운동 반경이나 손의 회전 등 운동 동작의 변형을 통해 좀 더 다양한 자극을 줄 수도 있고, 또 자신의 신체에 좀 더 적합한 동작으로 운동을 수행해낼 수도 있습니다.',
-      where:'대흉근 전체 가동 범위에서 동작이 이루어지기 때문에 가슴을 모아주는 중앙 부위와 바깥쪽 근육의 크기를 키우는 데 효과적입니다.',
-      how:[
+      what: '스쿼트, 데드리프트와 함께 웨이트 트레이닝을 대표하는 3대 운동 중 하나입니다. 덤벨 벤치 프레스는 비록 바벨만큼 고중량을 들기에는 어렵지만 범용성이라는 큰 장점이 있습니다. 양손의 가동범위가 자유로운만큼 운동 반경이나 손의 회전 등 운동 동작의 변형을 통해 좀 더 다양한 자극을 줄 수도 있고, 또 자신의 신체에 좀 더 적합한 동작으로 운동을 수행해낼 수도 있습니다.',
+      where: '대흉근 전체 가동 범위에서 동작이 이루어지기 때문에 가슴을 모아주는 중앙 부위와 바깥쪽 근육의 크기를 키우는 데 효과적입니다.',
+      how: [
         '벤치에 앉아 팔을 가슴 옆에 붙이고 덤벨을 듭니다.',
         '벤치에 누워 가슴 중앙 부분과 수직이 되게 덤벨을 위치시키면서 팔꿈치를 살짝 구부립니다.',
         '가슴이 양옆으로 늘어나는 느낌을 느끼면서 덤벨이 가슴과 평행이 될 때까지 당깁니다.',
         '겨드랑이에 힘을 주면서 가슴을 모아주는 느낌으로 덤벨을 밀어 올립니다.'
       ],
-      caution:'덤벨을 내리면서 어깨가 등 뒤로 과도하게 젖혀지면 어깨 주변 근육의 부상 위험이 커질 수 있습니다. 벤치에 누울 때는 엉덩이, 허리, 등, 어깨가 순서대로 닿을 수 있도록 합니다.'
+      caution: '덤벨을 내리면서 어깨가 등 뒤로 과도하게 젖혀지면 어깨 주변 근육의 부상 위험이 커질 수 있습니다. 벤치에 누울 때는 엉덩이, 허리, 등, 어깨가 순서대로 닿을 수 있도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02891301/02891301-Dumbbell-Bench-Press_Chest_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRj4CAABXRUJQVlA4IDICAAB0FwCdASq0ALQAADj+Bu4WxF7AJp8yeNNomNNomNLJEz/ohVpQhFG8sGxJjQuv8/3HXP+KBbiomZMxJNv8jChjQ3UKd5Nxmw0S1CR4YIvPu9ni180iAM8wSwdntWL8Vzv5RiB0QkkK2s98jskT4yGwiPQ2T6/dKuTD4fyLwRtLE/D554C7tMpVZ8I5Yzj+AlS8XOnHuQdYwpplE0+QtSVzJ4WU22RivGe+NnrVE/57wtXA2izh16fMnpCTnDy16fMnjSoAAP73ZABBdsSbUXDF0lg3YdHbiZZOxgloDuXdEoCBDrfwmHHccUNvcCFJDjaT2i/dqbwsl0YqKbVHXZm3GV7ZNHXfiXaqgC1IMQGT10pze5QAgvVyXrJIkA5f1GO2Bq4BKqOxZ+P0EUeEj6XI5yAhKYZV2vri7ykCOp4VVxrQUtbT7eJT4i9uUnBuVgILXVDZC7H8hll4DF5gixF+fm72+Dz6y9bg8Hx/vPSaq8O+2mngWb3fhxGiSl/w2h/UvZzPnpApQ0jkrR6+ezFbyvU3In1JKiCBSGnQeziJVOsIsX0ezSm9GS4rwOujNst2wk5G/aYPGME1tGmTZYgu9Hc5kKdep9ITMq1W/ZWgd8peTE6LJd9n8mc0vUHcvx4PoGaT4vn04og/muS8UxhFQlRPgRwlwHIuyov3Cokm0x6CBiZQVqkNudlcUz7/+jHy0MMXbABjtPRgz8jb+dV7In7wAE0ERF0UCBMMrJvkEAAA',
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
-  }, {
+  },
+  {
     name: '덤벨 플라이',
     priority: 2,
     part: 'CHEST',
@@ -323,20 +314,19 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'몸 위쪽으로 날갯짓 하듯 반원을 그리며 가슴을 모으는 동작입니다. 덤벨 플라이의 기본은 평평한 플랫 벤치이지만, 인클라인 벤치나 디클라인 벤치를 활용하면 가슴 부위 자극에 다양성을 부여하여 근육 발달의 완성도를 조금 더 높일 수 있습니다.',
-      where:'왼쪽과 오른쪽 가슴이 만나는 중앙 부분을 발달시키는 운동으로, 가슴 중앙 부위의 섬세한 근육 분리와 함께 가슴을 예쁘게 모아 주는 운동입니다.',
-      how:[
+      what: '몸 위쪽으로 날갯짓 하듯 반원을 그리며 가슴을 모으는 동작입니다. 덤벨 플라이의 기본은 평평한 플랫 벤치이지만, 인클라인 벤치나 디클라인 벤치를 활용하면 가슴 부위 자극에 다양성을 부여하여 근육 발달의 완성도를 조금 더 높일 수 있습니다.',
+      where: '왼쪽과 오른쪽 가슴이 만나는 중앙 부분을 발달시키는 운동으로, 가슴 중앙 부위의 섬세한 근육 분리와 함께 가슴을 예쁘게 모아 주는 운동입니다.',
+      how: [
         '손바닥이 서로 마주보게 덤벨을 잡아 허벅지에 올려놓습니다.',
         '벤치에 누워 가슴 앞쪽으로 양 팔을 앞으로 나란하게 뻗습니다.',
         '팔꿈치를 자연스럽게 구부리며 가슴 옆 방향으로 천천히 펼쳐 줍니다. 이 때, 가슴이 완전히 스트레칭 되는 벤치 높이까지 팔꿈치가 도달하도록 당겨주셔야합니다.',
         '호흡을 내쉬며 날개짓하듯 반원을 그리며 덤벨을 모읍니다. 가동 범위를 충분히 활용하기 위해, 덤벨을 부딪혀 깡 소리가 나도 좋습니다.',
         '동작의 정점에서 가슴 근육을 강하게 한번 짜 준 후 호흡을 들이쉬며 2~3번 과정을 다시 반복합니다.'
       ],
-      caution:'덤벨을 내릴 때 팔꿈치를 완전히 펴면 동작이 부자연스러워 지고, 팔꿈치를 너무 많이 굽히면 충분한 스트레칭 효과를 얻기 어려우므로 밋밋한 곡선이 이루어지게끔 살짝만 구부리셔야합니다. 어깨에 통증이 일어나지 않는 범위하에서 가동범위를 충분히 활용하셔야합니다. 각도 조절이 가능한 벤치일 경우 1칸씩 미세하게 변화를 주어 운동한다면 변화된 각도에 따라 조금씩 다른 근섬유가 개입되어 가슴부위의 발달을 극대화하는데 도움이 될 것입니다. 이러한 방법을 덤벨 플라이 뿐만 아니라 다른 가슴운동들에 까지 확대해 나간다면 가슴근육의 최대발달을 이룰 수 있을 것입니다.'
+      caution: '덤벨을 내릴 때 팔꿈치를 완전히 펴면 동작이 부자연스러워 지고, 팔꿈치를 너무 많이 굽히면 충분한 스트레칭 효과를 얻기 어려우므로 밋밋한 곡선이 이루어지게끔 살짝만 구부리셔야합니다. 어깨에 통증이 일어나지 않는 범위하에서 가동범위를 충분히 활용하셔야합니다. 각도 조절이 가능한 벤치일 경우 1칸씩 미세하게 변화를 주어 운동한다면 변화된 각도에 따라 조금씩 다른 근섬유가 개입되어 가슴부위의 발달을 극대화하는데 도움이 될 것입니다. 이러한 방법을 덤벨 플라이 뿐만 아니라 다른 가슴운동들에 까지 확대해 나간다면 가슴근육의 최대발달을 이룰 수 있을 것입니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03081301/03081301-Dumbbell-Fly_Chest-FIX_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRtICAABXRUJQVlA4IMYCAAB0GwCdASq0ALQAADj+Bu3QBsNNomNNbNxI0LvgbRj5fEM1N3Vgu3qyNw4Jc4yokE+LkaFNLJsjUxcx4E7BCBaYUQaOxRFGHNBebStRxSk0pUyq0TwQKaGYsMxn/FA/89qk407IJZ5omvzZBRwrhBOaGN0EL52TUcGQ/euDeL6O+9ae7UoFhdNTv+TudBV/tT4mxJUtryzwP51utYGXdSKW2mEOcoydAcHLVXmMX40VVyBVZkMuMc1of/J8FpeD/DIUotAjOGPLXp9zQHpXtR70Y+ZPAxCzbvfyrYz0+ZPGm0TGWAAA/uVqATz8NOhkUBCF99HDSH5Vz0JdvSdJceH+QgPI1xeKWfKmd2osIuAZuW/Bz1T00u8PPsq1BfUeWHB+pzgA8Ix5x6hIU2Sjl52YMRt0QS35P7rhfHin9A712ja2BFfZp5KXqdU0nLtj8BpBsAzfiH0/ew907PekpDR2UvpNwHmuqOuY+yq69+u1qrfnWpOyT9Qzw5km29GssiqFvmvWY5aONc1oo4YgWyBuVcp7tUnA5UTINMoeO1cPdQTfAm+cNMmoNGTNtwpKhkXfnylHEq2hgGMgk1xu7GrQxkJEkuMabNHOU9AM7PiIIQyIk1Yx27l8F2/H8wHsizlO9yAq52+KAIs8N36n+DQG05wdk3yypEAasocW+7WbLY01Cul3BIPw5AGsRBtM5JdzLQwi24IiaMUqfjpz517BWZykcTTqmHxlXlLJVtDXkfQ70myop69ZXOkpWuuFk0pO+MtafvP3gyrMH4ThPIN2H77pmyiWEqn+0J5ysgHOFBMkC0AD/hPuY0WiGPt6AGMVH6N6DlUGPJ+zRwmJ8S0PE5/ew2fF+r+PhWWXVNuGw0PiWTN7+7NwQ0iPz1fZFMThvG6aLEhT4DNZpDD3W8CEgB3noU3qudn/qkA7a904uAAAAAAAAA==',
-
     createdAt: `${new Date()}`,
     updatedAt: `${new Date()}`,
     deletedAt: null,
@@ -352,15 +342,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'덤벨을 이용한 가슴상부 운동으로 폭이 좁은 벤치에 드러누워 역기를 두 팔로 떠받치고 가슴 위에서 올렸다 내렸다 하는 웨이트 트레이닝입니다.',
-      where:'대흉근을 발달시키는 운동입니다. 수축과 이완 시 덤벨의 균형을 잘 잡아야 하므로 균형감각을 키울 수 있고 가슴을 예쁘고 탄력 있게 만들 수 있습니다.',
-      how:[
+      what: '덤벨을 이용한 가슴상부 운동으로 폭이 좁은 벤치에 드러누워 역기를 두 팔로 떠받치고 가슴 위에서 올렸다 내렸다 하는 웨이트 트레이닝입니다.',
+      where: '대흉근을 발달시키는 운동입니다. 수축과 이완 시 덤벨의 균형을 잘 잡아야 하므로 균형감각을 키울 수 있고 가슴을 예쁘고 탄력 있게 만들 수 있습니다.',
+      how: [
         '벤치의 각도는 45도로 높여주고 덤벨을 잡은뒤 벤치에 누워줍니다.',
         '덤벨을 귀옆으로 붙이고 쇄골과 덤벨이 수직이 되게 만들어 줍니다.',
         '팔꿈치를 굽혀 서서히 겨드랑이에 힘을주어 밀어올려줍니다.',
         '자극점을 유지하며 운동은 진행합니다.'
       ],
-      caution:'팔꿈치가 뒤쪽으로 쳐진다거나 움직이면 안됩니다. 바로 고정된 상태에서 가슴 자극만 주는것이 효과적인데 축이 무너져 흔들리게되면 운동효과가 전혀 없는 것은 물론 부상의 위험도 높을수있으니 이런 경우가 생긴다면 중량을 낮춰 윗가슴 운동을 수행해주세요.'
+      caution: '팔꿈치가 뒤쪽으로 쳐진다거나 움직이면 안됩니다. 바로 고정된 상태에서 가슴 자극만 주는것이 효과적인데 축이 무너져 흔들리게되면 운동효과가 전혀 없는 것은 물론 부상의 위험도 높을수있으니 이런 경우가 생긴다면 중량을 낮춰 윗가슴 운동을 수행해주세요.'
     }),
     imageLink: 'https://gif.helltabus.com/03141301/03141301-Dumbbell-Incline-Bench-Press_Chest_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRsQBAABXRUJQVlA4ILgBAABUFACdASq0ALQAADj+Bu4XKAEsHXvdd47DxM4eWvNNdie402mNfqWUtPmTxljcPvVJaRke4zvGm0KDzBmIvI4Qs+8d1g0mNNomLiW82ixbowYYuD3l0j5krxXWCh0ckj/E7VKodYeJCx8CoT+CFanNxN5S2qch36bRLBuIzF0sd7mJ/xPVwxQJcPkU0TGlhUbfiCsV2mC+2jHrlrPmTxpsbxNw2jHzJ402hwAA/vwgCfdECve+EWbHtT8vToepV6rNa+OJfvvLAWgo/3JXJfEv4QnXiGRoJXarTiKFcKMcjiZMKwmGI3RkZWwyBIQLYJqelEzqhQ8FgJadNJRMPPZv2Z8ebUZ+8GipVI4UFTJ9/U8JHYVn4COACYY8rdjOkz/gmG0IY0FZGfVrvDjIAeaVaDjuOYjZSPVxvSPFFcqDQx99DqXISBQOuCAVDxk/zdU0TnE+UV1i9nZw+OrLliZRQrbPgPowjm2oRbZaqVaf88S9rkcbvyFb0HiuhzOilEIVjmjM0NbMOLCso9K6o6+19uNibcqksF7uI3e3V4E3zFMfTASfLuhjvFHvzBqeflz8ZZcAoFCAAA==',
@@ -379,15 +369,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'레버 체스트 프레스는 가슴 근육 주변을 운동하여 가슴 라인을 이쁘게 잡아주는 기본적인 가슴 운동입니다.',
-      where:'대 흉근(가슴), 삼각근(어깨), 상완 삼두근(팔 뒷 부분), 주근(상완근)이 운동됩니다.',
-      how:[
+      what: '레버 체스트 프레스는 가슴 근육 주변을 운동하여 가슴 라인을 이쁘게 잡아주는 기본적인 가슴 운동입니다.',
+      where: '대 흉근(가슴), 삼각근(어깨), 상완 삼두근(팔 뒷 부분), 주근(상완근)이 운동됩니다.',
+      how: [
         '벤치에 엉덩이, 윗 등을 붙이고 가슴을 최대한 오픈시켜줍니다.',
         '가슴에 힘을 주면서 앞으로 밀어줍니다. 이때, 사전에 손잡이가 가슴 정중앙에 위치할 수 있게 벤치 높이를 조절해 줍니다.',
         '손목, 팔꿈치를 일직선으로 유지시킨 상태에서 팔꿈치를 뒤로 천천히 빼줍니다. (이때 가슴근육이 땡기는 느낌을 받아야 합니다.)',
         '다시 가슴에 힘을 주면서 밀어줍니다.'
       ],
-      caution:'팔꿈치가 어깨와 일직선이거나 어깨 위로 올라가면 안됩니다. 팔꿈치가 위로 올라가면 어깨에 힘이 많이 들어가게 됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 안됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 팔에 힘이 많이 들어가게 됩니다. 프레스 했을 때 어깨가 앞으로 나오면 안됩니다.'
+      caution: '팔꿈치가 어깨와 일직선이거나 어깨 위로 올라가면 안됩니다. 팔꿈치가 위로 올라가면 어깨에 힘이 많이 들어가게 됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 안됩니다. 팔꿈치가 손목보다 너무 밑에 있으면 팔에 힘이 많이 들어가게 됩니다. 프레스 했을 때 어깨가 앞으로 나오면 안됩니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05771301/05771301-Lever-Chest-Press_Chest_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqQCAABXRUJQVlA4IJgCAAD0FQCdASq0ALQAADj+BuugfiAu16fMnjTaHFmAIvCe2jHyVaJ82DbFk87whfUVIWJGGSJwOftS7K7K7QVCoVRZHLBeC1CVp2vvaOZrb8QxaN12Qy3Lp2eXMFq4u0YpNKUXZgbVFRMM8nZzqlswmexKppAtTWEfa1bvVli5SsGOWI6K8XoZetnzIe3NNagQ8jLAFj9m+3W7G2ghK5JWAw8HHw41o5jOsE5GKSQVDObgZL0yE5w8telwAP7laqbIcBaisH9jBld3TMeAU+uuGAzKdcI7iuazrfXTxM78usQsZpdePZmcBOw3cnzS/jInvmxPa+EGKX5JEujFswssysN4Ei7YkdEIkk2V1pMVfpdVP7WqzVlBrF2QsAAeRbJGE/j6if5YAugsR02qzmoAyAICXNM39MNmbgeqwxekzczG/XJS8L8xpQlO4yxD7BSYmHk44LGjJOFC3TAF3ZDpU8OOFenVDxXOAapBrW2B85il40SxLljGqcfnMzK0Tme4knHYB93Eky3Q6j8YMMNIJjpY+aIMmS04DRmlHMLGwNwQRtsoxIG5Mr9CZ4Qc7TlWjbH6UVaNsG8Cu/E0FpFe32nPdJWkkdIgDPygzmRIl7moRcC4U1VsZ7JHwGYlVyLv3sSfy3uGMgg8oiREur/mCvStcjblZGww6IwtlCh/0Ddr04W49oxGCLUYgUIC24ZXxZClqYI/4yhl6UHfPeJlFwnq+9WrTZ6wl9Tu3Jd+hq5ZqGS40uwqBqCJ8fh63QnYVm2/fuonow+jE4CwaWwHt8P46z7s1WZHYaB13MkSRZGUIK+Llwg19G/89N05H8HxM2wj/mPqUyVbpOPbxbm54VQ4tmp9nf1X9DLkZG92xuY3ZGGEeTxAAAAA',
@@ -406,9 +396,9 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'가슴근육의 모양을 다듬고, 가슴 안쪽부분을 발달시켜줍니다. 가슴 안쪽 근육으로 조이고 모으면서 양손의 간격을 좁혀주며 껴안듯이 날개짓 하며 안으로 모아줍니다.',
-      where:'대흉근 전면 전체적으로 운동이 됩니다.',
-      how:[
+      what: '가슴근육의 모양을 다듬고, 가슴 안쪽부분을 발달시켜줍니다. 가슴 안쪽 근육으로 조이고 모으면서 양손의 간격을 좁혀주며 껴안듯이 날개짓 하며 안으로 모아줍니다.',
+      where: '대흉근 전면 전체적으로 운동이 됩니다.',
+      how: [
         '양 손잡이가 어깨 보다 앞으로 나오게 위치 조정한다. 손잡이가 가슴 중상부에 오도록 의자 위치를 조정합니다.',
         '견갑골과 엉덩이를 등받이에 최대한 붙이고 허리는 아치형을 만듭니다.',
         '팔꿈치를 살짝 구부리고 손잡이는 가슴 중앙과 수평이 되도록합니다.',
@@ -417,7 +407,7 @@ export const ExerciseSeed = [
         '이완시 숨을 들이쉬면서 가슴을 내밀어 대흉근의 최대 이완이 이루어지도록합니다. 저항을 느끼면서 시작 자세로 돌아옵니다. 시작 자세로 돌아온 후에도 대흉근에 힘을 빼지 않고 긴장한 상태를 유지해야합니다.',
         '동작을 반복합니다.'
       ],
-      caution:'손이나 팔에 힘을 빼고 팔이 아니라 팔꿈치로 밀듯이 동작을 행합니다. 팔을 너무 올리거나 무게가 너무 많으면 어깨 주변 근육에 상해를 입을 수 있으므로 중량 선택 시 가급적 가벼운 중량을 하도록 합니다. 어깨가 올라가지 않게 주의합니다. 운동 시 팔꿈치 각도를 90도 이하로 굽히지 않습니다.'
+      caution: '손이나 팔에 힘을 빼고 팔이 아니라 팔꿈치로 밀듯이 동작을 행합니다. 팔을 너무 올리거나 무게가 너무 많으면 어깨 주변 근육에 상해를 입을 수 있으므로 중량 선택 시 가급적 가벼운 중량을 하도록 합니다. 어깨가 올라가지 않게 주의합니다. 운동 시 팔꿈치 각도를 90도 이하로 굽히지 않습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/05961301/05961301-Lever-Seated-Fly_Chest_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRpoCAABXRUJQVlA4II4CAABUFwCdASq0ALQAADj+BuumBlplTRemR4aKwx3hyXR/2GBUKd4YcyXXJX0moa3bzVFlr7pybUPBn63Xrmieb8g63YkbqAMOvWNfPAJdIinIk2Zw0hDOIRRZ+UrB6QgxJWWH/lk2Ftx2gFg8oN7+2EjAlIMOmyV0Dmztq4pu9cJ41R6icYqDFOid/cMPIBHN20ZgDQ0aqBliL90d2IDHqogH+AV6K8tHBQSZofIJ7HgPDqDJ2pm9WAcWA3PHTtBlEJycuAAA/uVqZOj+wCmlSwkJkNyHLXQAByRgSnHlmmxdjORtt5Xvh31fSIsTDmL4Pwt0g8KS+7QcAlATCFX8joPCi/9WdJU98W7W24B52tyPgPwCosN4i3ZhjeShBOBPxEGg/A20Tl9PyZXmES9gWf/2Wnlmf7PzSkUUvnyvU85baJ/yOo12fl+4BTT8DC1NmNS335ms+xtcIm8RcNC+95vVj9GH7ix4/N1bECvwe2GIrDAxz5hBlWSmOLUz+YPkSJH/zT2GxjB82ePsxmfwQwi5nmJBw0eAQrJyeUHhYxgls09PDcMFnfKYoXjN4CowMm4/6DYrNX6JmJ3F6Wl1HD3LWQ+7O4jJO50vlUUoE47mpQGdPCKjb94MoxIIgtoMTMw9Wjhfgk27go9PT+lI3FI4goW9AC67MFCIR4hsF6NWOA+An4LIk3Yr8aIe0bZovf4P32ohCGASipeoqdCVOwrQr4p2gUfzG/qxCQLS/LuinOd20w8lpy8jQZF5EwtdZdE8y5RlZ2bIyGlIrP1uOFP0Ea/zqGvbGHn4e8+FBzIphMyXQbTR3niZHbrARElYDIQxhWfkFnpfAQxSYnjOW6eHZwcPjfWSlHWAAAAAAAA=',
@@ -436,14 +426,14 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'레터럴 레이즈는 양손에 덤벨을 옆으로 들어 올리는 운동입니다.',
-      where:'팔을 들어 올리게 해줄 때 느껴지는 근육인 측면 삼각근을 기르는 운동입니다. 측면 삼각근의 볼륨감을 살려주고, 전면과 후면 삼각근을 자연스럽게 이어주는 역할을 합니다.',
-      how:[
+      what: '레터럴 레이즈는 양손에 덤벨을 옆으로 들어 올리는 운동입니다.',
+      where: '팔을 들어 올리게 해줄 때 느껴지는 근육인 측면 삼각근을 기르는 운동입니다. 측면 삼각근의 볼륨감을 살려주고, 전면과 후면 삼각근을 자연스럽게 이어주는 역할을 합니다.',
+      how: [
         '덤벨을 양손으로 잡은 뒤 어깨 양옆으로 벌리면서 동작합니다.',
         '자세는 어깨 간격으로 다리를 벌려 선 후, 몸을 곧게 펴고 반동이 일어나지 않도록 몸을 고정합니다.',
         '덤벨을 쥘 때는 손등이 앞을 보이도록 그립을 하는 것이 적합하고 팔꿈치와 손목이 아닌 삼각근의 힘을 이용합니다.'
       ],
-      caution:'지나치게 넓은 가동 범위는 어꺠에 무리를 줄 수 있습니다. 어깨 들석임을 포함한 반동을 이용하지 않아야 합니다. 등과 허리가 구부러지면, 운동효과가 반감될 수 있습니다.'
+      caution: '지나치게 넓은 가동 범위는 어꺠에 무리를 줄 수 있습니다. 어깨 들석임을 포함한 반동을 이용하지 않아야 합니다. 등과 허리가 구부러지면, 운동효과가 반감될 수 있습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03341301/03341301-Dumbbell-Lateral-Raise_shoulder-AFIX_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqwBAABXRUJQVlA4IKABAAD0EgCdASq0ALQAADj+Bu4XEhDO5p2b5AipDUlpJjTaINYPbY6fMnfBO57j5W7Prlq5JaJjPN+X2f9ulLl+nB8XCJjTaFyE1PrS6lUSbk5w8FhlUi6BXtUhLkzN6rvkNIR5PbRMTTIht5YEDh6MX1D5eLtGPmTYSc5A2szOHlrnHPeM3Rj5k31zt/NP9tGPVbS09KujzR0UkcabRMabRKgAAP77CIghI89wz456W17cE3dn4FrHPj62N1rm0b893U5E3qMSGsVu/JLS9+AeEBDTXg2t6pbTjUihyltmLn8krFGARetfApcxzvFCZESOK2Yy2RyuK5xcLVURuigQB1GWwKEy8youeDTw9Sy1qQTEhX8yE+dNFXYOT/XItkqP3aWliOAD9T7ntzd+r4o/H5kUMoCA+1P4qj1TxGJSO/7SsuXpToaTYA4xFiBERfziKklhZZwOM//EgAGpExqBUbuqdtl9kiuoVUCFwhFOMi8jhW1L/dS+0fGmhpGeeRDirOSzcLISKyUDsBdxLoEvRG59O9FsnW7zami0QZOBAAAAAA==',
@@ -462,15 +452,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'프론트 레이즈는 덤벨을 바깥, 정면으로 들면서 어깨를 단련시키는 운동입니다.',
-      where:'프론트 레이즈는 덤벨을 정면으로 들어올리는 운동이므로 이 운동은 특히 전면 삼각근 발달에 탁월합니다. 근력운동의 일종이다보니 근육의 크기를 높이는 데에도 물론 도움이 되지만, 그보다는 근육의 모양을 세밀하게 다듬을 때 효과가 있습니다.',
-      how:[
+      what: '프론트 레이즈는 덤벨을 바깥, 정면으로 들면서 어깨를 단련시키는 운동입니다.',
+      where: '프론트 레이즈는 덤벨을 정면으로 들어올리는 운동이므로 이 운동은 특히 전면 삼각근 발달에 탁월합니다. 근력운동의 일종이다보니 근육의 크기를 높이는 데에도 물론 도움이 되지만, 그보다는 근육의 모양을 세밀하게 다듬을 때 효과가 있습니다.',
+      how: [
         '다리를 어깨넓이 11자로 자연스럽게 섭니다.',
         '팔꿈치를 아주 살짝 구부려주시고, 손의 위치를 허벅지 앞 쪽에 둡니다.',
         '어깨에서 팔꿈치까지 힘을 주어 팔을 앞으로 올립니다.',
         '팔을 올릴 때 호흡을 내쉬고, 팔을 내릴 때 호흡을 들이마시면 됩니다.'
       ],
-      caution:'어깨가 부상을 당하지 않게 주의해야 합니다. 어깨는 생각하는 것보다 더 쉽게 자극을 받고 손상을 입기 때문에 지나치게 무겁거나 가동 범위의 한계를 벗어나지 않게 주의하셔야합니다.'
+      caution: '어깨가 부상을 당하지 않게 주의해야 합니다. 어깨는 생각하는 것보다 더 쉽게 자극을 받고 손상을 입기 때문에 지나치게 무겁거나 가동 범위의 한계를 벗어나지 않게 주의하셔야합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03101301/03101301-Dumbbell-Front-Raise_Shoulders_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRswBAABXRUJQVlA4IMABAAA0EwCdASq0ALQAADj+Bu4XEg9BonZvkLzDPV6aE8abRAZadGeausaMfMngNq2TRzKzUzq0Y+YpprN2gPznDy0QWDBLK5KC8onjS9t6ZIHbbik/FRlsX1YPg66Li+2jCO8OfVs2+m2ysxHz07D9ieNKhU11L/kq1QjFPXIjLze7vWWvT3a7iYzLGJHGm0RRpYZe+QQU9k0nomOfMnjWvNPmSgAA/vsIoEG/8aA76UhepQu7dk7Q3jQCB2vqYClmPRoB9OlRZNpEroLRMp78A8Cqb9T0QTmp0TO2oZjk6nr4/+P9+LbOITG2UK7f9WOC92L34QHsodcc/6/Xq49GCyMaat5iBUrpyKPlgMO2VG97CgyI/Yj+mH5pqUquUftoZ9jJBLDzubL27hy8lfCPn/BxOQrjlS4yHfJK5plU8KrflIddYseBvPy+erZh9vmkLTNJT6HckwZTe7cGGKiuSddTSEUWavZxxl+PVf2jOo0fGLxD5Hlbp1bjgb7LrOws9CqRMVXdEARi87HCd2+z6V67T/mJ7YVJ9NngEWHlG2AwJh7MLA+xzTU6ad7Al1xfyCvx4Xh5yR9AkkD5EE4AAAAA',
@@ -489,15 +479,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'레터럴 레이즈 동작을 상세를 숙여준 자세에서 시행하는 운동입니다. 상체를 숙이고 동작을 하기 때문에 다리의 반동을 줄일 수 있을 뿐만 아니라 어깨 근육만 사용하여 좀 더 집중해 운동을 할 수 있다는 장점이 있습니다.',
-      where:'등상부, 등 중심부, 측면과 후면삼각근이 운동됩니다.',
-      how:[
+      what: '레터럴 레이즈 동작을 상세를 숙여준 자세에서 시행하는 운동입니다. 상체를 숙이고 동작을 하기 때문에 다리의 반동을 줄일 수 있을 뿐만 아니라 어깨 근육만 사용하여 좀 더 집중해 운동을 할 수 있다는 장점이 있습니다.',
+      where: '등상부, 등 중심부, 측면과 후면삼각근이 운동됩니다.',
+      how: [
         '양손에 덤벨을 들고 몸통이 바닥과 거의 수평이 될때까지 상체를 앞으로 기울입니다.',
         '어깨로부터 덤밸을 아래로 곧게 내리고 손바닥이 마주보게 그립을 잡습니다.',
-        '어깨로부터 덤밸을 아래로 곧게 내리고 손바닥이 마주보게 그립을 잡습니다.',
+        '몸통이 흔들리지 않게 고정해주고 팔을 몸높이와 일직선이 될 때까지 양팔을 옆으로 들어 올립니다.',
         '최고지점에서 잠시 멈춘 후 시작 자세로 천천히 돌아갑니다.'
       ],
-      caution:'등을 곧게 유지합니다. 몸통이 흔들리지 않게 합니다. (반동을 주지 않습니다.) 처음부터 너무 무거운 무게로 운동하지 않습니다.'
+      caution: '등을 곧게 유지합니다. 몸통이 흔들리지 않게 합니다. (반동을 주지 않습니다.) 처음부터 너무 무거운 무게로 운동하지 않습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03801301/03801301-Dumbbell-Rear-Lateral-Raise_Shoulders_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqwBAABXRUJQVlA4IKABAAD0EgCdASq0ALQAADj+Bu4XEhDO5p2b5AipDUlpJjTaINYPbY6fMnfBO57j5W7Prlq5JaJjPN+X2f9ulLl+nB8XCJjTaFyE1PrS6lUSbk5w8FhlUi6BXtUhLkzN6rvkNIR5PbRMTTIht5YEDh6MX1D5eLtGPmTYSc5A2szOHlrnHPeM3Rj5k31zt/NP9tGPVbS09KujzR0UkcabRMabRKgAAP77CIghI89wz456W17cE3dn4FrHPj62N1rm0b893U5E3qMSGsVu/JLS9+AeEBDTXg2t6pbTjUihyltmLn8krFGARetfApcxzvFCZESOK2Yy2RyuK5xcLVURuigQB1GWwKEy8youeDTw9Sy1qQTEhX8yE+dNFXYOT/XItkqP3aWliOAD9T7ntzd+r4o/H5kUMoCA+1P4qj1TxGJSO/7SsuXpToaTYA4xFiBERfziKklhZZwOM//EgAGpExqBUbuqdtl9kiuoVUCFwhFOMi8jhW1L/dS+0fGmhpGeeRDirOSzcLISKyUDsBdxLoEvRG59O9FsnW7zami0QZOBAAAAAA==',
@@ -516,15 +506,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'아놀드 프레스는 숄더 프레스(오베헤드 프레스)을 변형한 동작입니다. 앉아서도, 서서도 할 수 있습니다.',
-      where:'운동의 가동 범위가 길어 전면, 측면 삼각근의 모든 부분을 자극합니다. 삼각근이 많이 늘어난 상태에서 수축하는 동작이기에 난이도가 높아집니다.',
-      how:[
-        '운동의 가동 범위가 길어 전면, 측면 삼각근의 모든 부분을 자극합니다. 삼각근이 많이 늘어난 상태에서 수축하는 동작이기에 난이도가 높아집니다.',
+      what: '아놀드 프레스는 숄더 프레스(오베헤드 프레스)을 변형한 동작입니다. 앉아서도, 서서도 할 수 있습니다.',
+      where: '운동의 가동 범위가 길어 전면, 측면 삼각근의 모든 부분을 자극합니다. 삼각근이 많이 늘어난 상태에서 수축하는 동작이기에 난이도가 높아집니다.',
+      how: [
+        '덤벨을 들고 손바닥이 자신을 바라보게 하여 눈 앞에 위치시킵니다. 팔꿈치는 벌어지지 않아야 합니다. (감이 오지 않는다면 I.O.I-너무 너무 너무 춤을 참고하면 좋다.)',
         '그 상태 그대로 팔을 열고 손바닥은 정면을 보게 합니다. 승모근이 올라가지 않도록 주의하는 것이 좋습니다.',
         '덤벨을 위쪽으로 뻗습니다. 올렸을 때 덤벨은 서로 닿지 않아야 하고, 팔꿈치를 완전히 펴지 않아야 합니다.',
         '역순으로 천천히 내립니다.'
       ],
-      caution:'동작 내내 허리가 꺾이지 않고, 몸통이 움직이지 않도록 코어를 잘 잡아야 합니다. 내려올 땐 동작을 천천히 통제하며 내려와야 합니다. 한 팔씩 교대로 운동해도 좋습니다. 모든 어깨 운동에서 과한 무게를 주의해야 하지만, 다른 어떤 운동보다도 가벼운 무게로 시작해야 하는 운동입니다. 어깨 관절이 불안정한 사람에게는 좋은 운동이 아닐 수 있습니다.'
+      caution: '동작 내내 허리가 꺾이지 않고, 몸통이 움직이지 않도록 코어를 잘 잡아야 합니다. 내려올 땐 동작을 천천히 통제하며 내려와야 합니다. 한 팔씩 교대로 운동해도 좋습니다. 모든 어깨 운동에서 과한 무게를 주의해야 하지만, 다른 어떤 운동보다도 가벼운 무게로 시작해야 하는 운동입니다. 어깨 관절이 불안정한 사람에게는 좋은 운동이 아닐 수 있습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/21371301/21371301-Dumbbell-Arnold-Press_Shoulders_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRroBAABXRUJQVlA4IK4BAAA0FACdASq0ALQAADj+Bu4XEgEsHlr0+ZPGm0TGm0PBmHrJzh5Q9T46hYQdXoEqsH6bRLOY9Ce34UbRb5gIteu9Bm1COakuZOyM+xMZzsxQlZwrtyxwjECki9CdMGm0S1QoqFLQwUyx87tcfMni+/uQJrK4uheAuPsq0UT2402h2m1mZLdXMdRA9f7tUtel3VZN8dbPCUBTzeCfrRMaX5M/BmkxweWv/80GSAD++wiACYJLOSo71+2oXHLiJu/gYCgEmxbaX72o3UJOgaA1ERCeUY0eOLNYpQv+SJvn5YAUghncg4bDn1vElf9e2aAk7/rpT+onf9u9rqCGcMCm/O2xdWU10zCL4G2CPUKrM6kHeHbRyaPSQFbO+GAuwcs3fcXzRLrtxwtsmA5tx3j8yuZ9XhydjnoUB+vi3Q7SKLfsC+cvTZcIFbSzlB0c3JZCEbFyxQClvS8w9ZHL2rD6EXE+A4ePNPxw15vjztC5QjFjbHaSMeuE77OZXuPY17e6osUxGZmHoLCDjYh+u/otdP/ezDUfq4Dm+DU9vE81Rdkb7EyYDs2OenHnI4TuAAAA',
@@ -543,9 +533,9 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'숄더(shoulder)는 어깨를 뜻하므로 숄더 프레스란 어깨의 근육을 이용해 미는(press)운동입니다. 어깨 주변의 근육은 상당히 많지만 주로 회전근개에 관심이 있는 정형외과 영역과는 달리 저항운동에서는 어깨외측에서 가장 튀어나와 있어서 옆선을 결정짓는 삼각형 모양의 근육인 삼각근(deltoid muscle)이 주된 관심사이며 지금 소개하는 숄더프레스도 삼각근의 트레이닝을 위한 운동입니다. 앞쪽, 외측, 뒷쪽 이렇게 3부분으로 구성되어 있고 작용또한 틀려서 각각 팔을 앞으로(굴곡), 옆으로(외전), 뒤로(신전) 들어올리는 역할을 합니다.',
-      where:'숄더 프레스를 통해 단련되는 근육은 일차적으로는 삼각근 중에서도 앞쪽 부분이며 (전삼각근) 이차적으로는 옆쪽 삼각근, 삼두근, 승모근, 상부 대흉근입니다.',
-      how:[
+      what: '숄더(shoulder)는 어깨를 뜻하므로 숄더 프레스란 어깨의 근육을 이용해 미는(press)운동입니다. 어깨 주변의 근육은 상당히 많지만 주로 회전근개에 관심이 있는 정형외과 영역과는 달리 저항운동에서는 어깨외측에서 가장 튀어나와 있어서 옆선을 결정짓는 삼각형 모양의 근육인 삼각근(deltoid muscle)이 주된 관심사이며 지금 소개하는 숄더프레스도 삼각근의 트레이닝을 위한 운동입니다. 앞쪽, 외측, 뒷쪽 이렇게 3부분으로 구성되어 있고 작용또한 틀려서 각각 팔을 앞으로(굴곡), 옆으로(외전), 뒤로(신전) 들어올리는 역할을 합니다.',
+      where: '숄더 프레스를 통해 단련되는 근육은 일차적으로는 삼각근 중에서도 앞쪽 부분이며 (전삼각근) 이차적으로는 옆쪽 삼각근, 삼두근, 승모근, 상부 대흉근입니다.',
+      how: [
         '의자 높이를 조절하여 허벅지는 바닥과 평행하게 하고 머리는 벤치 가장 윗부분에 닿을 정도로 충분히 낮아야 하며 양측 손의 그립을 연결한 가상의 선이 어깨의 가장 윗부분이나 목덜미 부위보다 낮으면 안됩니다.',
         '신체 5부위(머리,어깨등,엉덩이,양측발) 접촉자세가 유지되어야 합니다.',
         '핸들을 닫힌 회내그립(closed pronated grip) 으로 잡습니다.',
@@ -554,7 +544,7 @@ export const ExerciseSeed = [
         '올리는 동안 신체 5부위 자세를 유지해야 하며 등을 아치모양으로 만들거나 힙을 들어올리거나 일어서려는 것처럼 종아리를 위로 밀거나 고개를 뒤로 경사지게 하면 안됩니다. (어깨의 힘이 아닌 다른 부위의 동작을 통해 들어올리려는 시도들입니다.)',
         '핸들을 시작자세로 힘을 주면서 서서히 내립니다. 이 때 몸통을 앞으로 구부리면 안되며 신체5부위 자세를 유지하고 있어야 합니다.'
       ],
-      caution:'숄더 프레스시 바를 얼굴 앞쪽이 아니라 뒷쪽으로 내리는 프레스(back presses 혹은 비하인드넥 숄더프레스(behind neck shoulder press))는 어깨 손상위험이 더 높습니다. 회전근개의 운동은 회전근개의 충돌을 최소화하는 안전한 범위내에서 시행되어야 합니다.'
+      caution: '숄더 프레스시 바를 얼굴 앞쪽이 아니라 뒷쪽으로 내리는 프레스(back presses 혹은 비하인드넥 숄더프레스(behind neck shoulder press))는 어깨 손상위험이 더 높습니다. 회전근개의 운동은 회전근개의 충돌을 최소화하는 안전한 범위내에서 시행되어야 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/14541103/14541103-Lever-Seated-Shoulder-Press_Shoulders_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAAD0FACdASq0ALQAADj+Bu4W5hDEBp2gyeNNnU8AxJjTVv8K2LZBW5ARmFFFRkTcGhLr25npWboj7h7fjBZT7gy1jFRZFB+wwsrjXps8dNMHj063FlYTJBF1wj9GPlX1yUuYxz03MUsYhsRZjGWvJ4a0qbRE+eiMiC2NVyjQg1noWwHpzIOY106Q4IGaxFjMGbPZmqE/MiXDycDqNj6z1lr03d4TqCHf7FwZPGtLOHk4AAD++VqBxCMfhbxtJQJge67eErrSk/JTP1liYo/N8k9sELlcts/nBkisZxOWpXb2r2psflC5NbgxPVkjJJtkweqtKF+ImA9MIoWEyHoVpvY7oTtU/t5P8nW/3c/cxOFqa8h9Ik1XtvMMaOYbzWmZ81GVvN0oaL+LtWQIQVfzG3G4yMbjXh5Z8MPlG69AEpfFmFCeVGL/yqoojgYR5/UWCp/6V6wbLh+VaKtlPr6lKbuUq5H2sVUcW+KOTRyU4g2LIzhAmwOwGDLvM5AqIhvFN6bcnBM2CLpUsIN2Jdj4+K7FsDjJ2BiChUTkoZejojjoi3DnavcAkVRlh6MqXljLmIelkATxvsM1QtICWXo9Lfmx1ORb3xYlqlrkC7yvYFPWcvh87yXYBO+2wIJgFsimyeWrh1LZ7JRKQZALZtND3EYvPgAf3Z2Jw4oJqUfP8dy+JwKWk1dsxtIeo45lleOsRsxa/HALP5bK6dUnf6OZ35NR4umIFuzFJJhOYgc0EX+wXIS0D3iUvLmmr3RaYf0zuSqidy1FHx9F3bC6yksaROuMC7cAMAAAAAA=',
@@ -573,14 +563,14 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'덤벨을 들고 팔을 굽히는 운동입니다. 선 자세와 앉은 자세(벤치, 짐볼)에서 운동이 가능하며, 그립을 잡는 방향에 따라 발현되는 근육이 달라지며, 양팔을 동시에 운동하거나 한 팔씩 번갈아가며 운동을 할 수도 있습니다.',
-      where:'주 타격부위는 이두근이며 보조로 삼각근 전면과 전완근이 쓰입니다. 바벨 컬이 사이즈를 키우는데 더 유리한 운동이라면 덤벨 컬은 양쪽 이두근의 균형잡힌 발달과 높은 범용성의 장점이 있습니다. ',
-      how:[
+      what: '덤벨을 들고 팔을 굽히는 운동입니다. 선 자세와 앉은 자세(벤치, 짐볼)에서 운동이 가능하며, 그립을 잡는 방향에 따라 발현되는 근육이 달라지며, 양팔을 동시에 운동하거나 한 팔씩 번갈아가며 운동을 할 수도 있습니다.',
+      where: '주 타격부위는 이두근이며 보조로 삼각근 전면과 전완근이 쓰입니다. 바벨 컬이 사이즈를 키우는데 더 유리한 운동이라면 덤벨 컬은 양쪽 이두근의 균형잡힌 발달과 높은 범용성의 장점이 있습니다. ',
+      how: [
         '벤치에 앉아 다리는 골반 너비만큼 벌린 후 양손으로 덤벨을 잡고, 손바닥이 앞을 향하도록 합니다.',
         '팔꿈치를 옆구리에 고정시키고 덤벨을 들어올린다. 들어올리는 마지막 지점에서 손목이 바깥쪽을 향하도록 합니다.',
         '천천히 이두근의 저항을 느끼며 덤벨을 내립니다.'
       ],
-      caution:'팔꿈치가 앞으로 나가지 않도록 고정시킵니다. 덤벨이 몸 바깥쪽으로 벗어나지 않도록 합니다.'
+      caution: '팔꿈치가 앞으로 나가지 않도록 고정시킵니다. 덤벨이 몸 바깥쪽으로 벗어나지 않도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02941301/02941301-Dumbbell-Biceps-Curl_Upper-Arms_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRq4BAABXRUJQVlA4IKIBAAA0EACdASq0ALQAADj+Bu4XKAEsHkZEMM+nzJ40usG8yeNLNzDFIsiTGmvY4sa2dTEnOHlatqKc6zL7aLpZ9yLyo8w+sLMoFpjCgmbExpmVw7jpOE3C6ePrfkxwBG42MOU7aL7aIZbUfhPGmzvHOPgNox8g6KhPcGTxQBJYrapc8aUS4e3yY02iYeAA/vwgChfjCe4UAUXXd3uk3JJn/VntxQSPpFt//EY7SX5ID7zJAR70lbJUSIGxXKVu2VVuAGPggh9DtMtPGQmwj/FmHzsz+IykNEGiEjJGrhzQL25EKoZ2KnFmpi6lj1mbjgOxfcmgzix1Pm6ETEY0GMeIAJUNQXtwgJArtYb+zPX4OyOFY9XveUUHEEM8KEtNfNKRxMJfN8EwWt/XI8k1vFf9VJzZebVeccYdCtVwqqiES9iyCelvfHobOCtvKRyGG7YGcKX0mEiadJ0A16DdheLNX9DWmWIqOInTKzulGqsSoHqTzonW/16Hwnw0xasvi5HO17LQL6kp43tgQl4m5Tdaffbnjk19H3wEaNJ/0xgGYEWBAAAA',
@@ -599,15 +589,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'이두근을 발달시키는 운동의 하나로 양쪽 손바닥이 마주 보도록 똑바로 선 상태로 그대로 덤벨을 어깨 쪽으로 들어 올리며 운동을 진행합니다. Hammer 해머는 망치를 뜻하며 망치를 두드릴 때의 모양을 말하고 Curl은 ‘들어올리다, 말아 올리다’라는 뜻을 가지고 있습니다. 쉽게 말하면 해머컬은 양손을 마주보게 하여 덤벨을 들어올린다는 뜻입니다.',
-      where:'앞팔의 근육인 전완근과 이두근이 자극되며 이곳이 발달됩니다. 이두는 바깥쪽 근육인 장두와 뽀빠이자세를 취하면 힘줬을 때 나오는 알통인 단두로 나뉘는데 이중에서도 해머컬을 장두의 발달에 뛰어난 효과가 있는 운동입니다. 특히 이두근의 봉우리 발달에 좋은 운동이라고도 하는데 이두와 삼두 사이 쪽에 위치하는 근육을 발달시켜 이두근을 바깥쪽으로 밀어내 봉우리 형성에 큰 도움을 줍니다.',
-      how:[
-        '먼저 양손바닥을 마주 보게 하여 덤벨을 잡습니다. ',
-        '팔꿈치를 옆구리에 붙인 뒤, 덤벨을 말아 올립니다. ',
-        '천천히 원래 위치로 돌아갑니다. ',
+      what: '이두근을 발달시키는 운동의 하나로 양쪽 손바닥이 마주 보도록 똑바로 선 상태로 그대로 덤벨을 어깨 쪽으로 들어 올리며 운동을 진행합니다. Hammer 해머는 망치를 뜻하며 망치를 두드릴 때의 모양을 말하고 Curl은 ‘들어올리다, 말아 올리다’라는 뜻을 가지고 있습니다. 쉽게 말하면 해머컬은 양손을 마주보게 하여 덤벨을 들어올린다는 뜻입니다.',
+      where: '앞팔의 근육인 전완근과 이두근이 자극되며 이곳이 발달됩니다. 이두는 바깥쪽 근육인 장두와 뽀빠이자세를 취하면 힘줬을 때 나오는 알통인 단두로 나뉘는데 이중에서도 해머컬을 장두의 발달에 뛰어난 효과가 있는 운동입니다. 특히 이두근의 봉우리 발달에 좋은 운동이라고도 하는데 이두와 삼두 사이 쪽에 위치하는 근육을 발달시켜 이두근을 바깥쪽으로 밀어내 봉우리 형성에 큰 도움을 줍니다.',
+      how: [
+        '먼저 양손바닥을 마주 보게 하여 덤벨을 잡습니다.',
+        '팔꿈치를 옆구리에 붙인 뒤, 덤벨을 말아 올립니다.',
+        '천천히 원래 위치로 돌아갑니다.',
         '횟수에 따라 반복해주시면 됩니다.'
       ],
-      caution:'양 손바닥을 마주보게 하여 덤벨을 잡고 선 후 그 상태에서 그대로 팔을 말아 올려 줍니다. 이 때 중요한 포인트는 팔 운동시 포인트가 있는데 팔꿈치를 고정시켜야 합니다. 팔을 올리고 내릴때 팔꿈치가 움직이지 않고 고정이 되게 옆구리에 붙인 후 운동을 합니다. 팔 앞부분인 이두에 힘이 들어가는 것을 느끼면서 팔을 올릴때는 숨을 들이마시고 내릴때는 숨을 내쉬시면서 동작을 해줍니다. 처음부터 빠르게 하지 마시고 천천히 운동부위와 동작에 집중을 하시면서 운동을 하셔야 합니다. 팔을 올릴 때의 속도보다 내릴때의 속도를 천천히 하여 최대한 집중하셔서 하는 것이 좋습니다.'
+      caution: '양 손바닥을 마주보게 하여 덤벨을 잡고 선 후 그 상태에서 그대로 팔을 말아 올려 줍니다. 이 때 중요한 포인트는 팔 운동시 포인트가 있는데 팔꿈치를 고정시켜야 합니다. 팔을 올리고 내릴때 팔꿈치가 움직이지 않고 고정이 되게 옆구리에 붙인 후 운동을 합니다. 팔 앞부분인 이두에 힘이 들어가는 것을 느끼면서 팔을 올릴때는 숨을 들이마시고 내릴때는 숨을 내쉬시면서 동작을 해줍니다. 처음부터 빠르게 하지 마시고 천천히 운동부위와 동작에 집중을 하시면서 운동을 하셔야 합니다. 팔을 올릴 때의 속도보다 내릴때의 속도를 천천히 하여 최대한 집중하셔서 하는 것이 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03131301/03131301-Dumbbell-Hammer-Curl_Forearm_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRoYBAABXRUJQVlA4IHoBAAC0EQCdASq0ALQAADj+Bu4XKRG6n6JHGkUeuTnDy1vGlZ3jTaHw7CHTsBkCMLoMyxETxps+1IoK0cuNS5bg5WHBk2zb7m6fu4GxGmztRd/VYLoh8/pMptZ5EmNDOaYh6zMzr9vcX4dAHLXp7gEpU1eZIL7aMXJ+vkPvHCfMnYETQrDyeaJ4ywJ6LyyNoBwCRxptExptDgAA/vwgI7Q+CGeGl5EWX0RygkDJpI9FGWvdef3hp8ZNdHrWWxMu6khxWr6dLtqV5G7BwsF2p7YtC5rTo6Y5xj9RwlIoQyM4BhYluCtaukPN7SJ9gKcOKcV14fEJeve+tgAmcJIkMe/klV46Vflrzh8/Dlz//7LBcx9TsVv4Ab4rq5mH96+5t6z9E7gmWtDxk9IBAqpxGze2R3PXDillnJClTD1ffBt4nELla1U/yfyBhGq1Xp9+1h7xvFWRCwxXw1U4XYDaZckJRiEeadZ0i7H8DEkj0XsAr+z5lcqqe+Ty35QAAAA=',
@@ -626,16 +616,16 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'의자에 앉아 덤벨을 머리 뒤로 내렸다가 머리 위로 올리는, 삼두를 자극하는 운동입니다.',
-      where:'삼두 익스텐션을 통해 자극되는 근육은 일차적으로 삼두근이며 2차 근육은 삼각근과 전완근입니다.',
-      how:[
-        '똑바로 앉아서 양손에 덤벨을 받칩니다. 양 손바닥에 50대 50으로 덤벨의 중량을 나누어 올려 중심을 잡아주시면 됩니다. ',
+      what: '의자에 앉아 덤벨을 머리 뒤로 내렸다가 머리 위로 올리는, 삼두를 자극하는 운동입니다.',
+      where: '삼두 익스텐션을 통해 자극되는 근육은 일차적으로 삼두근이며 2차 근육은 삼각근과 전완근입니다.',
+      how: [
+        '똑바로 앉아서 양손에 덤벨을 받칩니다. 양 손바닥에 50대 50으로 덤벨의 중량을 나누어 올려 중심을 잡아주시면 됩니다.',
         '팔꿈치를 굽혀 덤벨이 머리 뒤로 내려오게 하신 후 팔꿈치를 최대한 펴주시면서 상완삼두근에 수축과 이완을 느낍니다.',
         '덤벨을 머리 뒤쪽으로 내릴때 팔꿈치가 너무 많이 벌어지지 않도록 주의하시는 것이 좋지만 어깨관절에 피로나 통증을 느낀다면 팔꿈치를 조금 벌려서 트레이닝 하는 것이 좋습니다.',
         '삼두 익스텐션은 팔꿈치만 사용하는 단순관절 운동으로 운동중에 어깨관절을 사용하지 않도록 주의하시는 것이 좋습니다.',
         '이 운동은 E-Z바를 이용할 수도 있습니다. 바벨을 이용하여 운동을 할때는 그립의 너비에 따라 삼두근의 운동자극 부위가 조금씩 틀려질 수 있습니다. 넓은 그립으로 트레이닝을 할 경우 삼두근의 장두에 조금 더 많은 자극이 올 것이며, 좁은 그립으로 트레이닝하면 삼두근의 외축에 조금 더 많은 자극이 옵니다.'
       ],
-      caution:'익스텐션은 영어로 확장이라는 뜻으로 삼두를 확장시키는 운동입니다. 삼두 익스텐션의 장점은 운동 시작자세가 삼두근이 스트레칭 된 자세에서 시작하기 때문에 삼두근에 조금 더 많은 자극을 느끼게 할 수 있습니다. 하지만 어깨 통증이 있는 사람들은 가벼운 중량이나 팔을 머리 위로 올려서 시작하는 삼두근 운동을 피하시는 것이 좋습니다.'
+      caution: '익스텐션은 영어로 확장이라는 뜻으로 삼두를 확장시키는 운동입니다. 삼두 익스텐션의 장점은 운동 시작자세가 삼두근이 스트레칭 된 자세에서 시작하기 때문에 삼두근에 조금 더 많은 자극을 느끼게 할 수 있습니다. 하지만 어깨 통증이 있는 사람들은 가벼운 중량이나 팔을 머리 위로 올려서 시작하는 삼두근 운동을 피하시는 것이 좋습니다.'
     }),
     imageLink: 'https://gif.helltabus.com/21881301/21881301-Dumbbell-Seated-Triceps-Extension_Upper-Arms_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqgBAABXRUJQVlA4IJwBAADUEQCdASq0ALQAADj+Bu4XSQEsHlr0+ZPGm0TGmztF3UWDUixyF2e15acF9tDxyUynI6Nv+jQ3GDxqbRLO8AXYtXHTOfMnjNeE2RMXkzeSJA7MabRA3U1VX9YSt5QkBrda9PlPQApwS+lBBP4F0ZfCrOD6HTiZXaCD4MbYX0jTa9LuiBx59OgEuHlryu8hHsODJ49Y5vAAAP79hEAbcVGNah83+xAMp/z0bic74ikYrDGFe1kLGRkcCeeswLQ563gG0/fgSpm1YYfbOFBgaMB0PTpqa44GR82OHrxn8Nvij00KWABsN1QMBGdqm/qoHVk/KsnOHV30RYhS6E+soO1Sj7UfaY7A1GXCXidVaDsiciGnROs9ahTQ0GZCPpUpAHt3ZTBXTCVpl5UQYG8AjAl+4uKv3J+pPcoyOFlbGhTYEZwU0IkzJsK1f++8Ymx4n2e2LXuYzcTlIW6fqq7USP86zczs7WgQuTjIUSvcJWWTRy0gD7ujVzoQjjs4Iupcxug6JcMsC05+/NVsRGSQMMRe+XPmrznwch3gAAAA',
@@ -654,15 +644,15 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'덤벨 킥백은 삼두근 운동으로 아령과 의자만 있으면 집에서도 가능합니다. 보통 한쪽씩 실시하는 원암 형태가 기본이며, 고립운동으로 수축에 집중하는게 중요합니다.',
-      where:'삼두중에서도 바깥 쪽에 특히 효과적인 운동입니다. 기본적으로는 삼두근을 골고루 발달시켜주며 자세, 수축을 바르게 실시한다면 다른 근육 부위의 사용을 최소화하고 정확히 삼두에만 집중할수 있는 장점이 있습니다.',
-      how:[
+      what: '덤벨 킥백은 삼두근 운동으로 아령과 의자만 있으면 집에서도 가능합니다. 보통 한쪽씩 실시하는 원암 형태가 기본이며, 고립운동으로 수축에 집중하는게 중요합니다.',
+      where: '삼두중에서도 바깥 쪽에 특히 효과적인 운동입니다. 기본적으로는 삼두근을 골고루 발달시켜주며 자세, 수축을 바르게 실시한다면 다른 근육 부위의 사용을 최소화하고 정확히 삼두에만 집중할수 있는 장점이 있습니다.',
+      how: [
         '한쪽 팔과 다리만 의자에 엎드린 자세를 취하며 굽혀서 받쳐 줍니다.',
         '윗팔-팔꿈치 윗 부위는 상체 몸통과 같은 방향에 고정을 시킵니다.',
         '몸통과 팔이 너무 떨어지거나 흔들리지 않도록 가까이 붙여서 고정합니다.',
         '몸통과 팔이 너무 떨어지거나 흔들리지 않도록 가까이 붙여서 고정합니다.'
       ],
-      caution:'삼두근을 자극할 때는 팔을 쥐어짠다는 느낌으로 운동을 해줘야 합니다. 가장 자극을 많이 받는 순간은 최대 수축지점 즉, 팔을 올리고 2초 정도 머무르는 상황에서 가장 많은 자극이 갑니다. 이때 힘들다고 팔이 추욱 떨어지지 않도록 잘 잡아 버텨줘야 합니다.'
+      caution: '삼두근을 자극할 때는 팔을 쥐어짠다는 느낌으로 운동을 해줘야 합니다. 가장 자극을 많이 받는 순간은 최대 수축지점 즉, 팔을 올리고 2초 정도 머무르는 상황에서 가장 많은 자극이 갑니다. 이때 힘들다고 팔이 추욱 떨어지지 않도록 잘 잡아 버텨줘야 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/03331301/03331301-Dumbbell-Kickback_Upper-Arms_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRkACAABXRUJQVlA4IDQCAABUFwCdASq0ALQAADj+Buvm0RG0dwZPGm0SwrkUH3ODpJfpBk8Z7csXhHO0zcW/QV6L/V/Ys21cbn/bf3WDaM/kJ+LCze70ihXuBCKRUMEAeWukG8jhEwpuB1NaCdXoYgPYbuzIDYtjdntWDTlvaa1wmw+2DYCjF9lNmvauyYuOLGUPjV40HnEY3dgO6mSoYIjBQblm3IW+Pmtn6Qg2SLimUD/7iHTfEjtGkUjIPFZm4jN9fgpMCgNExp24lfbRj5k8ZYAA/vhAAuPknELkiovBNe4rqOTwQ5FThjt7auNZ0ZlPA7bAnix8YbAuhSt3fvu+NlXZb0P5NiNMlkmATAFGYhL5C1r8Sdedq/tVgPrCjblqpZ8HoGMQh1p5n5cxJv42vCphY8ZsZ4ZIkldM0NNk7qN7bsWuRypZa+i4uszonT2D018tYQLElS6MD8+dk6Cf7UGZkFbL6JDghxHI1gc6ZRlkrt4ltGJXK++tlerCBdfmyMeACfpGTH3DTvzYbUqerT35CeWaWqLtGzyobw1ew99l+EFvS5dhDfMx7HLIaB8uK/JhY26/ehYXEYZQc4ZCYSfrNkRqCDXHFmMJXxLg6SvvuxcfBFXgfLovdz73EQc4iHvZCamXNCuwLdRwOWiIXBb/JDNI3w7s1k8FmVxX02bHjpIt42u56GC9V8fbxTodNDyxyDLtcDr6vwHnIT3lfbwtfLPmMQ5ZFO9QJ3VKwFJqmh9ygFe7S1B8e55h4AAAAAA=',
@@ -681,16 +671,16 @@ export const ExerciseSeed = [
     setBreakTime: 120,
     breakTime: 600,
     description: JSON.stringify({
-      what:'케이블 머신을 이용하여 삼두근을 기를 수 있는 운동입니다. 케이블 푸시다운은 `트라이셉스 푸시다운 또는 케입르 프레스 다운`이라고 불리기도 합니다.',
-      where:'케이블 푸시다운은 삼두근 중에서도 장두와 외측두를 집중적으로 운동 할 수 있는 운동입니다.',
-      how:[
+      what: '케이블 머신을 이용하여 삼두근을 기를 수 있는 운동입니다. 케이블 푸시다운은 `트라이셉스 푸시다운 또는 케입르 프레스 다운`이라고 불리기도 합니다.',
+      where: '케이블 푸시다운은 삼두근 중에서도 장두와 외측두를 집중적으로 운동 할 수 있는 운동입니다.',
+      how: [
         '상체를 살짝 숙인 상태로 자세를 잡습니다. (그립은 팔꿈치가 몸에 편하게 붙을 정도로 잡습니다.)',
         '어깨와 팔꿈치를 수직으로 만들어 주고, 팔꿈치를 앞뒤로 움직이면 안됩니다.',
         '전완근이 바득과 평행이 되도록 만들어주고, 아래로 천천히 내립니다. (팔꿈치는 최대로 펴주고, 제대로 안 펴지는 경우에는 무게가 높은거니 80% 수준으로 무게를 조정합니다.)',
         '천천히 팔을 들어올려 이완시킵니다.',
         '위의 동작들을 반복합니다.'
       ],
-      caution:'상체를 너무 숙이거나 세우지 않습니다. 바를 내렸을 때, 몸에 닿아 진행 방향을 막지 않도록 하고, 손목이 꺾이지 않도록 합니다. 팔꿈치가 앞뒤로 움직이지 않도록, 옆구리에 붙여 고정하고 어깨가 개입 되지 않도록 합니다.'
+      caution: '상체를 너무 숙이거나 세우지 않습니다. 바를 내렸을 때, 몸에 닿아 진행 방향을 막지 않도록 하고, 손목이 꺾이지 않도록 합니다. 팔꿈치가 앞뒤로 움직이지 않도록, 옆구리에 붙여 고정하고 어깨가 개입 되지 않도록 합니다.'
     }),
     imageLink: 'https://gif.helltabus.com/02411301/02411301-Cable-Triceps-Pushdown-(V-bar-attachment)_Upper-Arms_1080.gif',
     placeHolderImage: 'data:image/webp;base64,UklGRqIBAABXRUJQVlA4IJYBAACUDwCdASq0ALQAADj+Bu3QBsNNx4LFRWN8temjgmPDRj19HwEZizuYWvS669a1Ul8PUgxzSooY5J5YIb2GQDhCSqZqMbDlBS+zvCP/GGiztTVOIcE+R/JPipJtFgcTpN31k4gkKWh/1WN31U3G+R9y+bBtowW15x+KlQpGE+WvT5mPNKgAAP7lbSHwaV0QtqvRBKfjGJigYpENhR42IpNGtjQzbhunWzIVLORgpifn5aP/eqUVXVff9RVW3M7szTCOoC7Wx3fRi2AHObWVuREeXPrSLIeWMZoqHyO3J4V/U4liJp6VZaBiWFspktcktEpnCX8N4sDw2kkDbg8ieV0F2xVVythUZLywk/v2uymgXmzBEYeAem3IR5l2bXwrJ5LxZpZT0NdFUwKlfUH9S2orBPszoEn+eq/FRoQhhxlb75iDMo6gKRzOy5zfX9BVcZXoMMUzv+9KrQBBef/sdJHUSoDNwdMrKIbIs/NR0hz0GdjOUVdRXuVKQqWh1biz7Zmrw1/jqVmZVdZr2sOFRy3tLgAAAAAA',
